@@ -1,0 +1,3 @@
+[submodule "reference/tinygb"]
+	path = reference/tinygb
+	url = https://github.com/jewelcodes/tinygb
