@@ -21,10 +21,9 @@ class Emulator {
     var _state = 0;  // STATE_LOADING
 
     // T-states per tick. Full GB frame = 70,224.
-    // Simulator enforces ~250ms minimum timer interval and tighter watchdog.
-    // 2000 is the highest stable value in the simulator.
-    // On the real Fenix 7x (16ms timer, native VM) raise this to 70224.
-    const CYCLES_PER_TICK = 2000;
+    // Simulator: 500 keeps tick() well under watchdog when combined with rendering.
+    // On the real Fenix 7x raise this to 70224.
+    const CYCLES_PER_TICK = 500;
 
     // Force a view update every N ticks even if no VBlank fired,
     // so the framebuffer is visible in the simulator.

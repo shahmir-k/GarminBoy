@@ -37,409 +37,409 @@ class Emulator {
     var _loop;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 21; @position = 8; @symbol_vardef = [_state,21,8,14]; ]
     var _state = 0;
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 27; @position = 10; @symbol_constdef = [CYCLES_PER_TICK,27,10,25]; ]
-    const CYCLES_PER_TICK = 2000;
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 31; @position = 10; @symbol_constdef = [UPDATE_EVERY_N_TICKS,31,10,30]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 26; @position = 10; @symbol_constdef = [CYCLES_PER_TICK,26,10,25]; ]
+    const CYCLES_PER_TICK = 500;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 30; @position = 10; @symbol_constdef = [UPDATE_EVERY_N_TICKS,30,10,30]; ]
     const UPDATE_EVERY_N_TICKS = 5;
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 32; @position = 8; @symbol_vardef = [_tickCount,32,8,18]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 31; @position = 8; @symbol_vardef = [_tickCount,31,8,18]; ]
     var _tickCount = 0;
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 34; @symbol_functiondef = [initialize,34,13,23]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 33; @symbol_functiondef = [initialize,33,13,23]; ]
     function initialize() as Void {
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 36; @symbol_functiondef = [init,36,13,17]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 35; @symbol_functiondef = [init,35,13,17]; ]
     function init() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_36_20_46_4_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 37 8 ]
-        symbol [ Interrupts %tmp.4 37 26 36 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_35_20_45_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 36 8 ]
+        symbol [ Interrupts %tmp.4 36 26 36 ];
         %tmp.4 = getv ? :Interrupts;
         %tmp.1 = newc %tmp.4 ();
-        symbol [ _interrupts ? 37 8 19 ];
+        symbol [ _interrupts ? 36 8 19 ];
         putv self :_interrupts %tmp.1;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 38 8 ]
-        symbol [ Rom %tmp.8 38 26 29 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 37 8 ]
+        symbol [ Rom %tmp.8 37 26 29 ];
         %tmp.8 = getv ? :Rom;
         %tmp.5 = newc %tmp.8 ();
-        symbol [ _rom ? 38 8 12 ];
+        symbol [ _rom ? 37 8 12 ];
         putv self :_rom %tmp.5;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 39 8 ]
-        symbol [ Sound %tmp.12 39 26 31 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 38 8 ]
+        symbol [ Sound %tmp.12 38 26 31 ];
         %tmp.12 = getv ? :Sound;
         %tmp.9 = newc %tmp.12 ();
-        symbol [ _sound ? 39 8 14 ];
+        symbol [ _sound ? 38 8 14 ];
         putv self :_sound %tmp.9;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 40 8 ]
-        symbol [ Joypad %tmp.16 40 26 32 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 39 8 ]
+        symbol [ Joypad %tmp.16 39 26 32 ];
         %tmp.16 = getv ? :Joypad;
-        symbol [ _interrupts %tmp.18 40 33 44 ];
+        symbol [ _interrupts %tmp.18 39 33 44 ];
         %tmp.18 = getv ? :_interrupts;
         %tmp.13 = newc %tmp.16 (%tmp.18);
-        symbol [ _joypad ? 40 8 15 ];
+        symbol [ _joypad ? 39 8 15 ];
         putv self :_joypad %tmp.13;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 41 8 ]
-        symbol [ GbTimer %tmp.22 41 26 33 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 40 8 ]
+        symbol [ GbTimer %tmp.22 40 26 33 ];
         %tmp.22 = getv ? :GbTimer;
-        symbol [ _interrupts %tmp.24 41 34 45 ];
+        symbol [ _interrupts %tmp.24 40 34 45 ];
         %tmp.24 = getv ? :_interrupts;
         %tmp.19 = newc %tmp.22 (%tmp.24);
-        symbol [ _gbTimer ? 41 8 16 ];
+        symbol [ _gbTimer ? 40 8 16 ];
         putv self :_gbTimer %tmp.19;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 43 8 ]
-        symbol [ Timer %tmp.27 43 20 25 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 42 8 ]
+        symbol [ Timer %tmp.27 42 20 25 ];
         %tmp.27 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.28 43 26 31 ];
+        symbol [ Timer %tmp.28 42 26 31 ];
         %tmp.28 = getv function ? %tmp.27 :Timer;
         %tmp.25 = newc %tmp.28 ();
-        symbol [ _loop ? 43 8 13 ];
+        symbol [ _loop ? 42 8 13 ];
         putv self :_loop %tmp.25;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 44 8 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_36_20_46_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_36_20_46_4_stop" ]
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 43 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_35_20_45_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_35_20_45_4_stop" ]
         %cb.1 = local;
-        symbol [ cb %cb.1 44 12 14 ];
+        symbol [ cb %cb.1 43 12 14 ];
         %tmp.29 = self;
-        symbol [ method %tmp.30 44 17 23 ];
+        symbol [ method %tmp.30 43 17 23 ];
         %tmp.30 = getv function %tmp.29 :method;
         %tmp.32 = const :tick;
-        symbol [ tick %tmp.32 44 25 29 const ];
+        symbol [ tick %tmp.32 43 25 29 const ];
         %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.32);
         lputv %cb.1 %tmp.33;
-        symbol [ cb %cb.1 44 12 14 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 45 8 ]
-        symbol [ _loop %tmp.35 45 8 13 ];
+        symbol [ cb %cb.1 43 12 14 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 44 8 ]
+        symbol [ _loop %tmp.35 44 8 13 ];
         %tmp.35 = getv ? :_loop;
-        symbol [ start %tmp.36 45 14 19 ];
+        symbol [ start %tmp.36 44 14 19 ];
         %tmp.36 = getv function %tmp.35 :start;
         %tmp.37 = lgetv %cb.1;
-        symbol [ cb %tmp.37 45 20 22 ];
+        symbol [ cb %tmp.37 44 20 22 ];
         %tmp.38 = 16;
         %tmp.39 = true;
         invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38, %tmp.39);
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_36_20_46_4_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_35_20_45_4_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 48; @symbol_functiondef = [tick,48,13,17]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 47; @symbol_functiondef = [tick,47,13,17]; ]
     function tick() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_20_94_4_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 49 8 ]
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_8_56_8_if_stmt:
-        symbol [ _state %tmp.2 49 12 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_47_20_93_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 48 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_8_55_8_if_stmt:
+        symbol [ _state %tmp.2 48 12 18 ];
         %tmp.2 = getv ? :_state;
-        symbol [ STATE_LOADING %tmp.4 49 22 35 ];
+        symbol [ STATE_LOADING %tmp.4 48 22 35 ];
         %tmp.4 = getv ? :STATE_LOADING;
         %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_8_56_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_8_56_8_if_true:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_37_56_8_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 50 12 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_37_56_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_37_56_8_stop" ]
+        bf %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_8_55_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_8_55_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_37_55_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 49 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_37_55_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_37_55_8_stop" ]
         %done.1 = local;
-        symbol [ done %done.1 50 16 20 ];
-        symbol [ _rom %tmp.7 50 23 27 ];
+        symbol [ done %done.1 49 16 20 ];
+        symbol [ _rom %tmp.7 49 23 27 ];
         %tmp.7 = getv ? :_rom;
-        symbol [ loadStep %tmp.8 50 28 36 ];
+        symbol [ loadStep %tmp.8 49 28 36 ];
         %tmp.8 = getv function %tmp.7 :loadStep;
         %tmp.9 = invoke %tmp.7 %tmp.8();
         lputv %done.1 %tmp.9;
-        symbol [ done %done.1 50 16 20 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 51 12 ]
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_12_54_12_if_stmt:
+        symbol [ done %done.1 49 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 50 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_12_53_12_if_stmt:
         %tmp.10 = lgetv %done.1;
-        symbol [ done %tmp.10 51 16 20 ];
-        bf %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_12_54_12_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_12_54_12_if_true:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_22_54_12_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 52 16 ]
-        symbol [ STATE_SETUP %tmp.12 52 25 36 ];
+        symbol [ done %tmp.10 50 16 20 ];
+        bf %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_12_53_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_12_53_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_22_53_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 51 16 ]
+        symbol [ STATE_SETUP %tmp.12 51 25 36 ];
         %tmp.12 = getv ? :STATE_SETUP;
-        symbol [ _state ? 52 16 22 ];
+        symbol [ _state ? 51 16 22 ];
         putv self :_state %tmp.12;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 53 16 ]
-        symbol [ WatchUi %tmp.13 53 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 52 16 ]
+        symbol [ WatchUi %tmp.13 52 16 23 ];
         %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.14 53 24 37 ];
+        symbol [ requestUpdate %tmp.14 52 24 37 ];
         %tmp.14 = getv function %tmp.13 :requestUpdate;
         invoke %tmp.13 %tmp.14();
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_22_54_12_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_12_54_12_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_51_12_54_12_if_end:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 55 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_22_53_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_12_53_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_50_12_53_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 54 12 ]
         ret ?;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_37_56_8_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_8_56_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_49_8_56_8_if_end:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 58 8 ]
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_8_77_8_if_stmt:
-        symbol [ _state %tmp.16 58 12 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_37_55_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_8_55_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_8_55_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 57 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_8_76_8_if_stmt:
+        symbol [ _state %tmp.16 57 12 18 ];
         %tmp.16 = getv ? :_state;
-        symbol [ STATE_SETUP %tmp.18 58 22 33 ];
+        symbol [ STATE_SETUP %tmp.18 57 22 33 ];
         %tmp.18 = getv ? :STATE_SETUP;
         %tmp.19 = eq %tmp.16 %tmp.18;
-        bf %tmp.19 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_8_77_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_8_77_8_if_true:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_35_77_8_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 59 12 ]
-        symbol [ Memory %tmp.23 59 23 29 ];
+        bf %tmp.19 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_8_76_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_8_76_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_35_76_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 58 12 ]
+        symbol [ Memory %tmp.23 58 23 29 ];
         %tmp.23 = getv ? :Memory;
-        symbol [ _rom %tmp.25 59 30 34 ];
+        symbol [ _rom %tmp.25 58 30 34 ];
         %tmp.25 = getv ? :_rom;
-        symbol [ data %tmp.26 59 35 39 ];
+        symbol [ data %tmp.26 58 35 39 ];
         %tmp.26 = getv %tmp.25 :data;
-        symbol [ _interrupts %tmp.28 59 41 52 ];
+        symbol [ _interrupts %tmp.28 58 41 52 ];
         %tmp.28 = getv ? :_interrupts;
         %tmp.20 = newc %tmp.23 (%tmp.26, %tmp.28);
-        symbol [ _mem ? 59 12 16 ];
+        symbol [ _mem ? 58 12 16 ];
         putv self :_mem %tmp.20;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 60 12 ]
-        symbol [ Ppu %tmp.32 60 23 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 59 12 ]
+        symbol [ Ppu %tmp.32 59 23 26 ];
         %tmp.32 = getv ? :Ppu;
-        symbol [ _mem %tmp.34 60 27 31 ];
+        symbol [ _mem %tmp.34 59 27 31 ];
         %tmp.34 = getv ? :_mem;
-        symbol [ _interrupts %tmp.36 60 33 44 ];
+        symbol [ _interrupts %tmp.36 59 33 44 ];
         %tmp.36 = getv ? :_interrupts;
         %tmp.29 = newc %tmp.32 (%tmp.34, %tmp.36);
-        symbol [ _ppu ? 60 12 16 ];
+        symbol [ _ppu ? 59 12 16 ];
         putv self :_ppu %tmp.29;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 61 12 ]
-        symbol [ Cpu %tmp.40 61 23 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 60 12 ]
+        symbol [ Cpu %tmp.40 60 23 26 ];
         %tmp.40 = getv ? :Cpu;
-        symbol [ _mem %tmp.42 61 27 31 ];
+        symbol [ _mem %tmp.42 60 27 31 ];
         %tmp.42 = getv ? :_mem;
-        symbol [ _interrupts %tmp.44 61 33 44 ];
+        symbol [ _interrupts %tmp.44 60 33 44 ];
         %tmp.44 = getv ? :_interrupts;
         %tmp.37 = newc %tmp.40 (%tmp.42, %tmp.44);
-        symbol [ _cpu ? 61 12 16 ];
+        symbol [ _cpu ? 60 12 16 ];
         putv self :_cpu %tmp.37;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 63 12 ]
-        symbol [ _mem %tmp.46 63 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 62 12 ]
+        symbol [ _mem %tmp.46 62 12 16 ];
         %tmp.46 = getv ? :_mem;
-        symbol [ setPpu %tmp.47 63 17 23 ];
+        symbol [ setPpu %tmp.47 62 17 23 ];
         %tmp.47 = getv function %tmp.46 :setPpu;
-        symbol [ _ppu %tmp.49 63 24 28 ];
+        symbol [ _ppu %tmp.49 62 24 28 ];
         %tmp.49 = getv ? :_ppu;
         invoke %tmp.46 %tmp.47(%tmp.49);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 64 12 ]
-        symbol [ _mem %tmp.51 64 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 63 12 ]
+        symbol [ _mem %tmp.51 63 12 16 ];
         %tmp.51 = getv ? :_mem;
-        symbol [ setTimer %tmp.52 64 17 25 ];
+        symbol [ setTimer %tmp.52 63 17 25 ];
         %tmp.52 = getv function %tmp.51 :setTimer;
-        symbol [ _gbTimer %tmp.54 64 26 34 ];
+        symbol [ _gbTimer %tmp.54 63 26 34 ];
         %tmp.54 = getv ? :_gbTimer;
         invoke %tmp.51 %tmp.52(%tmp.54);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 65 12 ]
-        symbol [ _mem %tmp.56 65 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 64 12 ]
+        symbol [ _mem %tmp.56 64 12 16 ];
         %tmp.56 = getv ? :_mem;
-        symbol [ setJoypad %tmp.57 65 17 26 ];
+        symbol [ setJoypad %tmp.57 64 17 26 ];
         %tmp.57 = getv function %tmp.56 :setJoypad;
-        symbol [ _joypad %tmp.59 65 27 34 ];
+        symbol [ _joypad %tmp.59 64 27 34 ];
         %tmp.59 = getv ? :_joypad;
         invoke %tmp.56 %tmp.57(%tmp.59);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 66 12 ]
-        symbol [ _mem %tmp.61 66 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 65 12 ]
+        symbol [ _mem %tmp.61 65 12 16 ];
         %tmp.61 = getv ? :_mem;
-        symbol [ setSound %tmp.62 66 17 25 ];
+        symbol [ setSound %tmp.62 65 17 25 ];
         %tmp.62 = getv function %tmp.61 :setSound;
-        symbol [ _sound %tmp.64 66 26 32 ];
+        symbol [ _sound %tmp.64 65 26 32 ];
         %tmp.64 = getv ? :_sound;
         invoke %tmp.61 %tmp.62(%tmp.64);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 68 12 ]
-        symbol [ _sound %tmp.66 68 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 67 12 ]
+        symbol [ _sound %tmp.66 67 12 18 ];
         %tmp.66 = getv ? :_sound;
-        symbol [ start %tmp.67 68 19 24 ];
+        symbol [ start %tmp.67 67 19 24 ];
         %tmp.67 = getv function %tmp.66 :start;
         invoke %tmp.66 %tmp.67();
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 69 12 ]
-        symbol [ _gbTimer %tmp.69 69 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 68 12 ]
+        symbol [ _gbTimer %tmp.69 68 12 20 ];
         %tmp.69 = getv ? :_gbTimer;
-        symbol [ start %tmp.70 69 21 26 ];
+        symbol [ start %tmp.70 68 21 26 ];
         %tmp.70 = getv function %tmp.69 :start;
         invoke %tmp.69 %tmp.70();
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 70 12 ]
-        symbol [ _ppu %tmp.72 70 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 69 12 ]
+        symbol [ _ppu %tmp.72 69 12 16 ];
         %tmp.72 = getv ? :_ppu;
-        symbol [ start %tmp.73 70 17 22 ];
+        symbol [ start %tmp.73 69 17 22 ];
         %tmp.73 = getv function %tmp.72 :start;
         invoke %tmp.72 %tmp.73();
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 71 12 ]
-        symbol [ _cpu %tmp.75 71 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 70 12 ]
+        symbol [ _cpu %tmp.75 70 12 16 ];
         %tmp.75 = getv ? :_cpu;
-        symbol [ start %tmp.76 71 17 22 ];
+        symbol [ start %tmp.76 70 17 22 ];
         %tmp.76 = getv function %tmp.75 :start;
         invoke %tmp.75 %tmp.76();
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 73 12 ]
-        symbol [ STATE_RUNNING %tmp.78 73 21 34 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 72 12 ]
+        symbol [ STATE_RUNNING %tmp.78 72 21 34 ];
         %tmp.78 = getv ? :STATE_RUNNING;
-        symbol [ _state ? 73 12 18 ];
+        symbol [ _state ? 72 12 18 ];
         putv self :_state %tmp.78;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 74 12 ]
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 73 12 ]
         %tmp.79 = 0;
-        symbol [ _tickCount ? 74 12 22 ];
+        symbol [ _tickCount ? 73 12 22 ];
         putv self :_tickCount %tmp.79;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 75 12 ]
-        symbol [ WatchUi %tmp.80 75 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 74 12 ]
+        symbol [ WatchUi %tmp.80 74 12 19 ];
         %tmp.80 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.81 75 20 33 ];
+        symbol [ requestUpdate %tmp.81 74 20 33 ];
         %tmp.81 = getv function %tmp.80 :requestUpdate;
         invoke %tmp.80 %tmp.81();
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 76 12 ]
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 75 12 ]
         ret ?;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_35_77_8_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_8_77_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_58_8_77_8_if_end:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 80 8 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_20_94_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_20_94_4_stop" ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_35_76_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_8_76_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_57_8_76_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 79 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_47_20_93_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_47_20_93_4_stop" ]
         %cyclesLeft.2 = local;
-        symbol [ cyclesLeft %cyclesLeft.2 80 12 22 ];
-        symbol [ CYCLES_PER_TICK %tmp.83 80 25 40 ];
+        symbol [ cyclesLeft %cyclesLeft.2 79 12 22 ];
+        symbol [ CYCLES_PER_TICK %tmp.83 79 25 40 ];
         %tmp.83 = getv ? :CYCLES_PER_TICK;
         lputv %cyclesLeft.2 %tmp.83;
-        symbol [ cyclesLeft %cyclesLeft.2 80 12 22 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 81 8 ]
-        while @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_test:
+        symbol [ cyclesLeft %cyclesLeft.2 79 12 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 80 8 ]
+        while @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_test:
         %tmp.84 = lgetv %cyclesLeft.2;
-        symbol [ cyclesLeft %tmp.84 81 15 25 ];
+        symbol [ cyclesLeft %tmp.84 80 15 25 ];
         %tmp.85 = 0;
         %tmp.86 = gt %tmp.84 %tmp.85;
-        bf %tmp.86 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_begin:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_31_86_8_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 82 12 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_31_86_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_31_86_8_stop" ]
+        bf %tmp.86 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_31_85_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 81 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_31_85_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_31_85_8_stop" ]
         %c.3 = local;
-        symbol [ c %c.3 82 16 17 ];
-        symbol [ _cpu %tmp.88 82 20 24 ];
+        symbol [ c %c.3 81 16 17 ];
+        symbol [ _cpu %tmp.88 81 20 24 ];
         %tmp.88 = getv ? :_cpu;
-        symbol [ step %tmp.89 82 25 29 ];
+        symbol [ step %tmp.89 81 25 29 ];
         %tmp.89 = getv function %tmp.88 :step;
         %tmp.90 = invoke %tmp.88 %tmp.89();
         lputv %c.3 %tmp.90;
-        symbol [ c %c.3 82 16 17 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 83 12 ]
-        symbol [ _ppu %tmp.92 83 12 16 ];
+        symbol [ c %c.3 81 16 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 82 12 ]
+        symbol [ _ppu %tmp.92 82 12 16 ];
         %tmp.92 = getv ? :_ppu;
-        symbol [ cycle %tmp.93 83 17 22 ];
+        symbol [ cycle %tmp.93 82 17 22 ];
         %tmp.93 = getv function %tmp.92 :cycle;
         %tmp.94 = lgetv %c.3;
-        symbol [ c %tmp.94 83 23 24 ];
+        symbol [ c %tmp.94 82 23 24 ];
         invoke %tmp.92 %tmp.93(%tmp.94);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 84 12 ]
-        symbol [ _gbTimer %tmp.96 84 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 83 12 ]
+        symbol [ _gbTimer %tmp.96 83 12 20 ];
         %tmp.96 = getv ? :_gbTimer;
-        symbol [ cycle %tmp.97 84 21 26 ];
+        symbol [ cycle %tmp.97 83 21 26 ];
         %tmp.97 = getv function %tmp.96 :cycle;
         %tmp.98 = lgetv %c.3;
-        symbol [ c %tmp.98 84 27 28 ];
+        symbol [ c %tmp.98 83 27 28 ];
         invoke %tmp.96 %tmp.97(%tmp.98);
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 85 12 ]
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 84 12 ]
         %tmp.99 = lgetv %cyclesLeft.2;
-        symbol [ cyclesLeft %tmp.99 85 12 22 ];
+        symbol [ cyclesLeft %tmp.99 84 12 22 ];
         %tmp.100 = lgetv %c.3;
-        symbol [ c %tmp.100 85 26 27 ];
+        symbol [ c %tmp.100 84 26 27 ];
         %tmp.101 = sub %tmp.99 %tmp.100;
         lputv %cyclesLeft.2 %tmp.101;
-        symbol [ cyclesLeft %cyclesLeft.2 85 12 22 ];
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_31_86_8_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_test;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_81_8_86_8_while_end:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 88 8 ]
-        symbol [ _tickCount %tmp.104 88 8 18 ];
+        symbol [ cyclesLeft %cyclesLeft.2 84 12 22 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_31_85_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_80_8_85_8_while_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 87 8 ]
+        symbol [ _tickCount %tmp.104 87 8 18 ];
         %tmp.104 = getv ? :_tickCount;
         %tmp.105 = add %tmp.104 1;
-        symbol [ _tickCount ? 88 8 18 ];
+        symbol [ _tickCount ? 87 8 18 ];
         putv self :_tickCount dup %tmp.105;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 89 8 ]
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_stmt:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_46_begin:
-        symbol [ _ppu %tmp.107 89 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 88 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_12_88_46_begin:
+        symbol [ _ppu %tmp.107 88 12 16 ];
         %tmp.107 = getv ? :_ppu;
-        symbol [ _frameReady %tmp.108 89 17 28 ];
+        symbol [ _frameReady %tmp.108 88 17 28 ];
         %tmp.108 = getv %tmp.107 :_frameReady;
-        bt %tmp.108 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_true;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_32_89_46_false:
-        symbol [ _tickCount %tmp.110 89 32 42 ];
+        bt %tmp.108 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_32_88_46_false:
+        symbol [ _tickCount %tmp.110 88 32 42 ];
         %tmp.110 = getv ? :_tickCount;
-        symbol [ UPDATE_EVERY_N_TICKS %tmp.112 89 46 66 ];
+        symbol [ UPDATE_EVERY_N_TICKS %tmp.112 88 46 66 ];
         %tmp.112 = getv ? :UPDATE_EVERY_N_TICKS;
         %tmp.113 = gte %tmp.110 %tmp.112;
         push %tmp.113;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_32_89_46_end:
-        %tmp.114 = phi [%tmp.108 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_46_begin] [%tmp.113 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_32_89_46_false] [%tmp.114 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_32_89_46_end];
-        bf %tmp.114 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_true:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_68_93_8_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 90 12 ]
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_12_90_62_if_stmt:
-        symbol [ _ppu %tmp.116 90 16 20 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_32_88_46_end:
+        %tmp.114 = phi [%tmp.108 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_12_88_46_begin] [%tmp.113 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_32_88_46_false] [%tmp.114 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_32_88_46_end];
+        bf %tmp.114 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_68_92_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 89 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_62_if_stmt:
+        symbol [ _ppu %tmp.116 89 16 20 ];
         %tmp.116 = getv ? :_ppu;
-        symbol [ _frameReady %tmp.117 90 21 32 ];
+        symbol [ _frameReady %tmp.117 89 21 32 ];
         %tmp.117 = getv %tmp.116 :_frameReady;
-        bf %tmp.117 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_12_90_62_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_12_90_62_if_true:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_34_90_62_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 90 36 ]
-        symbol [ _ppu %tmp.118 90 36 40 ];
+        bf %tmp.117 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_62_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_62_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_34_89_62_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 89 36 ]
+        symbol [ _ppu %tmp.118 89 36 40 ];
         %tmp.118 = getv self :_ppu;
         %tmp.119 = false;
-        symbol [ _frameReady ? 90 41 52 ];
+        symbol [ _frameReady ? 89 41 52 ];
         putv %tmp.118 :_frameReady %tmp.119;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_34_90_62_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_12_90_62_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_90_12_90_62_if_end:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 91 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_34_89_62_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_62_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_12_89_62_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 90 12 ]
         %tmp.120 = 0;
-        symbol [ _tickCount ? 91 12 22 ];
+        symbol [ _tickCount ? 90 12 22 ];
         putv self :_tickCount %tmp.120;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 92 12 ]
-        symbol [ WatchUi %tmp.121 92 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 91 12 ]
+        symbol [ WatchUi %tmp.121 91 12 19 ];
         %tmp.121 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.122 92 20 33 ];
+        symbol [ requestUpdate %tmp.122 91 20 33 ];
         %tmp.122 = getv function %tmp.121 :requestUpdate;
         invoke %tmp.121 %tmp.122();
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_68_93_8_stop:
-        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_end;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_89_8_93_8_if_end:
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_48_20_94_4_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_68_92_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_88_8_92_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_47_20_93_4_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 96; @symbol_functiondef = [isLoading,96,13,22]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 95; @symbol_functiondef = [isLoading,95,13,22]; ]
     function isLoading() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_96_30_96_64_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 96 32 ]
-        symbol [ _state %tmp.2 96 39 45 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_95_30_95_64_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 95 32 ]
+        symbol [ _state %tmp.2 95 39 45 ];
         %tmp.2 = getv ? :_state;
-        symbol [ STATE_RUNNING %tmp.4 96 49 62 ];
+        symbol [ STATE_RUNNING %tmp.4 95 49 62 ];
         %tmp.4 = getv ? :STATE_RUNNING;
         %tmp.5 = ne %tmp.2 %tmp.4;
         ret %tmp.5;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_96_30_96_64_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_95_30_95_64_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 97; @symbol_functiondef = [getJoypad,97,13,22]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 96; @symbol_functiondef = [getJoypad,96,13,22]; ]
     function getJoypad() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_97_30_97_48_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 97 32 ]
-        symbol [ _joypad %tmp.2 97 39 46 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_96_30_96_48_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 96 32 ]
+        symbol [ _joypad %tmp.2 96 39 46 ];
         %tmp.2 = getv ? :_joypad;
         ret %tmp.2;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_97_30_97_48_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_96_30_96_48_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 98; @symbol_functiondef = [getFramebuffer,98,13,27]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 97; @symbol_functiondef = [getFramebuffer,97,13,27]; ]
     function getFramebuffer() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_98_30_98_57_start:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_97_30_97_57_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 97 32 ]
+        symbol [ _ppu %tmp.2 97 39 43 ];
+        %tmp.2 = getv ? :_ppu;
+        symbol [ framebuffer %tmp.3 97 44 55 ];
+        %tmp.3 = getv %tmp.2 :framebuffer;
+        ret %tmp.3;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_97_30_97_57_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 98; @symbol_functiondef = [getPalette,98,13,23]; ]
+    function getPalette() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_98_30_98_53_start:
 [ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 98 32 ]
         symbol [ _ppu %tmp.2 98 39 43 ];
         %tmp.2 = getv ? :_ppu;
-        symbol [ framebuffer %tmp.3 98 44 55 ];
-        %tmp.3 = getv %tmp.2 :framebuffer;
-        ret %tmp.3;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_98_30_98_57_stop:
-    }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 99; @symbol_functiondef = [getPalette,99,13,23]; ]
-    function getPalette() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_99_30_99_53_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" 99 32 ]
-        symbol [ _ppu %tmp.2 99 39 43 ];
-        %tmp.2 = getv ? :_ppu;
-        symbol [ palette %tmp.3 99 44 51 ];
+        symbol [ palette %tmp.3 98 44 51 ];
         %tmp.3 = getv %tmp.2 :palette;
         ret %tmp.3;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_99_30_99_53_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Emulator_mc_98_30_98_53_stop:
     }
 }
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 1; ]
