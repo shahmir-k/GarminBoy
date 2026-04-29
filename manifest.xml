@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="com.garmin.iq" version="3">
+    <iq:application entry="GarminBoyApp" id="a3421f3b-c937-4c10-af4a-garminboy001" launchType="system" minSdkVersion="3.2.0" targetSdkVersion="4.2.4" type="watchapp">
+        <iq:products>
+            <iq:product id="fenix7xpro"/>
+        </iq:products>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+    </iq:application>
+</iq:manifest>
