@@ -27,10 +27,12 @@ class GarminBoyView extends WatchUi.View {
 
             var pct = _emulator._rom.progress();
             var barW = (pct * 160).toNumber();
-            dc.setColor(0x00AA00, Graphics.COLOR_TRANSPARENT);
-            dc.fillRectangle(60, 150, barW, 10);
             dc.setColor(0x444444, Graphics.COLOR_TRANSPARENT);
             dc.drawRectangle(60, 150, 160, 10);
+            if (barW > 0) {
+                dc.setColor(0x00AA00, Graphics.COLOR_TRANSPARENT);
+                dc.fillRectangle(60, 150, barW, 10);
+            }
             return;
         }
 
