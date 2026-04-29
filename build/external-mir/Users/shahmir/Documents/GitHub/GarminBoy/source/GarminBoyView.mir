@@ -20,7 +20,7 @@ class GarminBoyView extends WatchUi.View {
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 10; @position = 10; @symbol_constdef = [OFFSET_Y,10,10,18]; ]
     const OFFSET_Y = 68;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 14; @position = 10; @symbol_constdef = [PIXEL_STEP,14,10,20]; ]
-    const PIXEL_STEP = 1;
+    const PIXEL_STEP = 2;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; @symbol_param<0> = [emulator,16,24,32]; ]
     function initialize(emulator) as Void {
 _Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_16_34_19_4_start:
