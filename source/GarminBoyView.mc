@@ -21,19 +21,20 @@ class GarminBoyView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        if (_emulator.isLoading() || !_emulator.hasFrame()) {
+        if (_emulator.isLoading()) {
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(140, 120, Graphics.FONT_SMALL, "GarminBoy", Graphics.TEXT_JUSTIFY_CENTER);
-            // Progress bar
+            dc.drawText(140, 116, Graphics.FONT_MEDIUM, "GarminBoy", Graphics.TEXT_JUSTIFY_CENTER);
+
             var pct = _emulator._rom.progress();
             var barW = (pct * 160).toNumber();
-            dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
-            dc.fillRectangle(60, 145, barW, 8);
+            dc.setColor(0x00AA00, Graphics.COLOR_TRANSPARENT);
+            dc.fillRectangle(60, 150, barW, 10);
             dc.setColor(0x444444, Graphics.COLOR_TRANSPARENT);
-            dc.drawRectangle(60, 145, 160, 8);
+            dc.drawRectangle(60, 150, 160, 10);
             return;
         }
 
+        // Render framebuffer — show whatever the PPU has produced so far
         var fb      = _emulator.getFramebuffer();
         var palette = _emulator.getPalette();
 

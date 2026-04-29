@@ -17,13 +17,16 @@ class Emulator {
     const STATE_RUNNING = 2;
     var _state = STATE_LOADING;
 
-    // T-states to execute per timer tick.
-    // Full GB frame = 70224 T-states. The simulator enforces a minimum timer
-    // interval (~250ms) and has a tighter watchdog than the real device.
-    // 1500 is stable in the simulator; raise toward 70224 on the real Fenix 7x.
-    const CYCLES_PER_TICK = 1500;
+    // T-states per tick. Full GB frame = 70,224.
+    // Simulator enforces ~250ms minimum timer interval and tighter watchdog.
+    // 2000 is the highest stable value in the simulator.
+    // On the real Fenix 7x (16ms timer, native VM) raise this to 70224.
+    const CYCLES_PER_TICK = 2000;
 
-    var _framesProduced = 0;
+    // Force a view update every N ticks even if no VBlank fired,
+    // so the framebuffer is visible in the simulator.
+    const UPDATE_EVERY_N_TICKS = 5;
+    var _tickCount = 0;
 
     function initialize() {}
 
@@ -63,6 +66,8 @@ class Emulator {
             _cpu.start();
 
             _state = STATE_RUNNING;
+            _tickCount = 0;
+            WatchUi.requestUpdate();
             return;
         }
 
@@ -75,15 +80,15 @@ class Emulator {
             cyclesLeft -= c;
         }
 
-        if (_ppu._frameReady) {
-            _ppu._frameReady = false;
-            _framesProduced++;
+        _tickCount++;
+        if (_ppu._frameReady || _tickCount >= UPDATE_EVERY_N_TICKS) {
+            if (_ppu._frameReady) { _ppu._frameReady = false; }
+            _tickCount = 0;
             WatchUi.requestUpdate();
         }
     }
 
-    function isLoading()  { return _state != STATE_RUNNING; }
-    function hasFrame()   { return _framesProduced > 0; }
+    function isLoading()      { return _state != STATE_RUNNING; }
     function getJoypad()      { return _joypad; }
     function getFramebuffer() { return _ppu.framebuffer; }
     function getPalette()     { return _ppu.palette; }
