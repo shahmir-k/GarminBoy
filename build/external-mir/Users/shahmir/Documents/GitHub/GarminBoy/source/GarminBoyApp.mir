@@ -2,87 +2,149 @@
 using Toybox.Application as :Application;
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; @symbol_usingAlias = [WatchUi,2,24,31]; ]
 using Toybox.WatchUi as :WatchUi;
-[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 4; @symbol_classdef = [GarminBoyApp,4,6,18]; @symbol_extends<0> = [Application,4,27,38]; @symbol_extends<1> = [AppBase,4,39,46]; ]
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Lang,3,13,17]; @symbol_usingAlias = [Lang,3,21,25]; ]
+using Toybox.Lang as :Lang;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [System,4,13,19]; @symbol_usingAlias = [Sys,4,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 6; @symbol_classdef = [GarminBoyApp,6,6,18]; @symbol_extends<0> = [Application,6,27,38]; @symbol_extends<1> = [AppBase,6,39,46]; ]
 class GarminBoyApp extends Application.AppBase {
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 4; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 4; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 5; @position = 8; @symbol_vardef = [_emulator,5,8,17]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 7; @position = 8; @symbol_vardef = [_emulator,7,8,17]; ]
     var _emulator;
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
     function initialize() as Void {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_7_26_9_4_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 8 8 ]
-        symbol [ AppBase %tmp.2 8 8 15 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_9_26_11_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 10 8 ]
+        symbol [ AppBase %tmp.2 10 8 15 ];
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 8 16 26 ];
+        symbol [ initialize %tmp.3 10 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_7_26_9_4_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_9_26_11_4_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 11; @symbol_functiondef = [onStart,11,13,20]; @symbol_param<0> = [state,11,21,26]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 13; @symbol_functiondef = [onStart,13,13,20]; @symbol_param<0> = [state,13,21,26]; ]
     function onStart(state) {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_11_28_14_4_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 12 8 ]
-        symbol [ Emulator %tmp.4 12 24 32 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_13_28_21_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 14 8 ]
+        try @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_beginTry @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_endTry @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_catch @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_beginTry:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_12_18_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 15 12 ]
+        symbol [ Emulator %tmp.4 15 28 36 ];
         %tmp.4 = getv ? :Emulator;
         %tmp.1 = newc %tmp.4 ();
-        symbol [ _emulator ? 12 8 17 ];
+        symbol [ _emulator ? 15 12 21 ];
         putv self :_emulator %tmp.1;
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 13 8 ]
-        symbol [ _emulator %tmp.6 13 8 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 16 12 ]
+        symbol [ _emulator %tmp.6 16 12 21 ];
         %tmp.6 = getv ? :_emulator;
-        symbol [ init %tmp.7 13 18 22 ];
+        symbol [ init %tmp.7 16 22 26 ];
         %tmp.7 = getv function %tmp.6 :init;
         invoke %tmp.6 %tmp.7();
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_11_28_14_4_stop:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 17 12 ]
+        symbol [ Sys %tmp.8 17 12 15 ];
+        %tmp.8 = getm $.Toybox.System;
+        symbol [ println %tmp.9 17 16 23 ];
+        %tmp.9 = getv function %tmp.8 :println;
+        %tmp.10 = "init ok";
+        invoke %tmp.8 %tmp.9(%tmp.10);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_12_18_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_endTry:
+        jsr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_catch:
+        %tmp.11 = exception;
+        push %tmp.11;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 18 10 ]
+        %tmp.12 = dup %tmp.11;
+        symbol [ Lang %tmp.13 18 31 35 ];
+        %tmp.13 = getm $.Toybox.Lang;
+        symbol [ Exception %tmp.14 18 36 45 ];
+        %tmp.14 = getv %tmp.13 :Exception;
+        %tmp.15 = isa %tmp.12 %tmp.14;
+        bf %tmp.15 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_10_20_8_next;
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_catch" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_10_20_8_next" ]
+        %ex.1 = local;
+        symbol [ ex %ex.1 18 17 19 ];
+        %tmp.16 = dup %tmp.11;
+        %tmp.17 = as %tmp.16 Lang.Exception;
+        lputv %ex.1 %tmp.17;
+        symbol [ ex %ex.1 18 17 19 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_47_20_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 19 12 ]
+        symbol [ Sys %tmp.18 19 12 15 ];
+        %tmp.18 = getm $.Toybox.System;
+        symbol [ println %tmp.19 19 16 23 ];
+        %tmp.19 = getv function %tmp.18 :println;
+        %tmp.20 = "CRASH onStart: ";
+        %tmp.21 = lgetv %ex.1;
+        symbol [ ex %tmp.21 19 44 46 ];
+        symbol [ getErrorMessage %tmp.22 19 47 62 ];
+        %tmp.22 = getv function %tmp.21 :getErrorMessage;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = add %tmp.20 %tmp.23;
+        invoke %tmp.18 %tmp.19(%tmp.24);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_47_20_8_stop:
+        jsr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally;
+        pop;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_10_20_8_next:
+        try @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_catch @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_10_20_8_next @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_18_10_20_8_next @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally;
+        jsr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally;
+        throw %tmp.11;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_finally:
+        jsrret;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_14_8_20_8_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_13_28_21_4_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 16; @symbol_functiondef = [getInitialView,16,13,27]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 23; @symbol_functiondef = [getInitialView,23,13,27]; ]
     function getInitialView() {
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_start:
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 17 8 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_stop" ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 24 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_stop" ]
         %view.1 = local;
-        symbol [ view %view.1 17 12 16 ];
-        symbol [ GarminBoyView %tmp.4 17 27 40 ];
+        symbol [ view %view.1 24 12 16 ];
+        symbol [ GarminBoyView %tmp.4 24 27 40 ];
         %tmp.4 = getv ? :GarminBoyView;
-        symbol [ _emulator %tmp.6 17 41 50 ];
+        symbol [ _emulator %tmp.6 24 41 50 ];
         %tmp.6 = getv ? :_emulator;
         %tmp.1 = newc %tmp.4 (%tmp.6);
         lputv %view.1 %tmp.1;
-        symbol [ view %view.1 17 12 16 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 18 8 ]
-        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_stop" ]
+        symbol [ view %view.1 24 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 25 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_stop" ]
         %delegate.2 = local;
-        symbol [ delegate %delegate.2 18 12 20 ];
-        symbol [ GarminBoyDelegate %tmp.10 18 27 44 ];
+        symbol [ delegate %delegate.2 25 12 20 ];
+        symbol [ GarminBoyDelegate %tmp.10 25 27 44 ];
         %tmp.10 = getv ? :GarminBoyDelegate;
-        symbol [ _emulator %tmp.12 18 45 54 ];
+        symbol [ _emulator %tmp.12 25 45 54 ];
         %tmp.12 = getv ? :_emulator;
-        symbol [ getJoypad %tmp.13 18 55 64 ];
+        symbol [ getJoypad %tmp.13 25 55 64 ];
         %tmp.13 = getv function %tmp.12 :getJoypad;
         %tmp.14 = invoke %tmp.12 %tmp.13();
         %tmp.7 = newc %tmp.10 (%tmp.14);
         lputv %delegate.2 %tmp.7;
-        symbol [ delegate %delegate.2 18 12 20 ];
-[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 19 8 ]
+        symbol [ delegate %delegate.2 25 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" 26 8 ]
         %tmp.15 = newa 2;
         %tmp.16 = lgetv %view.1;
-        symbol [ view %tmp.16 19 16 20 ];
+        symbol [ view %tmp.16 26 16 20 ];
         %tmp.17 = dup %tmp.15;
         %tmp.18 = aputv %tmp.17 0 %tmp.16;
         %tmp.19 = lgetv %delegate.2;
-        symbol [ delegate %tmp.19 19 22 30 ];
+        symbol [ delegate %tmp.19 26 22 30 ];
         %tmp.20 = dup %tmp.18;
         %tmp.21 = aputv %tmp.20 1 %tmp.19;
         ret %tmp.21;
-_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_16_30_20_4_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyApp_mc_23_30_27_4_stop:
     }
-    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 22; @symbol_functiondef = [onStop,22,13,19]; @symbol_param<0> = [state,22,20,25]; ]
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc"; @line = 29; @symbol_functiondef = [onStop,29,13,19]; @symbol_param<0> = [state,29,20,25]; ]
     function onStop(state) {
     }
 }

@@ -1,50 +1,48 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Graphics;
+using Toybox.System as Sys;
 
 class GarminBoyView extends WatchUi.View {
     var _emulator;
 
+    // GB screen at 1x scale centered on 280×280 display
     const OFFSET_X = 60;
     const OFFSET_Y = 68;
+
+    // Pixel block size: 8 means sample every 8th pixel and draw as 8×8 block.
+    // 160/8 × 144/8 = 20×18 = 360 blocks × 4 colors = 1440 iterations — well within watchdog.
+    // Set to 1 on a device fast enough for full rendering.
+    const PIXEL_STEP = 8;
 
     function initialize(emulator) {
         View.initialize();
         _emulator = emulator;
     }
 
-    function onLayout(dc) {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
-    }
+    function onLayout(dc) {}
 
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
         if (_emulator.isLoading()) {
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(140, 116, Graphics.FONT_MEDIUM, "GarminBoy", Graphics.TEXT_JUSTIFY_CENTER);
-
-            var pct = _emulator._rom.progress();
-            var barW = (pct * 160).toNumber();
-            dc.setColor(0x444444, Graphics.COLOR_TRANSPARENT);
-            dc.drawRectangle(60, 150, 160, 10);
-            if (barW > 0) {
-                dc.setColor(0x00AA00, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(60, 150, barW, 10);
-            }
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            dc.drawText(140, 130, Graphics.FONT_SMALL, "Loading...", Graphics.TEXT_JUSTIFY_CENTER);
             return;
         }
 
-        // Render framebuffer — show whatever the PPU has produced so far
         var fb      = _emulator.getFramebuffer();
         var palette = _emulator.getPalette();
+        var step    = PIXEL_STEP;
 
         for (var c = 0; c < 4; c++) {
             dc.setColor(palette[c], palette[c]);
-            for (var i = 0; i < 160 * 144; i++) {
-                if ((fb[i] & 0x03) == c) {
-                    dc.drawPoint(OFFSET_X + (i % 160), OFFSET_Y + (i / 160));
+            for (var y = 0; y < 144; y += step) {
+                var lineBase = y * 160;
+                for (var x = 0; x < 160; x += step) {
+                    if ((fb[lineBase + x] & 0x03) == c) {
+                        dc.fillRectangle(OFFSET_X + x, OFFSET_Y + y, step, step);
+                    }
                 }
             }
         }

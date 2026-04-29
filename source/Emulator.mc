@@ -1,6 +1,12 @@
 using Toybox.Timer as Timer;
 using Toybox.WatchUi as WatchUi;
 
+// Module-level state constants — class-level const can't be used in
+// instance variable initializers reliably in Monkey C
+const STATE_LOADING = 0;
+const STATE_SETUP   = 1;
+const STATE_RUNNING = 2;
+
 class Emulator {
     var _mem;
     var _cpu;
@@ -12,10 +18,7 @@ class Emulator {
     var _rom;
     var _loop;
 
-    const STATE_LOADING = 0;
-    const STATE_SETUP   = 1;
-    const STATE_RUNNING = 2;
-    var _state = STATE_LOADING;
+    var _state = 0;  // STATE_LOADING
 
     // T-states per tick. Full GB frame = 70,224.
     // Simulator enforces ~250ms minimum timer interval and tighter watchdog.
@@ -45,8 +48,10 @@ class Emulator {
     function tick() {
         if (_state == STATE_LOADING) {
             var done = _rom.loadStep();
-            if (done) { _state = STATE_SETUP; }
-            WatchUi.requestUpdate();
+            if (done) {
+                _state = STATE_SETUP;
+                WatchUi.requestUpdate();
+            }
             return;
         }
 

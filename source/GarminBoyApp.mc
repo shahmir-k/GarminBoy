@@ -1,5 +1,7 @@
 using Toybox.Application as Application;
 using Toybox.WatchUi as WatchUi;
+using Toybox.Lang as Lang;
+using Toybox.System as Sys;
 
 class GarminBoyApp extends Application.AppBase {
     var _emulator;
@@ -9,8 +11,13 @@ class GarminBoyApp extends Application.AppBase {
     }
 
     function onStart(state) {
-        _emulator = new Emulator();
-        _emulator.init();
+        try {
+            _emulator = new Emulator();
+            _emulator.init();
+            Sys.println("init ok");
+        } catch (ex instanceof Lang.Exception) {
+            Sys.println("CRASH onStart: " + ex.getErrorMessage());
+        }
     }
 
     function getInitialView() {

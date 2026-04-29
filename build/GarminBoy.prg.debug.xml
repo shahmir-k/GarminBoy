@@ -4,8 +4,8 @@
     <pcToLineNum>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/build/gen/006-B4376-00/source/Rez.mcgen" id="1" lineNum="7" parent="globals/Rez" pc="268435457" symbol="&lt;init&gt;"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" id="2" lineNum="3" parent="globals/GarminBoyDelegate" pc="268435477" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="3" lineNum="4" parent="globals/GarminBoyApp" pc="268435489" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="4" lineNum="4" parent="globals/GarminBoyView" pc="268435501" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="3" lineNum="6" parent="globals/GarminBoyApp" pc="268435489" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="4" lineNum="5" parent="globals/GarminBoyView" pc="268435501" symbol="&lt;init&gt;"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="20" parent="globals/Joypad" pc="268435513" symbol="read"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="22" parent="globals/Joypad" pc="268435516" symbol="read"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="23" parent="globals/Joypad" pc="268435527" symbol="read"/>
@@ -1140,58 +1140,58 @@
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Cpu.mc" id="51" lineNum="963" parent="globals/Cpu" pc="268451280" symbol="xorA"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Cpu.mc" id="51" lineNum="964" parent="globals/Cpu" pc="268451282" symbol="xorA"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Cpu.mc" id="51" lineNum="965" parent="globals/Cpu" pc="268451301" symbol="xorA"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="33" parent="globals/Emulator" pc="268451326" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="34" parent="globals/Emulator" pc="268451329" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="35" parent="globals/Emulator" pc="268451354" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="36" parent="globals/Emulator" pc="268451379" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="37" parent="globals/Emulator" pc="268451404" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="38" parent="globals/Emulator" pc="268451434" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="40" parent="globals/Emulator" pc="268451464" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="41" parent="globals/Emulator" pc="268451493" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="42" parent="globals/Emulator" pc="268451508" symbol="init"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="45" parent="globals/Emulator" pc="268451528" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="46" parent="globals/Emulator" pc="268451531" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="47" parent="globals/Emulator" pc="268451541" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="48" parent="globals/Emulator" pc="268451554" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="48" parent="globals/Emulator" pc="268451559" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="49" parent="globals/Emulator" pc="268451568" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="50" parent="globals/Emulator" pc="268451579" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="53" parent="globals/Emulator" pc="268451580" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="54" parent="globals/Emulator" pc="268451591" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="55" parent="globals/Emulator" pc="268451631" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="56" parent="globals/Emulator" pc="268451666" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="58" parent="globals/Emulator" pc="268451701" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="59" parent="globals/Emulator" pc="268451720" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="60" parent="globals/Emulator" pc="268451739" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="61" parent="globals/Emulator" pc="268451758" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="63" parent="globals/Emulator" pc="268451777" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="64" parent="globals/Emulator" pc="268451789" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="65" parent="globals/Emulator" pc="268451801" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="66" parent="globals/Emulator" pc="268451813" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="68" parent="globals/Emulator" pc="268451825" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="69" parent="globals/Emulator" pc="268451834" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="70" parent="globals/Emulator" pc="268451842" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="71" parent="globals/Emulator" pc="268451853" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="75" parent="globals/Emulator" pc="268451854" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="76" parent="globals/Emulator" pc="268451859" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="77" parent="globals/Emulator" pc="268451866" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="78" parent="globals/Emulator" pc="268451879" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="79" parent="globals/Emulator" pc="268451895" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="80" parent="globals/Emulator" pc="268451911" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="83" parent="globals/Emulator" pc="268451921" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="84" parent="globals/Emulator" pc="268451936" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="85" parent="globals/Emulator" pc="268451960" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="85" parent="globals/Emulator" pc="268451973" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="86" parent="globals/Emulator" pc="268451985" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="87" parent="globals/Emulator" pc="268451993" symbol="tick"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="54" lineNum="94" parent="globals/Emulator" pc="268452005" symbol="getPalette"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="54" lineNum="94" parent="globals/Emulator" pc="268452007" symbol="getPalette"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="55" lineNum="91" parent="globals/Emulator" pc="268452018" symbol="isLoading"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="55" lineNum="91" parent="globals/Emulator" pc="268452020" symbol="isLoading"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="56" lineNum="92" parent="globals/Emulator" pc="268452029" symbol="getJoypad"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="56" lineNum="92" parent="globals/Emulator" pc="268452031" symbol="getJoypad"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="58" lineNum="93" parent="globals/Emulator" pc="268452037" symbol="getFramebuffer"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="58" lineNum="93" parent="globals/Emulator" pc="268452039" symbol="getFramebuffer"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="36" parent="globals/Emulator" pc="268451326" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="37" parent="globals/Emulator" pc="268451329" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="38" parent="globals/Emulator" pc="268451354" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="39" parent="globals/Emulator" pc="268451379" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="40" parent="globals/Emulator" pc="268451404" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="41" parent="globals/Emulator" pc="268451434" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="43" parent="globals/Emulator" pc="268451464" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="44" parent="globals/Emulator" pc="268451493" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="52" lineNum="45" parent="globals/Emulator" pc="268451508" symbol="init"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="48" parent="globals/Emulator" pc="268451528" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="49" parent="globals/Emulator" pc="268451531" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="50" parent="globals/Emulator" pc="268451541" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="51" parent="globals/Emulator" pc="268451554" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="52" parent="globals/Emulator" pc="268451559" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="53" parent="globals/Emulator" pc="268451568" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="55" parent="globals/Emulator" pc="268451579" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="58" parent="globals/Emulator" pc="268451580" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="59" parent="globals/Emulator" pc="268451591" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="60" parent="globals/Emulator" pc="268451631" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="61" parent="globals/Emulator" pc="268451666" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="63" parent="globals/Emulator" pc="268451701" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="64" parent="globals/Emulator" pc="268451720" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="65" parent="globals/Emulator" pc="268451739" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="66" parent="globals/Emulator" pc="268451758" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="68" parent="globals/Emulator" pc="268451777" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="69" parent="globals/Emulator" pc="268451789" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="70" parent="globals/Emulator" pc="268451801" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="71" parent="globals/Emulator" pc="268451813" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="73" parent="globals/Emulator" pc="268451825" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="74" parent="globals/Emulator" pc="268451834" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="75" parent="globals/Emulator" pc="268451842" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="76" parent="globals/Emulator" pc="268451853" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="80" parent="globals/Emulator" pc="268451854" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="81" parent="globals/Emulator" pc="268451859" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="82" parent="globals/Emulator" pc="268451866" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="83" parent="globals/Emulator" pc="268451879" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="84" parent="globals/Emulator" pc="268451895" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="85" parent="globals/Emulator" pc="268451911" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="88" parent="globals/Emulator" pc="268451921" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="89" parent="globals/Emulator" pc="268451936" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="90" parent="globals/Emulator" pc="268451960" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="90" parent="globals/Emulator" pc="268451973" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="91" parent="globals/Emulator" pc="268451985" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="53" lineNum="92" parent="globals/Emulator" pc="268451993" symbol="tick"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="54" lineNum="99" parent="globals/Emulator" pc="268452005" symbol="getPalette"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="54" lineNum="99" parent="globals/Emulator" pc="268452007" symbol="getPalette"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="55" lineNum="96" parent="globals/Emulator" pc="268452018" symbol="isLoading"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="55" lineNum="96" parent="globals/Emulator" pc="268452020" symbol="isLoading"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="56" lineNum="97" parent="globals/Emulator" pc="268452029" symbol="getJoypad"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="56" lineNum="97" parent="globals/Emulator" pc="268452031" symbol="getJoypad"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="58" lineNum="98" parent="globals/Emulator" pc="268452037" symbol="getFramebuffer"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc" id="58" lineNum="98" parent="globals/Emulator" pc="268452039" symbol="getFramebuffer"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" id="59" lineNum="208" parent="globals/Ppu" pc="268452050" symbol="renderLine"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" id="59" lineNum="209" parent="globals/Ppu" pc="268452053" symbol="renderLine"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" id="59" lineNum="209" parent="globals/Ppu" pc="268452065" symbol="renderLine"/>
@@ -1666,314 +1666,311 @@
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" id="85" lineNum="31" parent="globals/Interrupts" pc="268457133" symbol="ieWrite"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" id="87" lineNum="22" parent="globals/Interrupts" pc="268457147" symbol="ifWrite"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" id="87" lineNum="23" parent="globals/Interrupts" pc="268457149" symbol="ifWrite"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="11" parent="globals/GarminBoyApp" pc="268457162" symbol="onStart"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="12" parent="globals/GarminBoyApp" pc="268457164" symbol="onStart"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="13" parent="globals/GarminBoyApp" pc="268457189" symbol="onStart"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="16" parent="globals/GarminBoyApp" pc="268457202" symbol="getInitialView"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="17" parent="globals/GarminBoyApp" pc="268457205" symbol="getInitialView"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="18" parent="globals/GarminBoyApp" pc="268457230" symbol="getInitialView"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="19" parent="globals/GarminBoyApp" pc="268457261" symbol="getInitialView"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="90" lineNum="7" parent="globals/GarminBoyApp" pc="268457276" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="90" lineNum="8" parent="globals/GarminBoyApp" pc="268457278" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="18" parent="globals/Rom" pc="268457291" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="19" parent="globals/Rom" pc="268457294" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="19" parent="globals/Rom" pc="268457305" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="21" parent="globals/Rom" pc="268457307" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="22" parent="globals/Rom" pc="268457322" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="23" parent="globals/Rom" pc="268457333" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="24" parent="globals/Rom" pc="268457345" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="27" parent="globals/Rom" pc="268457375" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="28" parent="globals/Rom" pc="268457390" symbol="loadStep"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="40" parent="globals/Rom" pc="268457399" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="41" parent="globals/Rom" pc="268457401" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="42" parent="globals/Rom" pc="268457403" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="43" parent="globals/Rom" pc="268457418" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="44" parent="globals/Rom" pc="268457434" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="45" parent="globals/Rom" pc="268457450" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="46" parent="globals/Rom" pc="268457466" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="47" parent="globals/Rom" pc="268457482" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="48" parent="globals/Rom" pc="268457498" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="49" parent="globals/Rom" pc="268457514" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="50" parent="globals/Rom" pc="268457530" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="51" parent="globals/Rom" pc="268457546" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="52" parent="globals/Rom" pc="268457562" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="53" parent="globals/Rom" pc="268457578" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="54" parent="globals/Rom" pc="268457594" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="55" parent="globals/Rom" pc="268457610" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="56" parent="globals/Rom" pc="268457626" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="57" parent="globals/Rom" pc="268457642" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="58" parent="globals/Rom" pc="268457658" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="59" parent="globals/Rom" pc="268457674" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="60" parent="globals/Rom" pc="268457690" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="61" parent="globals/Rom" pc="268457706" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="62" parent="globals/Rom" pc="268457722" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="63" parent="globals/Rom" pc="268457738" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="64" parent="globals/Rom" pc="268457754" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="65" parent="globals/Rom" pc="268457770" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="66" parent="globals/Rom" pc="268457786" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="67" parent="globals/Rom" pc="268457802" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="68" parent="globals/Rom" pc="268457818" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="69" parent="globals/Rom" pc="268457834" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="70" parent="globals/Rom" pc="268457850" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="71" parent="globals/Rom" pc="268457866" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="72" parent="globals/Rom" pc="268457882" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="73" parent="globals/Rom" pc="268457898" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="74" parent="globals/Rom" pc="268457914" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="75" parent="globals/Rom" pc="268457930" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="76" parent="globals/Rom" pc="268457946" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="77" parent="globals/Rom" pc="268457962" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="78" parent="globals/Rom" pc="268457978" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="79" parent="globals/Rom" pc="268457994" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="80" parent="globals/Rom" pc="268458010" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="81" parent="globals/Rom" pc="268458026" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="82" parent="globals/Rom" pc="268458042" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="83" parent="globals/Rom" pc="268458058" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="84" parent="globals/Rom" pc="268458074" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="85" parent="globals/Rom" pc="268458090" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="86" parent="globals/Rom" pc="268458106" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="87" parent="globals/Rom" pc="268458122" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="88" parent="globals/Rom" pc="268458138" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="89" parent="globals/Rom" pc="268458154" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="90" parent="globals/Rom" pc="268458170" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="91" parent="globals/Rom" pc="268458186" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="92" parent="globals/Rom" pc="268458202" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="93" parent="globals/Rom" pc="268458218" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="94" parent="globals/Rom" pc="268458234" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="95" parent="globals/Rom" pc="268458250" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="96" parent="globals/Rom" pc="268458266" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="97" parent="globals/Rom" pc="268458282" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="98" parent="globals/Rom" pc="268458298" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="99" parent="globals/Rom" pc="268458314" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="100" parent="globals/Rom" pc="268458330" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="101" parent="globals/Rom" pc="268458346" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="102" parent="globals/Rom" pc="268458362" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="103" parent="globals/Rom" pc="268458378" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="104" parent="globals/Rom" pc="268458394" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="105" parent="globals/Rom" pc="268458410" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="42" parent="globals/Rom" pc="268458413" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="43" parent="globals/Rom" pc="268458424" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="44" parent="globals/Rom" pc="268458435" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="45" parent="globals/Rom" pc="268458446" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="46" parent="globals/Rom" pc="268458457" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="47" parent="globals/Rom" pc="268458468" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="48" parent="globals/Rom" pc="268458479" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="49" parent="globals/Rom" pc="268458490" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="50" parent="globals/Rom" pc="268458501" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="51" parent="globals/Rom" pc="268458512" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="52" parent="globals/Rom" pc="268458523" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="53" parent="globals/Rom" pc="268458534" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="54" parent="globals/Rom" pc="268458545" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="55" parent="globals/Rom" pc="268458556" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="56" parent="globals/Rom" pc="268458567" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="57" parent="globals/Rom" pc="268458578" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="58" parent="globals/Rom" pc="268458589" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="59" parent="globals/Rom" pc="268458600" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="60" parent="globals/Rom" pc="268458611" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="61" parent="globals/Rom" pc="268458622" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="62" parent="globals/Rom" pc="268458633" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="63" parent="globals/Rom" pc="268458644" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="64" parent="globals/Rom" pc="268458655" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="65" parent="globals/Rom" pc="268458666" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="66" parent="globals/Rom" pc="268458677" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="67" parent="globals/Rom" pc="268458688" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="68" parent="globals/Rom" pc="268458699" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="69" parent="globals/Rom" pc="268458710" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="70" parent="globals/Rom" pc="268458721" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="71" parent="globals/Rom" pc="268458732" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="72" parent="globals/Rom" pc="268458743" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="73" parent="globals/Rom" pc="268458754" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="74" parent="globals/Rom" pc="268458765" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="75" parent="globals/Rom" pc="268458776" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="76" parent="globals/Rom" pc="268458787" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="77" parent="globals/Rom" pc="268458798" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="78" parent="globals/Rom" pc="268458809" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="79" parent="globals/Rom" pc="268458820" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="80" parent="globals/Rom" pc="268458831" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="81" parent="globals/Rom" pc="268458842" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="82" parent="globals/Rom" pc="268458853" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="83" parent="globals/Rom" pc="268458864" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="84" parent="globals/Rom" pc="268458875" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="85" parent="globals/Rom" pc="268458886" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="86" parent="globals/Rom" pc="268458897" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="87" parent="globals/Rom" pc="268458908" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="88" parent="globals/Rom" pc="268458919" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="89" parent="globals/Rom" pc="268458930" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="90" parent="globals/Rom" pc="268458941" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="91" parent="globals/Rom" pc="268458952" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="92" parent="globals/Rom" pc="268458963" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="93" parent="globals/Rom" pc="268458974" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="94" parent="globals/Rom" pc="268458985" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="95" parent="globals/Rom" pc="268458996" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="96" parent="globals/Rom" pc="268459007" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="97" parent="globals/Rom" pc="268459018" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="98" parent="globals/Rom" pc="268459029" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="99" parent="globals/Rom" pc="268459040" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="100" parent="globals/Rom" pc="268459051" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="101" parent="globals/Rom" pc="268459062" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="102" parent="globals/Rom" pc="268459073" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="103" parent="globals/Rom" pc="268459084" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="104" parent="globals/Rom" pc="268459095" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="105" parent="globals/Rom" pc="268459106" symbol="getChunk"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="94" lineNum="31" parent="globals/Rom" pc="268459119" symbol="isReady"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="94" lineNum="32" parent="globals/Rom" pc="268459121" symbol="isReady"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="95" lineNum="35" parent="globals/Rom" pc="268459130" symbol="progress"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="95" lineNum="36" parent="globals/Rom" pc="268459132" symbol="progress"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="96" lineNum="13" parent="globals/Rom" pc="268459147" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="96" lineNum="14" parent="globals/Rom" pc="268459149" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="97" lineNum="9" parent="globals/RomData" pc="268459162" symbol="chunk0"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="97" lineNum="10" parent="globals/RomData" pc="268459172" symbol="chunk0"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="98" lineNum="13" parent="globals/RomData" pc="268459178" symbol="chunk1"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="98" lineNum="14" parent="globals/RomData" pc="268459188" symbol="chunk1"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="99" lineNum="17" parent="globals/RomData" pc="268459194" symbol="chunk2"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="99" lineNum="18" parent="globals/RomData" pc="268459204" symbol="chunk2"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="100" lineNum="21" parent="globals/RomData" pc="268459210" symbol="chunk3"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="100" lineNum="22" parent="globals/RomData" pc="268459220" symbol="chunk3"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="101" lineNum="25" parent="globals/RomData" pc="268459226" symbol="chunk4"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="101" lineNum="26" parent="globals/RomData" pc="268459236" symbol="chunk4"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="102" lineNum="29" parent="globals/RomData" pc="268459242" symbol="chunk5"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="102" lineNum="30" parent="globals/RomData" pc="268459252" symbol="chunk5"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="103" lineNum="185" parent="globals/RomData" pc="268459258" symbol="chunk44"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="103" lineNum="186" parent="globals/RomData" pc="268459268" symbol="chunk44"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="104" lineNum="33" parent="globals/RomData" pc="268459274" symbol="chunk6"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="104" lineNum="34" parent="globals/RomData" pc="268459284" symbol="chunk6"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="105" lineNum="181" parent="globals/RomData" pc="268459290" symbol="chunk43"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="105" lineNum="182" parent="globals/RomData" pc="268459300" symbol="chunk43"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="106" lineNum="37" parent="globals/RomData" pc="268459306" symbol="chunk7"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="106" lineNum="38" parent="globals/RomData" pc="268459316" symbol="chunk7"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="107" lineNum="193" parent="globals/RomData" pc="268459322" symbol="chunk46"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="107" lineNum="194" parent="globals/RomData" pc="268459332" symbol="chunk46"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="108" lineNum="41" parent="globals/RomData" pc="268459338" symbol="chunk8"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="108" lineNum="42" parent="globals/RomData" pc="268459348" symbol="chunk8"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="109" lineNum="189" parent="globals/RomData" pc="268459354" symbol="chunk45"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="109" lineNum="190" parent="globals/RomData" pc="268459364" symbol="chunk45"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="110" lineNum="45" parent="globals/RomData" pc="268459370" symbol="chunk9"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="110" lineNum="46" parent="globals/RomData" pc="268459380" symbol="chunk9"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="111" lineNum="169" parent="globals/RomData" pc="268459386" symbol="chunk40"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="111" lineNum="170" parent="globals/RomData" pc="268459396" symbol="chunk40"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="112" lineNum="177" parent="globals/RomData" pc="268459402" symbol="chunk42"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="112" lineNum="178" parent="globals/RomData" pc="268459412" symbol="chunk42"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="113" lineNum="173" parent="globals/RomData" pc="268459418" symbol="chunk41"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="113" lineNum="174" parent="globals/RomData" pc="268459428" symbol="chunk41"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="114" lineNum="201" parent="globals/RomData" pc="268459434" symbol="chunk48"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="114" lineNum="202" parent="globals/RomData" pc="268459444" symbol="chunk48"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="115" lineNum="197" parent="globals/RomData" pc="268459450" symbol="chunk47"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="115" lineNum="198" parent="globals/RomData" pc="268459460" symbol="chunk47"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="116" lineNum="205" parent="globals/RomData" pc="268459466" symbol="chunk49"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="116" lineNum="206" parent="globals/RomData" pc="268459476" symbol="chunk49"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="117" lineNum="141" parent="globals/RomData" pc="268459482" symbol="chunk33"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="117" lineNum="142" parent="globals/RomData" pc="268459492" symbol="chunk33"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="118" lineNum="137" parent="globals/RomData" pc="268459498" symbol="chunk32"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="118" lineNum="138" parent="globals/RomData" pc="268459508" symbol="chunk32"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="119" lineNum="149" parent="globals/RomData" pc="268459514" symbol="chunk35"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="119" lineNum="150" parent="globals/RomData" pc="268459524" symbol="chunk35"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="120" lineNum="145" parent="globals/RomData" pc="268459530" symbol="chunk34"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="120" lineNum="146" parent="globals/RomData" pc="268459540" symbol="chunk34"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="121" lineNum="133" parent="globals/RomData" pc="268459546" symbol="chunk31"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="121" lineNum="134" parent="globals/RomData" pc="268459556" symbol="chunk31"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="122" lineNum="129" parent="globals/RomData" pc="268459562" symbol="chunk30"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="122" lineNum="130" parent="globals/RomData" pc="268459572" symbol="chunk30"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="123" lineNum="157" parent="globals/RomData" pc="268459578" symbol="chunk37"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="123" lineNum="158" parent="globals/RomData" pc="268459588" symbol="chunk37"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="124" lineNum="153" parent="globals/RomData" pc="268459594" symbol="chunk36"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="124" lineNum="154" parent="globals/RomData" pc="268459604" symbol="chunk36"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="125" lineNum="165" parent="globals/RomData" pc="268459610" symbol="chunk39"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="125" lineNum="166" parent="globals/RomData" pc="268459620" symbol="chunk39"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="126" lineNum="161" parent="globals/RomData" pc="268459626" symbol="chunk38"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="126" lineNum="162" parent="globals/RomData" pc="268459636" symbol="chunk38"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="127" lineNum="249" parent="globals/RomData" pc="268459642" symbol="chunk60"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="127" lineNum="250" parent="globals/RomData" pc="268459652" symbol="chunk60"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="128" lineNum="97" parent="globals/RomData" pc="268459658" symbol="chunk22"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="128" lineNum="98" parent="globals/RomData" pc="268459668" symbol="chunk22"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="129" lineNum="93" parent="globals/RomData" pc="268459674" symbol="chunk21"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="129" lineNum="94" parent="globals/RomData" pc="268459684" symbol="chunk21"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="130" lineNum="105" parent="globals/RomData" pc="268459690" symbol="chunk24"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="130" lineNum="106" parent="globals/RomData" pc="268459700" symbol="chunk24"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="131" lineNum="101" parent="globals/RomData" pc="268459706" symbol="chunk23"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="131" lineNum="102" parent="globals/RomData" pc="268459716" symbol="chunk23"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="132" lineNum="257" parent="globals/RomData" pc="268459722" symbol="chunk62"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="132" lineNum="258" parent="globals/RomData" pc="268459732" symbol="chunk62"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="133" lineNum="253" parent="globals/RomData" pc="268459738" symbol="chunk61"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="133" lineNum="254" parent="globals/RomData" pc="268459748" symbol="chunk61"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="134" lineNum="89" parent="globals/RomData" pc="268459754" symbol="chunk20"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="134" lineNum="90" parent="globals/RomData" pc="268459764" symbol="chunk20"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="135" lineNum="261" parent="globals/RomData" pc="268459770" symbol="chunk63"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="135" lineNum="262" parent="globals/RomData" pc="268459780" symbol="chunk63"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="136" lineNum="125" parent="globals/RomData" pc="268459786" symbol="chunk29"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="136" lineNum="126" parent="globals/RomData" pc="268459796" symbol="chunk29"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="137" lineNum="113" parent="globals/RomData" pc="268459802" symbol="chunk26"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="137" lineNum="114" parent="globals/RomData" pc="268459812" symbol="chunk26"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="138" lineNum="109" parent="globals/RomData" pc="268459818" symbol="chunk25"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="138" lineNum="110" parent="globals/RomData" pc="268459828" symbol="chunk25"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="139" lineNum="121" parent="globals/RomData" pc="268459834" symbol="chunk28"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="139" lineNum="122" parent="globals/RomData" pc="268459844" symbol="chunk28"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="140" lineNum="117" parent="globals/RomData" pc="268459850" symbol="chunk27"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="140" lineNum="118" parent="globals/RomData" pc="268459860" symbol="chunk27"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="141" lineNum="53" parent="globals/RomData" pc="268459866" symbol="chunk11"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="141" lineNum="54" parent="globals/RomData" pc="268459876" symbol="chunk11"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="142" lineNum="229" parent="globals/RomData" pc="268459882" symbol="chunk55"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="142" lineNum="230" parent="globals/RomData" pc="268459892" symbol="chunk55"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="143" lineNum="49" parent="globals/RomData" pc="268459898" symbol="chunk10"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="143" lineNum="50" parent="globals/RomData" pc="268459908" symbol="chunk10"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="144" lineNum="225" parent="globals/RomData" pc="268459914" symbol="chunk54"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="144" lineNum="226" parent="globals/RomData" pc="268459924" symbol="chunk54"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="145" lineNum="61" parent="globals/RomData" pc="268459930" symbol="chunk13"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="145" lineNum="62" parent="globals/RomData" pc="268459940" symbol="chunk13"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="146" lineNum="237" parent="globals/RomData" pc="268459946" symbol="chunk57"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="146" lineNum="238" parent="globals/RomData" pc="268459956" symbol="chunk57"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="147" lineNum="57" parent="globals/RomData" pc="268459962" symbol="chunk12"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="147" lineNum="58" parent="globals/RomData" pc="268459972" symbol="chunk12"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="148" lineNum="233" parent="globals/RomData" pc="268459978" symbol="chunk56"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="148" lineNum="234" parent="globals/RomData" pc="268459988" symbol="chunk56"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="149" lineNum="213" parent="globals/RomData" pc="268459994" symbol="chunk51"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="149" lineNum="214" parent="globals/RomData" pc="268460004" symbol="chunk51"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="150" lineNum="209" parent="globals/RomData" pc="268460010" symbol="chunk50"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="150" lineNum="210" parent="globals/RomData" pc="268460020" symbol="chunk50"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="151" lineNum="221" parent="globals/RomData" pc="268460026" symbol="chunk53"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="151" lineNum="222" parent="globals/RomData" pc="268460036" symbol="chunk53"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="152" lineNum="217" parent="globals/RomData" pc="268460042" symbol="chunk52"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="152" lineNum="218" parent="globals/RomData" pc="268460052" symbol="chunk52"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="153" lineNum="85" parent="globals/RomData" pc="268460058" symbol="chunk19"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="153" lineNum="86" parent="globals/RomData" pc="268460068" symbol="chunk19"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="154" lineNum="81" parent="globals/RomData" pc="268460074" symbol="chunk18"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="154" lineNum="82" parent="globals/RomData" pc="268460084" symbol="chunk18"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="155" lineNum="69" parent="globals/RomData" pc="268460090" symbol="chunk15"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="155" lineNum="70" parent="globals/RomData" pc="268460100" symbol="chunk15"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="156" lineNum="245" parent="globals/RomData" pc="268460106" symbol="chunk59"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="156" lineNum="246" parent="globals/RomData" pc="268460116" symbol="chunk59"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="157" lineNum="65" parent="globals/RomData" pc="268460122" symbol="chunk14"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="157" lineNum="66" parent="globals/RomData" pc="268460132" symbol="chunk14"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="158" lineNum="241" parent="globals/RomData" pc="268460138" symbol="chunk58"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="158" lineNum="242" parent="globals/RomData" pc="268460148" symbol="chunk58"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="159" lineNum="77" parent="globals/RomData" pc="268460154" symbol="chunk17"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="159" lineNum="78" parent="globals/RomData" pc="268460164" symbol="chunk17"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="73" parent="globals/RomData" pc="268460170" symbol="chunk16"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="74" parent="globals/RomData" pc="268460180" symbol="chunk16"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="15" parent="globals/GarminBoyView" pc="268460186" symbol="onLayout"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="16" parent="globals/GarminBoyView" pc="268460188" symbol="onLayout"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="17" parent="globals/GarminBoyView" pc="268460200" symbol="onLayout"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="10" parent="globals/GarminBoyView" pc="268460209" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="11" parent="globals/GarminBoyView" pc="268460211" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="12" parent="globals/GarminBoyView" pc="268460223" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="20" parent="globals/GarminBoyView" pc="268460233" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="21" parent="globals/GarminBoyView" pc="268460236" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="22" parent="globals/GarminBoyView" pc="268460248" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="24" parent="globals/GarminBoyView" pc="268460256" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="25" parent="globals/GarminBoyView" pc="268460270" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="26" parent="globals/GarminBoyView" pc="268460287" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="28" parent="globals/GarminBoyView" pc="268460311" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="29" parent="globals/GarminBoyView" pc="268460329" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="30" parent="globals/GarminBoyView" pc="268460343" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="31" parent="globals/GarminBoyView" pc="268460359" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="32" parent="globals/GarminBoyView" pc="268460378" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="33" parent="globals/GarminBoyView" pc="268460394" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="34" parent="globals/GarminBoyView" pc="268460414" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="38" parent="globals/GarminBoyView" pc="268460415" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="39" parent="globals/GarminBoyView" pc="268460428" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="41" parent="globals/GarminBoyView" pc="268460441" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="42" parent="globals/GarminBoyView" pc="268460452" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="43" parent="globals/GarminBoyView" pc="268460472" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="44" parent="globals/GarminBoyView" pc="268460484" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="45" parent="globals/GarminBoyView" pc="268460498" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="13" parent="globals/GarminBoyApp" pc="268457162" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="15" parent="globals/GarminBoyApp" pc="268457165" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="16" parent="globals/GarminBoyApp" pc="268457190" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="17" parent="globals/GarminBoyApp" pc="268457202" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="18" parent="globals/GarminBoyApp" pc="268457221" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="88" lineNum="19" parent="globals/GarminBoyApp" pc="268457240" symbol="onStart"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="23" parent="globals/GarminBoyApp" pc="268457270" symbol="getInitialView"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="24" parent="globals/GarminBoyApp" pc="268457273" symbol="getInitialView"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="25" parent="globals/GarminBoyApp" pc="268457298" symbol="getInitialView"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="89" lineNum="26" parent="globals/GarminBoyApp" pc="268457329" symbol="getInitialView"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="90" lineNum="9" parent="globals/GarminBoyApp" pc="268457344" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="90" lineNum="10" parent="globals/GarminBoyApp" pc="268457346" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="18" parent="globals/Rom" pc="268457359" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="19" parent="globals/Rom" pc="268457362" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="19" parent="globals/Rom" pc="268457373" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="21" parent="globals/Rom" pc="268457375" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="22" parent="globals/Rom" pc="268457390" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="23" parent="globals/Rom" pc="268457401" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="24" parent="globals/Rom" pc="268457413" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="27" parent="globals/Rom" pc="268457443" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="92" lineNum="28" parent="globals/Rom" pc="268457458" symbol="loadStep"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="40" parent="globals/Rom" pc="268457467" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="41" parent="globals/Rom" pc="268457469" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="42" parent="globals/Rom" pc="268457471" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="43" parent="globals/Rom" pc="268457486" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="44" parent="globals/Rom" pc="268457502" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="45" parent="globals/Rom" pc="268457518" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="46" parent="globals/Rom" pc="268457534" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="47" parent="globals/Rom" pc="268457550" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="48" parent="globals/Rom" pc="268457566" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="49" parent="globals/Rom" pc="268457582" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="50" parent="globals/Rom" pc="268457598" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="51" parent="globals/Rom" pc="268457614" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="52" parent="globals/Rom" pc="268457630" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="53" parent="globals/Rom" pc="268457646" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="54" parent="globals/Rom" pc="268457662" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="55" parent="globals/Rom" pc="268457678" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="56" parent="globals/Rom" pc="268457694" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="57" parent="globals/Rom" pc="268457710" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="58" parent="globals/Rom" pc="268457726" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="59" parent="globals/Rom" pc="268457742" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="60" parent="globals/Rom" pc="268457758" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="61" parent="globals/Rom" pc="268457774" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="62" parent="globals/Rom" pc="268457790" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="63" parent="globals/Rom" pc="268457806" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="64" parent="globals/Rom" pc="268457822" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="65" parent="globals/Rom" pc="268457838" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="66" parent="globals/Rom" pc="268457854" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="67" parent="globals/Rom" pc="268457870" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="68" parent="globals/Rom" pc="268457886" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="69" parent="globals/Rom" pc="268457902" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="70" parent="globals/Rom" pc="268457918" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="71" parent="globals/Rom" pc="268457934" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="72" parent="globals/Rom" pc="268457950" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="73" parent="globals/Rom" pc="268457966" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="74" parent="globals/Rom" pc="268457982" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="75" parent="globals/Rom" pc="268457998" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="76" parent="globals/Rom" pc="268458014" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="77" parent="globals/Rom" pc="268458030" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="78" parent="globals/Rom" pc="268458046" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="79" parent="globals/Rom" pc="268458062" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="80" parent="globals/Rom" pc="268458078" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="81" parent="globals/Rom" pc="268458094" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="82" parent="globals/Rom" pc="268458110" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="83" parent="globals/Rom" pc="268458126" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="84" parent="globals/Rom" pc="268458142" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="85" parent="globals/Rom" pc="268458158" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="86" parent="globals/Rom" pc="268458174" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="87" parent="globals/Rom" pc="268458190" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="88" parent="globals/Rom" pc="268458206" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="89" parent="globals/Rom" pc="268458222" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="90" parent="globals/Rom" pc="268458238" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="91" parent="globals/Rom" pc="268458254" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="92" parent="globals/Rom" pc="268458270" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="93" parent="globals/Rom" pc="268458286" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="94" parent="globals/Rom" pc="268458302" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="95" parent="globals/Rom" pc="268458318" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="96" parent="globals/Rom" pc="268458334" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="97" parent="globals/Rom" pc="268458350" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="98" parent="globals/Rom" pc="268458366" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="99" parent="globals/Rom" pc="268458382" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="100" parent="globals/Rom" pc="268458398" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="101" parent="globals/Rom" pc="268458414" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="102" parent="globals/Rom" pc="268458430" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="103" parent="globals/Rom" pc="268458446" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="104" parent="globals/Rom" pc="268458462" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="105" parent="globals/Rom" pc="268458478" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="42" parent="globals/Rom" pc="268458481" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="43" parent="globals/Rom" pc="268458492" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="44" parent="globals/Rom" pc="268458503" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="45" parent="globals/Rom" pc="268458514" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="46" parent="globals/Rom" pc="268458525" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="47" parent="globals/Rom" pc="268458536" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="48" parent="globals/Rom" pc="268458547" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="49" parent="globals/Rom" pc="268458558" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="50" parent="globals/Rom" pc="268458569" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="51" parent="globals/Rom" pc="268458580" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="52" parent="globals/Rom" pc="268458591" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="53" parent="globals/Rom" pc="268458602" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="54" parent="globals/Rom" pc="268458613" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="55" parent="globals/Rom" pc="268458624" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="56" parent="globals/Rom" pc="268458635" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="57" parent="globals/Rom" pc="268458646" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="58" parent="globals/Rom" pc="268458657" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="59" parent="globals/Rom" pc="268458668" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="60" parent="globals/Rom" pc="268458679" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="61" parent="globals/Rom" pc="268458690" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="62" parent="globals/Rom" pc="268458701" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="63" parent="globals/Rom" pc="268458712" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="64" parent="globals/Rom" pc="268458723" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="65" parent="globals/Rom" pc="268458734" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="66" parent="globals/Rom" pc="268458745" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="67" parent="globals/Rom" pc="268458756" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="68" parent="globals/Rom" pc="268458767" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="69" parent="globals/Rom" pc="268458778" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="70" parent="globals/Rom" pc="268458789" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="71" parent="globals/Rom" pc="268458800" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="72" parent="globals/Rom" pc="268458811" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="73" parent="globals/Rom" pc="268458822" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="74" parent="globals/Rom" pc="268458833" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="75" parent="globals/Rom" pc="268458844" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="76" parent="globals/Rom" pc="268458855" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="77" parent="globals/Rom" pc="268458866" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="78" parent="globals/Rom" pc="268458877" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="79" parent="globals/Rom" pc="268458888" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="80" parent="globals/Rom" pc="268458899" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="81" parent="globals/Rom" pc="268458910" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="82" parent="globals/Rom" pc="268458921" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="83" parent="globals/Rom" pc="268458932" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="84" parent="globals/Rom" pc="268458943" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="85" parent="globals/Rom" pc="268458954" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="86" parent="globals/Rom" pc="268458965" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="87" parent="globals/Rom" pc="268458976" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="88" parent="globals/Rom" pc="268458987" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="89" parent="globals/Rom" pc="268458998" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="90" parent="globals/Rom" pc="268459009" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="91" parent="globals/Rom" pc="268459020" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="92" parent="globals/Rom" pc="268459031" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="93" parent="globals/Rom" pc="268459042" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="94" parent="globals/Rom" pc="268459053" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="95" parent="globals/Rom" pc="268459064" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="96" parent="globals/Rom" pc="268459075" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="97" parent="globals/Rom" pc="268459086" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="98" parent="globals/Rom" pc="268459097" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="99" parent="globals/Rom" pc="268459108" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="100" parent="globals/Rom" pc="268459119" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="101" parent="globals/Rom" pc="268459130" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="102" parent="globals/Rom" pc="268459141" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="103" parent="globals/Rom" pc="268459152" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="104" parent="globals/Rom" pc="268459163" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="93" lineNum="105" parent="globals/Rom" pc="268459174" symbol="getChunk"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="94" lineNum="31" parent="globals/Rom" pc="268459187" symbol="isReady"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="94" lineNum="32" parent="globals/Rom" pc="268459189" symbol="isReady"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="95" lineNum="35" parent="globals/Rom" pc="268459198" symbol="progress"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="95" lineNum="36" parent="globals/Rom" pc="268459200" symbol="progress"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="96" lineNum="13" parent="globals/Rom" pc="268459215" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" id="96" lineNum="14" parent="globals/Rom" pc="268459217" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="97" lineNum="9" parent="globals/RomData" pc="268459230" symbol="chunk0"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="97" lineNum="10" parent="globals/RomData" pc="268459240" symbol="chunk0"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="98" lineNum="13" parent="globals/RomData" pc="268459246" symbol="chunk1"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="98" lineNum="14" parent="globals/RomData" pc="268459256" symbol="chunk1"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="99" lineNum="17" parent="globals/RomData" pc="268459262" symbol="chunk2"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="99" lineNum="18" parent="globals/RomData" pc="268459272" symbol="chunk2"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="100" lineNum="21" parent="globals/RomData" pc="268459278" symbol="chunk3"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="100" lineNum="22" parent="globals/RomData" pc="268459288" symbol="chunk3"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="101" lineNum="25" parent="globals/RomData" pc="268459294" symbol="chunk4"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="101" lineNum="26" parent="globals/RomData" pc="268459304" symbol="chunk4"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="102" lineNum="29" parent="globals/RomData" pc="268459310" symbol="chunk5"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="102" lineNum="30" parent="globals/RomData" pc="268459320" symbol="chunk5"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="103" lineNum="185" parent="globals/RomData" pc="268459326" symbol="chunk44"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="103" lineNum="186" parent="globals/RomData" pc="268459336" symbol="chunk44"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="104" lineNum="33" parent="globals/RomData" pc="268459342" symbol="chunk6"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="104" lineNum="34" parent="globals/RomData" pc="268459352" symbol="chunk6"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="105" lineNum="181" parent="globals/RomData" pc="268459358" symbol="chunk43"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="105" lineNum="182" parent="globals/RomData" pc="268459368" symbol="chunk43"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="106" lineNum="37" parent="globals/RomData" pc="268459374" symbol="chunk7"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="106" lineNum="38" parent="globals/RomData" pc="268459384" symbol="chunk7"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="107" lineNum="193" parent="globals/RomData" pc="268459390" symbol="chunk46"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="107" lineNum="194" parent="globals/RomData" pc="268459400" symbol="chunk46"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="108" lineNum="41" parent="globals/RomData" pc="268459406" symbol="chunk8"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="108" lineNum="42" parent="globals/RomData" pc="268459416" symbol="chunk8"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="109" lineNum="189" parent="globals/RomData" pc="268459422" symbol="chunk45"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="109" lineNum="190" parent="globals/RomData" pc="268459432" symbol="chunk45"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="110" lineNum="45" parent="globals/RomData" pc="268459438" symbol="chunk9"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="110" lineNum="46" parent="globals/RomData" pc="268459448" symbol="chunk9"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="111" lineNum="169" parent="globals/RomData" pc="268459454" symbol="chunk40"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="111" lineNum="170" parent="globals/RomData" pc="268459464" symbol="chunk40"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="112" lineNum="177" parent="globals/RomData" pc="268459470" symbol="chunk42"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="112" lineNum="178" parent="globals/RomData" pc="268459480" symbol="chunk42"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="113" lineNum="173" parent="globals/RomData" pc="268459486" symbol="chunk41"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="113" lineNum="174" parent="globals/RomData" pc="268459496" symbol="chunk41"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="114" lineNum="201" parent="globals/RomData" pc="268459502" symbol="chunk48"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="114" lineNum="202" parent="globals/RomData" pc="268459512" symbol="chunk48"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="115" lineNum="197" parent="globals/RomData" pc="268459518" symbol="chunk47"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="115" lineNum="198" parent="globals/RomData" pc="268459528" symbol="chunk47"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="116" lineNum="205" parent="globals/RomData" pc="268459534" symbol="chunk49"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="116" lineNum="206" parent="globals/RomData" pc="268459544" symbol="chunk49"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="117" lineNum="141" parent="globals/RomData" pc="268459550" symbol="chunk33"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="117" lineNum="142" parent="globals/RomData" pc="268459560" symbol="chunk33"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="118" lineNum="137" parent="globals/RomData" pc="268459566" symbol="chunk32"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="118" lineNum="138" parent="globals/RomData" pc="268459576" symbol="chunk32"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="119" lineNum="149" parent="globals/RomData" pc="268459582" symbol="chunk35"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="119" lineNum="150" parent="globals/RomData" pc="268459592" symbol="chunk35"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="120" lineNum="145" parent="globals/RomData" pc="268459598" symbol="chunk34"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="120" lineNum="146" parent="globals/RomData" pc="268459608" symbol="chunk34"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="121" lineNum="133" parent="globals/RomData" pc="268459614" symbol="chunk31"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="121" lineNum="134" parent="globals/RomData" pc="268459624" symbol="chunk31"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="122" lineNum="129" parent="globals/RomData" pc="268459630" symbol="chunk30"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="122" lineNum="130" parent="globals/RomData" pc="268459640" symbol="chunk30"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="123" lineNum="157" parent="globals/RomData" pc="268459646" symbol="chunk37"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="123" lineNum="158" parent="globals/RomData" pc="268459656" symbol="chunk37"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="124" lineNum="153" parent="globals/RomData" pc="268459662" symbol="chunk36"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="124" lineNum="154" parent="globals/RomData" pc="268459672" symbol="chunk36"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="125" lineNum="165" parent="globals/RomData" pc="268459678" symbol="chunk39"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="125" lineNum="166" parent="globals/RomData" pc="268459688" symbol="chunk39"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="126" lineNum="161" parent="globals/RomData" pc="268459694" symbol="chunk38"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="126" lineNum="162" parent="globals/RomData" pc="268459704" symbol="chunk38"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="127" lineNum="249" parent="globals/RomData" pc="268459710" symbol="chunk60"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="127" lineNum="250" parent="globals/RomData" pc="268459720" symbol="chunk60"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="128" lineNum="97" parent="globals/RomData" pc="268459726" symbol="chunk22"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="128" lineNum="98" parent="globals/RomData" pc="268459736" symbol="chunk22"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="129" lineNum="93" parent="globals/RomData" pc="268459742" symbol="chunk21"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="129" lineNum="94" parent="globals/RomData" pc="268459752" symbol="chunk21"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="130" lineNum="105" parent="globals/RomData" pc="268459758" symbol="chunk24"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="130" lineNum="106" parent="globals/RomData" pc="268459768" symbol="chunk24"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="131" lineNum="101" parent="globals/RomData" pc="268459774" symbol="chunk23"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="131" lineNum="102" parent="globals/RomData" pc="268459784" symbol="chunk23"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="132" lineNum="257" parent="globals/RomData" pc="268459790" symbol="chunk62"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="132" lineNum="258" parent="globals/RomData" pc="268459800" symbol="chunk62"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="133" lineNum="253" parent="globals/RomData" pc="268459806" symbol="chunk61"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="133" lineNum="254" parent="globals/RomData" pc="268459816" symbol="chunk61"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="134" lineNum="89" parent="globals/RomData" pc="268459822" symbol="chunk20"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="134" lineNum="90" parent="globals/RomData" pc="268459832" symbol="chunk20"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="135" lineNum="261" parent="globals/RomData" pc="268459838" symbol="chunk63"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="135" lineNum="262" parent="globals/RomData" pc="268459848" symbol="chunk63"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="136" lineNum="125" parent="globals/RomData" pc="268459854" symbol="chunk29"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="136" lineNum="126" parent="globals/RomData" pc="268459864" symbol="chunk29"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="137" lineNum="113" parent="globals/RomData" pc="268459870" symbol="chunk26"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="137" lineNum="114" parent="globals/RomData" pc="268459880" symbol="chunk26"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="138" lineNum="109" parent="globals/RomData" pc="268459886" symbol="chunk25"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="138" lineNum="110" parent="globals/RomData" pc="268459896" symbol="chunk25"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="139" lineNum="121" parent="globals/RomData" pc="268459902" symbol="chunk28"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="139" lineNum="122" parent="globals/RomData" pc="268459912" symbol="chunk28"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="140" lineNum="117" parent="globals/RomData" pc="268459918" symbol="chunk27"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="140" lineNum="118" parent="globals/RomData" pc="268459928" symbol="chunk27"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="141" lineNum="53" parent="globals/RomData" pc="268459934" symbol="chunk11"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="141" lineNum="54" parent="globals/RomData" pc="268459944" symbol="chunk11"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="142" lineNum="229" parent="globals/RomData" pc="268459950" symbol="chunk55"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="142" lineNum="230" parent="globals/RomData" pc="268459960" symbol="chunk55"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="143" lineNum="49" parent="globals/RomData" pc="268459966" symbol="chunk10"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="143" lineNum="50" parent="globals/RomData" pc="268459976" symbol="chunk10"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="144" lineNum="225" parent="globals/RomData" pc="268459982" symbol="chunk54"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="144" lineNum="226" parent="globals/RomData" pc="268459992" symbol="chunk54"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="145" lineNum="61" parent="globals/RomData" pc="268459998" symbol="chunk13"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="145" lineNum="62" parent="globals/RomData" pc="268460008" symbol="chunk13"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="146" lineNum="237" parent="globals/RomData" pc="268460014" symbol="chunk57"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="146" lineNum="238" parent="globals/RomData" pc="268460024" symbol="chunk57"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="147" lineNum="57" parent="globals/RomData" pc="268460030" symbol="chunk12"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="147" lineNum="58" parent="globals/RomData" pc="268460040" symbol="chunk12"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="148" lineNum="233" parent="globals/RomData" pc="268460046" symbol="chunk56"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="148" lineNum="234" parent="globals/RomData" pc="268460056" symbol="chunk56"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="149" lineNum="213" parent="globals/RomData" pc="268460062" symbol="chunk51"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="149" lineNum="214" parent="globals/RomData" pc="268460072" symbol="chunk51"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="150" lineNum="209" parent="globals/RomData" pc="268460078" symbol="chunk50"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="150" lineNum="210" parent="globals/RomData" pc="268460088" symbol="chunk50"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="151" lineNum="221" parent="globals/RomData" pc="268460094" symbol="chunk53"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="151" lineNum="222" parent="globals/RomData" pc="268460104" symbol="chunk53"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="152" lineNum="217" parent="globals/RomData" pc="268460110" symbol="chunk52"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="152" lineNum="218" parent="globals/RomData" pc="268460120" symbol="chunk52"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="153" lineNum="85" parent="globals/RomData" pc="268460126" symbol="chunk19"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="153" lineNum="86" parent="globals/RomData" pc="268460136" symbol="chunk19"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="154" lineNum="81" parent="globals/RomData" pc="268460142" symbol="chunk18"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="154" lineNum="82" parent="globals/RomData" pc="268460152" symbol="chunk18"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="155" lineNum="69" parent="globals/RomData" pc="268460158" symbol="chunk15"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="155" lineNum="70" parent="globals/RomData" pc="268460168" symbol="chunk15"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="156" lineNum="245" parent="globals/RomData" pc="268460174" symbol="chunk59"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="156" lineNum="246" parent="globals/RomData" pc="268460184" symbol="chunk59"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="157" lineNum="65" parent="globals/RomData" pc="268460190" symbol="chunk14"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="157" lineNum="66" parent="globals/RomData" pc="268460200" symbol="chunk14"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="158" lineNum="241" parent="globals/RomData" pc="268460206" symbol="chunk58"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="158" lineNum="242" parent="globals/RomData" pc="268460216" symbol="chunk58"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="159" lineNum="77" parent="globals/RomData" pc="268460222" symbol="chunk17"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="159" lineNum="78" parent="globals/RomData" pc="268460232" symbol="chunk17"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="73" parent="globals/RomData" pc="268460238" symbol="chunk16"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="74" parent="globals/RomData" pc="268460248" symbol="chunk16"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="17" parent="globals/GarminBoyView" pc="268460254" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="18" parent="globals/GarminBoyView" pc="268460256" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="19" parent="globals/GarminBoyView" pc="268460268" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="24" parent="globals/GarminBoyView" pc="268460278" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="25" parent="globals/GarminBoyView" pc="268460281" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="26" parent="globals/GarminBoyView" pc="268460293" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="28" parent="globals/GarminBoyView" pc="268460301" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="29" parent="globals/GarminBoyView" pc="268460315" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="30" parent="globals/GarminBoyView" pc="268460331" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="31" parent="globals/GarminBoyView" pc="268460356" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="34" parent="globals/GarminBoyView" pc="268460357" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="35" parent="globals/GarminBoyView" pc="268460370" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="36" parent="globals/GarminBoyView" pc="268460383" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="38" parent="globals/GarminBoyView" pc="268460387" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="39" parent="globals/GarminBoyView" pc="268460398" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="40" parent="globals/GarminBoyView" pc="268460418" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="41" parent="globals/GarminBoyView" pc="268460430" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="42" parent="globals/GarminBoyView" pc="268460438" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="43" parent="globals/GarminBoyView" pc="268460450" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="44" parent="globals/GarminBoyView" pc="268460467" symbol="onUpdate"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="25" method="true" symbol="write"/>
@@ -2417,16 +2414,19 @@
         <entry arg="true" endPc="268457115" name="bit" stackId="1" startPc="268457098"/>
         <entry arg="true" endPc="268457146" name="val" stackId="1" startPc="268457131"/>
         <entry arg="true" endPc="268457161" name="val" stackId="1" startPc="268457147"/>
-        <entry arg="true" endPc="268457201" name="state" stackId="1" startPc="268457162"/>
-        <entry endPc="268457374" name="i" stackId="3" startPc="268457345"/>
-        <entry arg="true" endPc="268459118" name="i" stackId="1" startPc="268457399"/>
-        <entry arg="true" endPc="268460208" name="dc" stackId="1" startPc="268460186"/>
-        <entry arg="true" endPc="268460232" name="emulator" stackId="1" startPc="268460209"/>
-        <entry arg="true" endPc="268460546" name="dc" stackId="1" startPc="268460233"/>
-        <entry endPc="268460545" name="fb" stackId="4" startPc="268460236"/>
-        <entry endPc="268460545" name="palette" stackId="5" startPc="268460236"/>
-        <entry endPc="268460545" name="c" stackId="6" startPc="268460452"/>
-        <entry endPc="268460535" name="i" stackId="7" startPc="268460484"/>
+        <entry arg="true" endPc="268457269" name="state" stackId="1" startPc="268457162"/>
+        <entry endPc="268457267" name="ex" stackId="2" startPc="268457221"/>
+        <entry endPc="268457442" name="i" stackId="3" startPc="268457413"/>
+        <entry arg="true" endPc="268459186" name="i" stackId="1" startPc="268457467"/>
+        <entry arg="true" endPc="268460277" name="emulator" stackId="1" startPc="268460254"/>
+        <entry arg="true" endPc="268460521" name="dc" stackId="1" startPc="268460278"/>
+        <entry endPc="268460520" name="fb" stackId="2" startPc="268460281"/>
+        <entry endPc="268460520" name="palette" stackId="3" startPc="268460281"/>
+        <entry endPc="268460520" name="step" stackId="4" startPc="268460281"/>
+        <entry endPc="268460520" name="c" stackId="5" startPc="268460398"/>
+        <entry endPc="268460510" name="y" stackId="6" startPc="268460430"/>
+        <entry endPc="268460500" name="lineBase" stackId="7" startPc="268460430"/>
+        <entry endPc="268460500" name="x" stackId="8" startPc="268460450"/>
     </localVars>
     <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4376-00"/>
     <annotations>
@@ -2827,237 +2827,237 @@
             <param id="val"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268457201" name="onStart" parent="GarminBoyApp" startPc="268457162">
+        <functionEntry accessMode="public" endPc="268457269" name="onStart" parent="GarminBoyApp" startPc="268457162">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268457275" name="getInitialView" parent="GarminBoyApp" startPc="268457202">
+        <functionEntry accessMode="public" endPc="268457343" name="getInitialView" parent="GarminBoyApp" startPc="268457270">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268457290" name="initialize" parent="GarminBoyApp" startPc="268457276">
+        <functionEntry accessMode="public" endPc="268457358" name="initialize" parent="GarminBoyApp" startPc="268457344">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onStop" parent="GarminBoyApp">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268457398" name="loadStep" parent="Rom" startPc="268457291">
+        <functionEntry accessMode="public" endPc="268457466" name="loadStep" parent="Rom" startPc="268457359">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459118" name="getChunk" parent="Rom" startPc="268457399">
+        <functionEntry accessMode="public" endPc="268459186" name="getChunk" parent="Rom" startPc="268457467">
             <param id="i"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459129" name="isReady" parent="Rom" startPc="268459119">
+        <functionEntry accessMode="public" endPc="268459197" name="isReady" parent="Rom" startPc="268459187">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459146" name="progress" parent="Rom" startPc="268459130">
+        <functionEntry accessMode="public" endPc="268459214" name="progress" parent="Rom" startPc="268459198">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459161" name="initialize" parent="Rom" startPc="268459147">
+        <functionEntry accessMode="public" endPc="268459229" name="initialize" parent="Rom" startPc="268459215">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459177" name="chunk0" parent="RomData" startPc="268459162">
+        <functionEntry accessMode="public" endPc="268459245" name="chunk0" parent="RomData" startPc="268459230">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459193" name="chunk1" parent="RomData" startPc="268459178">
+        <functionEntry accessMode="public" endPc="268459261" name="chunk1" parent="RomData" startPc="268459246">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459209" name="chunk2" parent="RomData" startPc="268459194">
+        <functionEntry accessMode="public" endPc="268459277" name="chunk2" parent="RomData" startPc="268459262">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459225" name="chunk3" parent="RomData" startPc="268459210">
+        <functionEntry accessMode="public" endPc="268459293" name="chunk3" parent="RomData" startPc="268459278">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459241" name="chunk4" parent="RomData" startPc="268459226">
+        <functionEntry accessMode="public" endPc="268459309" name="chunk4" parent="RomData" startPc="268459294">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459257" name="chunk5" parent="RomData" startPc="268459242">
+        <functionEntry accessMode="public" endPc="268459325" name="chunk5" parent="RomData" startPc="268459310">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459273" name="chunk44" parent="RomData" startPc="268459258">
+        <functionEntry accessMode="public" endPc="268459341" name="chunk44" parent="RomData" startPc="268459326">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459289" name="chunk6" parent="RomData" startPc="268459274">
+        <functionEntry accessMode="public" endPc="268459357" name="chunk6" parent="RomData" startPc="268459342">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459305" name="chunk43" parent="RomData" startPc="268459290">
+        <functionEntry accessMode="public" endPc="268459373" name="chunk43" parent="RomData" startPc="268459358">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459321" name="chunk7" parent="RomData" startPc="268459306">
+        <functionEntry accessMode="public" endPc="268459389" name="chunk7" parent="RomData" startPc="268459374">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459337" name="chunk46" parent="RomData" startPc="268459322">
+        <functionEntry accessMode="public" endPc="268459405" name="chunk46" parent="RomData" startPc="268459390">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459353" name="chunk8" parent="RomData" startPc="268459338">
+        <functionEntry accessMode="public" endPc="268459421" name="chunk8" parent="RomData" startPc="268459406">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459369" name="chunk45" parent="RomData" startPc="268459354">
+        <functionEntry accessMode="public" endPc="268459437" name="chunk45" parent="RomData" startPc="268459422">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459385" name="chunk9" parent="RomData" startPc="268459370">
+        <functionEntry accessMode="public" endPc="268459453" name="chunk9" parent="RomData" startPc="268459438">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459401" name="chunk40" parent="RomData" startPc="268459386">
+        <functionEntry accessMode="public" endPc="268459469" name="chunk40" parent="RomData" startPc="268459454">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459417" name="chunk42" parent="RomData" startPc="268459402">
+        <functionEntry accessMode="public" endPc="268459485" name="chunk42" parent="RomData" startPc="268459470">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459433" name="chunk41" parent="RomData" startPc="268459418">
+        <functionEntry accessMode="public" endPc="268459501" name="chunk41" parent="RomData" startPc="268459486">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459449" name="chunk48" parent="RomData" startPc="268459434">
+        <functionEntry accessMode="public" endPc="268459517" name="chunk48" parent="RomData" startPc="268459502">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459465" name="chunk47" parent="RomData" startPc="268459450">
+        <functionEntry accessMode="public" endPc="268459533" name="chunk47" parent="RomData" startPc="268459518">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459481" name="chunk49" parent="RomData" startPc="268459466">
+        <functionEntry accessMode="public" endPc="268459549" name="chunk49" parent="RomData" startPc="268459534">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459497" name="chunk33" parent="RomData" startPc="268459482">
+        <functionEntry accessMode="public" endPc="268459565" name="chunk33" parent="RomData" startPc="268459550">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459513" name="chunk32" parent="RomData" startPc="268459498">
+        <functionEntry accessMode="public" endPc="268459581" name="chunk32" parent="RomData" startPc="268459566">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459529" name="chunk35" parent="RomData" startPc="268459514">
+        <functionEntry accessMode="public" endPc="268459597" name="chunk35" parent="RomData" startPc="268459582">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459545" name="chunk34" parent="RomData" startPc="268459530">
+        <functionEntry accessMode="public" endPc="268459613" name="chunk34" parent="RomData" startPc="268459598">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459561" name="chunk31" parent="RomData" startPc="268459546">
+        <functionEntry accessMode="public" endPc="268459629" name="chunk31" parent="RomData" startPc="268459614">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459577" name="chunk30" parent="RomData" startPc="268459562">
+        <functionEntry accessMode="public" endPc="268459645" name="chunk30" parent="RomData" startPc="268459630">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459593" name="chunk37" parent="RomData" startPc="268459578">
+        <functionEntry accessMode="public" endPc="268459661" name="chunk37" parent="RomData" startPc="268459646">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459609" name="chunk36" parent="RomData" startPc="268459594">
+        <functionEntry accessMode="public" endPc="268459677" name="chunk36" parent="RomData" startPc="268459662">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459625" name="chunk39" parent="RomData" startPc="268459610">
+        <functionEntry accessMode="public" endPc="268459693" name="chunk39" parent="RomData" startPc="268459678">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459641" name="chunk38" parent="RomData" startPc="268459626">
+        <functionEntry accessMode="public" endPc="268459709" name="chunk38" parent="RomData" startPc="268459694">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459657" name="chunk60" parent="RomData" startPc="268459642">
+        <functionEntry accessMode="public" endPc="268459725" name="chunk60" parent="RomData" startPc="268459710">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459673" name="chunk22" parent="RomData" startPc="268459658">
+        <functionEntry accessMode="public" endPc="268459741" name="chunk22" parent="RomData" startPc="268459726">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459689" name="chunk21" parent="RomData" startPc="268459674">
+        <functionEntry accessMode="public" endPc="268459757" name="chunk21" parent="RomData" startPc="268459742">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459705" name="chunk24" parent="RomData" startPc="268459690">
+        <functionEntry accessMode="public" endPc="268459773" name="chunk24" parent="RomData" startPc="268459758">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459721" name="chunk23" parent="RomData" startPc="268459706">
+        <functionEntry accessMode="public" endPc="268459789" name="chunk23" parent="RomData" startPc="268459774">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459737" name="chunk62" parent="RomData" startPc="268459722">
+        <functionEntry accessMode="public" endPc="268459805" name="chunk62" parent="RomData" startPc="268459790">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459753" name="chunk61" parent="RomData" startPc="268459738">
+        <functionEntry accessMode="public" endPc="268459821" name="chunk61" parent="RomData" startPc="268459806">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459769" name="chunk20" parent="RomData" startPc="268459754">
+        <functionEntry accessMode="public" endPc="268459837" name="chunk20" parent="RomData" startPc="268459822">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459785" name="chunk63" parent="RomData" startPc="268459770">
+        <functionEntry accessMode="public" endPc="268459853" name="chunk63" parent="RomData" startPc="268459838">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459801" name="chunk29" parent="RomData" startPc="268459786">
+        <functionEntry accessMode="public" endPc="268459869" name="chunk29" parent="RomData" startPc="268459854">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459817" name="chunk26" parent="RomData" startPc="268459802">
+        <functionEntry accessMode="public" endPc="268459885" name="chunk26" parent="RomData" startPc="268459870">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459833" name="chunk25" parent="RomData" startPc="268459818">
+        <functionEntry accessMode="public" endPc="268459901" name="chunk25" parent="RomData" startPc="268459886">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459849" name="chunk28" parent="RomData" startPc="268459834">
+        <functionEntry accessMode="public" endPc="268459917" name="chunk28" parent="RomData" startPc="268459902">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459865" name="chunk27" parent="RomData" startPc="268459850">
+        <functionEntry accessMode="public" endPc="268459933" name="chunk27" parent="RomData" startPc="268459918">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459881" name="chunk11" parent="RomData" startPc="268459866">
+        <functionEntry accessMode="public" endPc="268459949" name="chunk11" parent="RomData" startPc="268459934">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459897" name="chunk55" parent="RomData" startPc="268459882">
+        <functionEntry accessMode="public" endPc="268459965" name="chunk55" parent="RomData" startPc="268459950">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459913" name="chunk10" parent="RomData" startPc="268459898">
+        <functionEntry accessMode="public" endPc="268459981" name="chunk10" parent="RomData" startPc="268459966">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459929" name="chunk54" parent="RomData" startPc="268459914">
+        <functionEntry accessMode="public" endPc="268459997" name="chunk54" parent="RomData" startPc="268459982">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459945" name="chunk13" parent="RomData" startPc="268459930">
+        <functionEntry accessMode="public" endPc="268460013" name="chunk13" parent="RomData" startPc="268459998">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459961" name="chunk57" parent="RomData" startPc="268459946">
+        <functionEntry accessMode="public" endPc="268460029" name="chunk57" parent="RomData" startPc="268460014">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459977" name="chunk12" parent="RomData" startPc="268459962">
+        <functionEntry accessMode="public" endPc="268460045" name="chunk12" parent="RomData" startPc="268460030">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268459993" name="chunk56" parent="RomData" startPc="268459978">
+        <functionEntry accessMode="public" endPc="268460061" name="chunk56" parent="RomData" startPc="268460046">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460009" name="chunk51" parent="RomData" startPc="268459994">
+        <functionEntry accessMode="public" endPc="268460077" name="chunk51" parent="RomData" startPc="268460062">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460025" name="chunk50" parent="RomData" startPc="268460010">
+        <functionEntry accessMode="public" endPc="268460093" name="chunk50" parent="RomData" startPc="268460078">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460041" name="chunk53" parent="RomData" startPc="268460026">
+        <functionEntry accessMode="public" endPc="268460109" name="chunk53" parent="RomData" startPc="268460094">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460057" name="chunk52" parent="RomData" startPc="268460042">
+        <functionEntry accessMode="public" endPc="268460125" name="chunk52" parent="RomData" startPc="268460110">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460073" name="chunk19" parent="RomData" startPc="268460058">
+        <functionEntry accessMode="public" endPc="268460141" name="chunk19" parent="RomData" startPc="268460126">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460089" name="chunk18" parent="RomData" startPc="268460074">
+        <functionEntry accessMode="public" endPc="268460157" name="chunk18" parent="RomData" startPc="268460142">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460105" name="chunk15" parent="RomData" startPc="268460090">
+        <functionEntry accessMode="public" endPc="268460173" name="chunk15" parent="RomData" startPc="268460158">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460121" name="chunk59" parent="RomData" startPc="268460106">
+        <functionEntry accessMode="public" endPc="268460189" name="chunk59" parent="RomData" startPc="268460174">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460137" name="chunk14" parent="RomData" startPc="268460122">
+        <functionEntry accessMode="public" endPc="268460205" name="chunk14" parent="RomData" startPc="268460190">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460153" name="chunk58" parent="RomData" startPc="268460138">
+        <functionEntry accessMode="public" endPc="268460221" name="chunk58" parent="RomData" startPc="268460206">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460169" name="chunk17" parent="RomData" startPc="268460154">
+        <functionEntry accessMode="public" endPc="268460237" name="chunk17" parent="RomData" startPc="268460222">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460185" name="chunk16" parent="RomData" startPc="268460170">
+        <functionEntry accessMode="public" endPc="268460253" name="chunk16" parent="RomData" startPc="268460238">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460208" name="onLayout" parent="GarminBoyView" startPc="268460186">
+        <functionEntry accessMode="public" name="onLayout" parent="GarminBoyView">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460232" name="initialize" parent="GarminBoyView" startPc="268460209">
+        <functionEntry accessMode="public" endPc="268460277" name="initialize" parent="GarminBoyView" startPc="268460254">
             <param id="emulator"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460546" name="onUpdate" parent="GarminBoyView" startPc="268460233">
+        <functionEntry accessMode="public" endPc="268460521" name="onUpdate" parent="GarminBoyView" startPc="268460278">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
