@@ -1,24 +1,24 @@
 using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Graphics;
-using Toybox.System as Sys;
 
 class GarminBoyView extends WatchUi.View {
     var _emulator;
+    var _bitmap = null;
 
-    // GB screen at 1x scale centered on 280×280 display
+    // GB screen centered on 280×280 display at 1× scale
     const OFFSET_X = 60;
     const OFFSET_Y = 68;
-
-    // Pixel block size: 4 = 40×36 sampled pixels drawn as 4×4 blocks.
-    // 5760 iterations × 4 colors = 1440 fillRectangle calls per frame.
-    const PIXEL_STEP = 4;
 
     function initialize(emulator) {
         View.initialize();
         _emulator = emulator;
     }
 
-    function onLayout(dc) {}
+    function onLayout(dc) {
+        // Allocate the off-screen buffer once — 160×144, drawn to RAM not display
+        var opts = {:width => 160, :height => 144};
+        _bitmap = Graphics.createBufferedBitmap(opts).get();
+    }
 
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
@@ -32,18 +32,22 @@ class GarminBoyView extends WatchUi.View {
 
         var fb      = _emulator.getFramebuffer();
         var palette = _emulator.getPalette();
-        var step    = PIXEL_STEP;
+        var bdc     = _bitmap.getDc();
 
+        // Draw into off-screen RAM buffer — one setColor + drawPoint per pixel group
         for (var c = 0; c < 4; c++) {
-            dc.setColor(palette[c], palette[c]);
-            for (var y = 0; y < 144; y += step) {
+            bdc.setColor(palette[c], palette[c]);
+            for (var y = 0; y < 144; y++) {
                 var lineBase = y * 160;
-                for (var x = 0; x < 160; x += step) {
+                for (var x = 0; x < 160; x++) {
                     if ((fb[lineBase + x] & 0x03) == c) {
-                        dc.fillRectangle(OFFSET_X + x, OFFSET_Y + y, step, step);
+                        bdc.drawPoint(x, y);
                     }
                 }
             }
         }
+
+        // Single hardware blit to screen — one call regardless of content
+        dc.drawBitmap(OFFSET_X, OFFSET_Y, _bitmap);
     }
 }

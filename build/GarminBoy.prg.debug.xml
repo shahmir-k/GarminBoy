@@ -5,7 +5,7 @@
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/build/gen/006-B4376-00/source/Rez.mcgen" id="1" lineNum="7" parent="globals/Rez" pc="268435457" symbol="&lt;init&gt;"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" id="2" lineNum="3" parent="globals/GarminBoyDelegate" pc="268435477" symbol="&lt;init&gt;"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyApp.mc" id="3" lineNum="6" parent="globals/GarminBoyApp" pc="268435489" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="4" lineNum="5" parent="globals/GarminBoyView" pc="268435501" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="4" lineNum="4" parent="globals/GarminBoyView" pc="268435501" symbol="&lt;init&gt;"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="20" parent="globals/Joypad" pc="268435513" symbol="read"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="22" parent="globals/Joypad" pc="268435516" symbol="read"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" id="5" lineNum="23" parent="globals/Joypad" pc="268435527" symbol="read"/>
@@ -1951,26 +1951,30 @@
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="159" lineNum="78" parent="globals/RomData" pc="268460232" symbol="chunk17"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="73" parent="globals/RomData" pc="268460238" symbol="chunk16"/>
         <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/RomData.mc" id="160" lineNum="74" parent="globals/RomData" pc="268460248" symbol="chunk16"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="16" parent="globals/GarminBoyView" pc="268460254" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="17" parent="globals/GarminBoyView" pc="268460256" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="18" parent="globals/GarminBoyView" pc="268460268" symbol="initialize"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="23" parent="globals/GarminBoyView" pc="268460278" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="24" parent="globals/GarminBoyView" pc="268460281" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="25" parent="globals/GarminBoyView" pc="268460293" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="27" parent="globals/GarminBoyView" pc="268460301" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="28" parent="globals/GarminBoyView" pc="268460315" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="29" parent="globals/GarminBoyView" pc="268460331" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="30" parent="globals/GarminBoyView" pc="268460356" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="33" parent="globals/GarminBoyView" pc="268460357" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="34" parent="globals/GarminBoyView" pc="268460370" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="35" parent="globals/GarminBoyView" pc="268460383" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="37" parent="globals/GarminBoyView" pc="268460387" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="38" parent="globals/GarminBoyView" pc="268460398" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="39" parent="globals/GarminBoyView" pc="268460418" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="40" parent="globals/GarminBoyView" pc="268460430" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="41" parent="globals/GarminBoyView" pc="268460438" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="42" parent="globals/GarminBoyView" pc="268460450" symbol="onUpdate"/>
-        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="43" parent="globals/GarminBoyView" pc="268460467" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="17" parent="globals/GarminBoyView" pc="268460254" symbol="onLayout"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="19" parent="globals/GarminBoyView" pc="268460257" symbol="onLayout"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="161" lineNum="20" parent="globals/GarminBoyView" pc="268460282" symbol="onLayout"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="12" parent="globals/GarminBoyView" pc="268460310" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="13" parent="globals/GarminBoyView" pc="268460312" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="162" lineNum="14" parent="globals/GarminBoyView" pc="268460324" symbol="initialize"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="23" parent="globals/GarminBoyView" pc="268460334" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="24" parent="globals/GarminBoyView" pc="268460337" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="25" parent="globals/GarminBoyView" pc="268460349" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="27" parent="globals/GarminBoyView" pc="268460357" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="28" parent="globals/GarminBoyView" pc="268460371" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="29" parent="globals/GarminBoyView" pc="268460387" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="30" parent="globals/GarminBoyView" pc="268460412" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="33" parent="globals/GarminBoyView" pc="268460413" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="34" parent="globals/GarminBoyView" pc="268460426" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="35" parent="globals/GarminBoyView" pc="268460439" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="38" parent="globals/GarminBoyView" pc="268460452" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="39" parent="globals/GarminBoyView" pc="268460463" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="40" parent="globals/GarminBoyView" pc="268460483" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="41" parent="globals/GarminBoyView" pc="268460495" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="42" parent="globals/GarminBoyView" pc="268460503" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="43" parent="globals/GarminBoyView" pc="268460515" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="44" parent="globals/GarminBoyView" pc="268460532" symbol="onUpdate"/>
+        <entry filename="/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" id="163" lineNum="51" parent="globals/GarminBoyView" pc="268460576" symbol="onUpdate"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="25" method="true" symbol="write"/>
@@ -1985,18 +1989,19 @@
         <entry id="56" method="true" symbol="orA"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="21" method="true" symbol="keyDown"/>
-        <entry field="true" id="237" symbol="RomChunk7"/>
-        <entry field="true" id="236" symbol="RomChunk6"/>
-        <entry field="true" id="235" symbol="RomChunk5"/>
-        <entry field="true" id="234" symbol="RomChunk4"/>
-        <entry field="true" id="233" symbol="RomChunk3"/>
-        <entry field="true" id="232" symbol="RomChunk2"/>
-        <entry field="true" id="231" symbol="RomChunk1"/>
-        <entry field="true" id="230" symbol="RomChunk0"/>
+        <entry field="true" id="238" symbol="RomChunk7"/>
+        <entry field="true" id="237" symbol="RomChunk6"/>
+        <entry field="true" id="236" symbol="RomChunk5"/>
+        <entry field="true" id="235" symbol="RomChunk4"/>
+        <entry field="true" id="234" symbol="RomChunk3"/>
+        <entry field="true" id="233" symbol="RomChunk2"/>
+        <entry field="true" id="232" symbol="RomChunk1"/>
+        <entry field="true" id="231" symbol="RomChunk0"/>
         <entry field="true" id="145" symbol="_timaCycles"/>
         <entry field="true" id="23" symbol="pressedKeys"/>
         <entry id="17" module="true" symbol="RomData"/>
         <entry id="84" method="true" symbol="xorA"/>
+        <entry field="true" id="228" symbol="_bitmap"/>
         <entry field="true" id="89" symbol="_tickCount"/>
         <entry id="12" object="true" symbol="Interrupts"/>
         <entry id="111" method="true" symbol="renderBgLine"/>
@@ -2017,7 +2022,7 @@
         <entry id="162" method="true" symbol="loadStep"/>
         <entry field="true" id="105" symbol="lcdc"/>
         <entry id="112" method="true" symbol="renderLine"/>
-        <entry field="true" id="229" symbol="AppName"/>
+        <entry field="true" id="230" symbol="AppName"/>
         <entry field="true" id="8389807" symbol="data"/>
         <entry id="72" method="true" symbol="regHL"/>
         <entry field="true" id="86" symbol="_loop"/>
@@ -2052,11 +2057,13 @@
         <entry id="51" method="true" symbol="decFlags"/>
         <entry field="true" id="79" symbol="sp"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="8389067" symbol="height"/>
         <entry id="82" method="true" symbol="writeReg16"/>
         <entry field="true" id="40" symbol="vram"/>
         <entry id="110" method="true" symbol="readReg"/>
         <entry field="true" id="57" symbol="pc"/>
         <entry id="83" method="true" symbol="writeReg8"/>
+        <entry field="true" id="8389066" symbol="width"/>
         <entry field="true" id="29" symbol="_sound"/>
         <entry id="47" method="true" symbol="addA"/>
         <entry field="true" id="106" symbol="ly"/>
@@ -2169,7 +2176,7 @@
         <entry id="53" method="true" symbol="handleInterrupts"/>
         <entry field="true" id="26" symbol="_gbTimer"/>
         <entry id="113" method="true" symbol="renderSpriteLine"/>
-        <entry field="true" id="228" symbol="LauncherIcon"/>
+        <entry field="true" id="229" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry field="true" id="45" symbol="_mem"/>
         <entry id="38" method="true" symbol="setSound"/>
@@ -2418,15 +2425,17 @@
         <entry endPc="268457267" name="ex" stackId="2" startPc="268457221"/>
         <entry endPc="268457442" name="i" stackId="3" startPc="268457413"/>
         <entry arg="true" endPc="268459186" name="i" stackId="1" startPc="268457467"/>
-        <entry arg="true" endPc="268460277" name="emulator" stackId="1" startPc="268460254"/>
-        <entry arg="true" endPc="268460521" name="dc" stackId="1" startPc="268460278"/>
-        <entry endPc="268460520" name="fb" stackId="2" startPc="268460281"/>
-        <entry endPc="268460520" name="palette" stackId="3" startPc="268460281"/>
-        <entry endPc="268460520" name="step" stackId="4" startPc="268460281"/>
-        <entry endPc="268460520" name="c" stackId="5" startPc="268460398"/>
-        <entry endPc="268460510" name="y" stackId="6" startPc="268460430"/>
-        <entry endPc="268460500" name="lineBase" stackId="7" startPc="268460430"/>
-        <entry endPc="268460500" name="x" stackId="8" startPc="268460450"/>
+        <entry arg="true" endPc="268460309" name="dc" stackId="1" startPc="268460254"/>
+        <entry endPc="268460308" name="opts" stackId="2" startPc="268460257"/>
+        <entry arg="true" endPc="268460333" name="emulator" stackId="1" startPc="268460310"/>
+        <entry arg="true" endPc="268460595" name="dc" stackId="1" startPc="268460334"/>
+        <entry endPc="268460594" name="fb" stackId="2" startPc="268460337"/>
+        <entry endPc="268460594" name="palette" stackId="3" startPc="268460337"/>
+        <entry endPc="268460594" name="bdc" stackId="4" startPc="268460337"/>
+        <entry endPc="268460575" name="c" stackId="5" startPc="268460463"/>
+        <entry endPc="268460565" name="y" stackId="6" startPc="268460495"/>
+        <entry endPc="268460555" name="lineBase" stackId="7" startPc="268460495"/>
+        <entry endPc="268460555" name="x" stackId="8" startPc="268460515"/>
     </localVars>
     <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4376-00"/>
     <annotations>
@@ -2457,8 +2466,8 @@
         <dataEntry label="globals/Rom" offset="2229" parentId="globals" symbolId="Rom" type="class"/>
         <dataEntry label="globals/RomData" offset="2327" parentId="globals" symbolId="RomData" type="module"/>
         <dataEntry label="globals/GarminBoyView" offset="2929" parentId="globals" symbolId="GarminBoyView" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="3000" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="3035" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="3009" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="3044" parentId="Rez" symbolId="Strings" type="module"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Joypad">
@@ -3049,15 +3058,15 @@
         <functionEntry accessMode="public" endPc="268460253" name="chunk16" parent="RomData" startPc="268460238">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" name="onLayout" parent="GarminBoyView">
+        <functionEntry accessMode="public" endPc="268460309" name="onLayout" parent="GarminBoyView" startPc="268460254">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460277" name="initialize" parent="GarminBoyView" startPc="268460254">
+        <functionEntry accessMode="public" endPc="268460333" name="initialize" parent="GarminBoyView" startPc="268460310">
             <param id="emulator"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268460521" name="onUpdate" parent="GarminBoyView" startPc="268460278">
+        <functionEntry accessMode="public" endPc="268460595" name="onUpdate" parent="GarminBoyView" startPc="268460334">
             <param id="dc"/>
             <documentation/>
         </functionEntry>

@@ -21,8 +21,8 @@ class Emulator {
     var _state = 0;  // STATE_LOADING
 
     // T-states per tick. Full GB frame = 70,224.
-    // Conservative start — raise toward 70224 once rendering is stable.
-    const CYCLES_PER_TICK = 4000;
+    // Conservative start — raise toward 70224 once confirmed stable on device.
+    const CYCLES_PER_TICK = 8000;
 
     // Force a view update every N ticks even if no VBlank fired,
     // so the framebuffer is visible in the simulator.
