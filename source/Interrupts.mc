@@ -1,34 +1,33 @@
-using Toybox.System as Sys;
+// Module-level interrupt bit constants — accessible everywhere without an instance
+const INT_VBLANK = 0x01;
+const INT_STAT   = 0x02;
+const INT_TIMER  = 0x04;
+const INT_SERIAL = 0x08;
+const INT_JOYPAD = 0x10;
 
 class Interrupts {
-    var io_if as Number = 0;
-    var io_ie as Number = 0;
-
-    const INT_VBLANK = 0x01;
-    const INT_STAT   = 0x02;
-    const INT_TIMER  = 0x04;
-    const INT_SERIAL = 0x08;
-    const INT_JOYPAD = 0x10;
+    var io_if = 0;
+    var io_ie = 0;
 
     function initialize() {}
 
-    function request(bit as Number) as Void {
+    function request(bit) {
         io_if |= bit;
     }
 
-    function ifRead() as Number {
+    function ifRead() {
         return (io_if & 0x1F) | 0xE0;
     }
 
-    function ifWrite(val as Number) as Void {
+    function ifWrite(val) {
         io_if = val & 0x1F;
     }
 
-    function ieRead() as Number {
+    function ieRead() {
         return io_ie;
     }
 
-    function ieWrite(val as Number) as Void {
+    function ieWrite(val) {
         io_ie = val & 0xFF;
     }
 }

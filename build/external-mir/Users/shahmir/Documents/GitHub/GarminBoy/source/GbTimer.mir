@@ -1,0 +1,371 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 4; @symbol_classdef = [GbTimer,4,6,13]; ]
+class GbTimer {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 4; ]
+    <init> {
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 22 8 ]
+        %tmp.1 = newa 4;
+        %tmp.2 = 1024;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 16;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 64;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = 256;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        putv self :TIMA_THRESHOLDS %tmp.13;
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 5; @position = 8; @symbol_vardef = [div,5,8,11]; ]
+    var div = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 6; @position = 8; @symbol_vardef = [tima,6,8,12]; ]
+    var tima = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 7; @position = 8; @symbol_vardef = [tma,7,8,11]; ]
+    var tma = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 8; @position = 8; @symbol_vardef = [tac,8,8,11]; ]
+    var tac = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 10; @position = 8; @symbol_vardef = [_divCycles,10,8,18]; ]
+    var _divCycles = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 11; @position = 8; @symbol_vardef = [_timaCycles,11,8,19]; ]
+    var _timaCycles = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 12; @position = 8; @symbol_vardef = [_timaThreshold,12,8,22]; ]
+    var _timaThreshold = 1024;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 14; @position = 8; @symbol_vardef = [_interrupts,14,8,19]; ]
+    var _interrupts;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 22; @position = 8; @symbol_vardef = [TIMA_THRESHOLDS,22,8,23]; ]
+    var TIMA_THRESHOLDS;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 24; @symbol_functiondef = [initialize,24,13,23]; @symbol_param<0> = [interrupts,24,24,34]; ]
+    function initialize(interrupts) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_24_36_26_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 25 8 ]
+        %tmp.1 = lgetv %interrupts;
+        symbol [ interrupts %tmp.1 25 22 32 ];
+        symbol [ _interrupts ? 25 8 19 ];
+        putv self :_interrupts %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_24_36_26_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 28; @symbol_functiondef = [start,28,13,18]; ]
+    function start() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_28_21_36_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 29 8 ]
+        %tmp.1 = 0;
+        symbol [ div ? 29 8 11 ];
+        putv self :div %tmp.1;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 30 8 ]
+        %tmp.2 = 0;
+        symbol [ tima ? 30 8 12 ];
+        putv self :tima %tmp.2;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 31 8 ]
+        %tmp.3 = 0;
+        symbol [ tma ? 31 8 11 ];
+        putv self :tma %tmp.3;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 32 8 ]
+        %tmp.4 = 0;
+        symbol [ tac ? 32 8 11 ];
+        putv self :tac %tmp.4;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 33 8 ]
+        %tmp.5 = 0;
+        symbol [ _divCycles ? 33 8 18 ];
+        putv self :_divCycles %tmp.5;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 34 8 ]
+        %tmp.6 = 0;
+        symbol [ _timaCycles ? 34 8 19 ];
+        putv self :_timaCycles %tmp.6;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 35 8 ]
+        %tmp.7 = 1024;
+        symbol [ _timaThreshold ? 35 8 22 ];
+        putv self :_timaThreshold %tmp.7;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_28_21_36_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 38; @symbol_functiondef = [cycle,38,13,18]; @symbol_param<0> = [tStates,38,19,26]; ]
+    function cycle(tStates) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_38_28_57_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 40 8 ]
+        symbol [ _divCycles %tmp.1 40 8 18 ];
+        %tmp.1 = getv self :_divCycles;
+        %tmp.2 = lgetv %tStates;
+        symbol [ tStates %tmp.2 40 22 29 ];
+        %tmp.3 = add %tmp.1 %tmp.2;
+        symbol [ _divCycles ? 40 8 18 ];
+        putv self :_divCycles dup %tmp.3;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 41 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_8_44_8_if_stmt:
+        symbol [ _divCycles %tmp.5 41 12 22 ];
+        %tmp.5 = getv ? :_divCycles;
+        %tmp.6 = 256;
+        %tmp.7 = gte %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_8_44_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_8_44_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_31_44_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 42 12 ]
+        symbol [ _divCycles %tmp.8 42 12 22 ];
+        %tmp.8 = getv self :_divCycles;
+        %tmp.9 = 256;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        symbol [ _divCycles ? 42 12 22 ];
+        putv self :_divCycles dup %tmp.10;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 43 12 ]
+        symbol [ div %tmp.12 43 19 22 ];
+        %tmp.12 = getv ? :div;
+        %tmp.13 = 1;
+        %tmp.14 = add %tmp.12 %tmp.13;
+        %tmp.15 = 0xFF;
+        %tmp.16 = bitand %tmp.14 %tmp.15;
+        symbol [ div ? 43 12 15 ];
+        putv self :div %tmp.16;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_31_44_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_8_44_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_41_8_44_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 46 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_8_46_41_if_stmt:
+        symbol [ tac %tmp.18 46 13 16 ];
+        %tmp.18 = getv ? :tac;
+        %tmp.19 = 0x04;
+        %tmp.20 = bitand %tmp.18 %tmp.19;
+        %tmp.21 = 0;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_8_46_41_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_8_46_41_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_31_46_41_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 46 33 ]
+        ret ?;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_31_46_41_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_8_46_41_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_46_8_46_41_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 48 8 ]
+        symbol [ _timaCycles %tmp.23 48 8 19 ];
+        %tmp.23 = getv self :_timaCycles;
+        %tmp.24 = lgetv %tStates;
+        symbol [ tStates %tmp.24 48 23 30 ];
+        %tmp.25 = add %tmp.23 %tmp.24;
+        symbol [ _timaCycles ? 48 8 19 ];
+        putv self :_timaCycles dup %tmp.25;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 49 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_8_56_8_if_stmt:
+        symbol [ _timaCycles %tmp.27 49 12 23 ];
+        %tmp.27 = getv ? :_timaCycles;
+        symbol [ _timaThreshold %tmp.29 49 27 41 ];
+        %tmp.29 = getv ? :_timaThreshold;
+        %tmp.30 = gte %tmp.27 %tmp.29;
+        bf %tmp.30 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_8_56_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_8_56_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_43_56_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 50 12 ]
+        symbol [ _timaCycles %tmp.31 50 12 23 ];
+        %tmp.31 = getv self :_timaCycles;
+        symbol [ _timaThreshold %tmp.33 50 27 41 ];
+        %tmp.33 = getv ? :_timaThreshold;
+        %tmp.34 = sub %tmp.31 %tmp.33;
+        symbol [ _timaCycles ? 50 12 23 ];
+        putv self :_timaCycles dup %tmp.34;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 51 12 ]
+        symbol [ tima %tmp.36 51 20 24 ];
+        %tmp.36 = getv ? :tima;
+        %tmp.37 = 1;
+        %tmp.38 = add %tmp.36 %tmp.37;
+        %tmp.39 = 0xFF;
+        %tmp.40 = bitand %tmp.38 %tmp.39;
+        symbol [ tima ? 51 12 16 ];
+        putv self :tima %tmp.40;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 52 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_12_55_12_if_stmt:
+        symbol [ tima %tmp.42 52 16 20 ];
+        %tmp.42 = getv ? :tima;
+        %tmp.43 = 0;
+        %tmp.44 = eq %tmp.42 %tmp.43;
+        bf %tmp.44 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_12_55_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_12_55_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_27_55_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 53 16 ]
+        symbol [ tma %tmp.46 53 23 26 ];
+        %tmp.46 = getv ? :tma;
+        symbol [ tima ? 53 16 20 ];
+        putv self :tima %tmp.46;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 54 16 ]
+        symbol [ _interrupts %tmp.48 54 16 27 ];
+        %tmp.48 = getv ? :_interrupts;
+        symbol [ request %tmp.49 54 28 35 ];
+        %tmp.49 = getv function %tmp.48 :request;
+        symbol [ INT_TIMER %tmp.51 54 36 45 ];
+        %tmp.51 = getv ? :INT_TIMER;
+        invoke %tmp.48 %tmp.49(%tmp.51);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_27_55_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_12_55_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_52_12_55_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_43_56_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_8_56_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_49_8_56_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_38_28_57_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 59; @symbol_functiondef = [read,59,13,17]; @symbol_param<0> = [addr,59,18,22]; ]
+    function read(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_59_24_67_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 60 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 60 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 61 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF04;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_61_12_61_43_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 62 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF05;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_62_12_62_43_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 63 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF06;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_63_12_63_43_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 64 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF07;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_64_12_64_43_switchCase;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_61_12_61_43_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 61 25 ]
+        symbol [ div %tmp.19 61 32 35 ];
+        %tmp.19 = getv ? :div;
+        %tmp.20 = 0xFF;
+        %tmp.21 = bitand %tmp.19 %tmp.20;
+        ret %tmp.21;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_62_12_62_43_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 62 25 ]
+        symbol [ tima %tmp.23 62 32 36 ];
+        %tmp.23 = getv ? :tima;
+        %tmp.24 = 0xFF;
+        %tmp.25 = bitand %tmp.23 %tmp.24;
+        ret %tmp.25;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_63_12_63_43_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 63 25 ]
+        symbol [ tma %tmp.27 63 32 35 ];
+        %tmp.27 = getv ? :tma;
+        %tmp.28 = 0xFF;
+        %tmp.29 = bitand %tmp.27 %tmp.28;
+        ret %tmp.29;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_64_12_64_43_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 64 25 ]
+        symbol [ tac %tmp.31 64 32 35 ];
+        %tmp.31 = getv ? :tac;
+        %tmp.32 = 0xFF;
+        %tmp.33 = bitand %tmp.31 %tmp.32;
+        ret %tmp.33;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_defaultCodeBegin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_60_8_65_8_switchStmtEnd:
+        pop;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 66 8 ]
+        %tmp.34 = 0xFF;
+        ret %tmp.34;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_59_24_67_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 69; @symbol_functiondef = [write,69,13,18]; @symbol_param<0> = [addr,69,19,23]; @symbol_param<1> = [val,69,25,28]; ]
+    function write(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_69_30_86_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 70 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 70 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 71 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF04;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_71_12_74_21_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 75 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF05;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_75_12_77_21_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 78 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF06;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_78_12_80_21_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 81 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF07;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_81_12_84_21_switchCase;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_71_12_74_21_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 72 16 ]
+        %tmp.18 = 0;
+        symbol [ div ? 72 16 19 ];
+        putv self :div %tmp.18;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 73 16 ]
+        %tmp.19 = 0;
+        symbol [ _divCycles ? 73 16 26 ];
+        putv self :_divCycles %tmp.19;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 74 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_75_12_77_21_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 76 16 ]
+        %tmp.20 = lgetv %val;
+        symbol [ val %tmp.20 76 23 26 ];
+        %tmp.21 = 0xFF;
+        %tmp.22 = bitand %tmp.20 %tmp.21;
+        symbol [ tima ? 76 16 20 ];
+        putv self :tima %tmp.22;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 77 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_78_12_80_21_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 79 16 ]
+        %tmp.23 = lgetv %val;
+        symbol [ val %tmp.23 79 22 25 ];
+        %tmp.24 = 0xFF;
+        %tmp.25 = bitand %tmp.23 %tmp.24;
+        symbol [ tma ? 79 16 19 ];
+        putv self :tma %tmp.25;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 80 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_81_12_84_21_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 82 16 ]
+        %tmp.26 = lgetv %val;
+        symbol [ val %tmp.26 82 22 25 ];
+        %tmp.27 = 0xFF;
+        %tmp.28 = bitand %tmp.26 %tmp.27;
+        symbol [ tac ? 82 16 19 ];
+        putv self :tac %tmp.28;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 83 16 ]
+        symbol [ TIMA_THRESHOLDS %tmp.30 83 33 48 ];
+        %tmp.30 = getv ? :TIMA_THRESHOLDS;
+        symbol [ tac %tmp.32 83 49 52 ];
+        %tmp.32 = getv ? :tac;
+        %tmp.33 = 0x03;
+        %tmp.34 = bitand %tmp.32 %tmp.33;
+        %tmp.35 = agetv %tmp.30 %tmp.34;
+        symbol [ _timaThreshold ? 83 16 30 ];
+        putv self :_timaThreshold %tmp.35;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc" 84 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_defaultCodeBegin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_70_8_85_8_switchStmtEnd:
+        pop;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GbTimer_mc_69_30_86_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GbTimer.mc"; @line = 4; ]
+<init> {
+}

@@ -1,24 +1,25 @@
 using Toybox.Timer as Timer;
 using Toybox.WatchUi as WatchUi;
 using Toybox.System as Sys;
+using Toybox.Lang as Lang;
 
 class Emulator {
-    var _mem        as Memory;
-    var _cpu        as Cpu;
-    var _ppu        as Ppu;
-    var _gbTimer    as GbTimer;
-    var _joypad     as Joypad;
-    var _sound      as Sound;
-    var _interrupts as Interrupts;
-    var _rom        as Rom;
-    var _loop       as Timer.Timer;
+    var _mem       ;
+    var _cpu       ;
+    var _ppu       ;
+    var _gbTimer   ;
+    var _joypad    ;
+    var _sound     ;
+    var _interrupts;
+    var _rom       ;
+    var _loop      ;
 
     // T-states per 16ms tick ≈ one GB frame (70224 T-states per frame)
     const CYCLES_PER_TICK = 70224;
 
     function initialize() {}
 
-    function init() as Void {
+    function init() {
         _interrupts = new Interrupts();
         _rom        = new Rom();
         _sound      = new Sound();
@@ -39,10 +40,11 @@ class Emulator {
         _cpu.start();
 
         _loop = new Timer.Timer();
-        _loop.start(method(:tick), 16, true);
+        var cb = method(:tick);
+        _loop.start(cb, 16, true);
     }
 
-    function tick() as Void {
+    function tick() {
         var cyclesLeft = CYCLES_PER_TICK;
         while (cyclesLeft > 0) {
             var c = _cpu.step();
@@ -57,7 +59,7 @@ class Emulator {
         }
     }
 
-    function getJoypad() as Joypad    { return _joypad; }
-    function getFramebuffer() as ByteArray { return _ppu.framebuffer; }
-    function getPalette() as Array    { return _ppu.palette; }
+    function getJoypad()    { return _joypad; }
+    function getFramebuffer() { return _ppu.framebuffer; }
+    function getPalette()    { return _ppu.palette; }
 }

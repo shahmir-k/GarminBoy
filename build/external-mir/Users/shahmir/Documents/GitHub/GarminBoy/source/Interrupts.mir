@@ -1,0 +1,89 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 2; @position = 6; @symbol_constdef = [INT_VBLANK,2,6,16]; ]
+const INT_VBLANK = 0x01;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 3; @position = 6; @symbol_constdef = [INT_STAT,3,6,14]; ]
+const INT_STAT = 0x02;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 4; @position = 6; @symbol_constdef = [INT_TIMER,4,6,15]; ]
+const INT_TIMER = 0x04;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 5; @position = 6; @symbol_constdef = [INT_SERIAL,5,6,16]; ]
+const INT_SERIAL = 0x08;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 6; @position = 6; @symbol_constdef = [INT_JOYPAD,6,6,16]; ]
+const INT_JOYPAD = 0x10;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 8; @symbol_classdef = [Interrupts,8,6,16]; ]
+class Interrupts {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 9; @position = 8; @symbol_vardef = [io_if,9,8,13]; ]
+    var io_if = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 10; @position = 8; @symbol_vardef = [io_ie,10,8,13]; ]
+    var io_ie = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 14; @symbol_functiondef = [request,14,13,20]; @symbol_param<0> = [bit,14,21,24]; ]
+    function request(bit) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_14_26_16_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" 15 8 ]
+        symbol [ io_if %tmp.1 15 8 13 ];
+        %tmp.1 = getv self :io_if;
+        %tmp.2 = lgetv %bit;
+        symbol [ bit %tmp.2 15 17 20 ];
+        %tmp.3 = bitor %tmp.1 %tmp.2;
+        symbol [ io_if ? 15 8 13 ];
+        putv self :io_if dup %tmp.3;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_14_26_16_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 18; @symbol_functiondef = [ifRead,18,13,19]; ]
+    function ifRead() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_18_22_20_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" 19 8 ]
+        symbol [ io_if %tmp.2 19 16 21 ];
+        %tmp.2 = getv ? :io_if;
+        %tmp.3 = 0x1F;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = 0xE0;
+        %tmp.6 = bitor %tmp.4 %tmp.5;
+        ret %tmp.6;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_18_22_20_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 22; @symbol_functiondef = [ifWrite,22,13,20]; @symbol_param<0> = [val,22,21,24]; ]
+    function ifWrite(val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_22_26_24_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" 23 8 ]
+        %tmp.1 = lgetv %val;
+        symbol [ val %tmp.1 23 16 19 ];
+        %tmp.2 = 0x1F;
+        %tmp.3 = bitand %tmp.1 %tmp.2;
+        symbol [ io_if ? 23 8 13 ];
+        putv self :io_if %tmp.3;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_22_26_24_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 26; @symbol_functiondef = [ieRead,26,13,19]; ]
+    function ieRead() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_26_22_28_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" 27 8 ]
+        symbol [ io_ie %tmp.2 27 15 20 ];
+        %tmp.2 = getv ? :io_ie;
+        ret %tmp.2;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_26_22_28_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 30; @symbol_functiondef = [ieWrite,30,13,20]; @symbol_param<0> = [val,30,21,24]; ]
+    function ieWrite(val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_30_26_32_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc" 31 8 ]
+        %tmp.1 = lgetv %val;
+        symbol [ val %tmp.1 31 16 19 ];
+        %tmp.2 = 0xFF;
+        %tmp.3 = bitand %tmp.1 %tmp.2;
+        symbol [ io_ie ? 31 8 13 ];
+        putv self :io_ie %tmp.3;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Interrupts_mc_30_26_32_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Interrupts.mc"; @line = 2; ]
+<init> {
+}

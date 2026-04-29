@@ -1,0 +1,232 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 2; @position = 6; @symbol_constdef = [BUTTON_A,2,6,14]; ]
+const BUTTON_A = 0x01;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 3; @position = 6; @symbol_constdef = [BUTTON_B,3,6,14]; ]
+const BUTTON_B = 0x02;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 4; @position = 6; @symbol_constdef = [BUTTON_SELECT,4,6,19]; ]
+const BUTTON_SELECT = 0x04;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 5; @position = 6; @symbol_constdef = [BUTTON_START,5,6,18]; ]
+const BUTTON_START = 0x08;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 6; @position = 6; @symbol_constdef = [BUTTON_RIGHT,6,6,18]; ]
+const BUTTON_RIGHT = 0x10;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 7; @position = 6; @symbol_constdef = [BUTTON_LEFT,7,6,17]; ]
+const BUTTON_LEFT = 0x20;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 8; @position = 6; @symbol_constdef = [BUTTON_UP,8,6,15]; ]
+const BUTTON_UP = 0x40;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 9; @position = 6; @symbol_constdef = [BUTTON_DOWN,9,6,17]; ]
+const BUTTON_DOWN = 0x80;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 11; @symbol_classdef = [Joypad,11,6,12]; ]
+class Joypad {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 12; @position = 8; @symbol_vardef = [pressedKeys,12,8,19]; ]
+    var pressedKeys = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 13; @position = 8; @symbol_vardef = [_selection,13,8,18]; ]
+    var _selection = 2;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 14; @position = 8; @symbol_vardef = [_interrupts,14,8,19]; ]
+    var _interrupts;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; @symbol_param<0> = [interrupts,16,24,34]; ]
+    function initialize(interrupts) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_16_36_18_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 17 8 ]
+        %tmp.1 = lgetv %interrupts;
+        symbol [ interrupts %tmp.1 17 22 32 ];
+        symbol [ _interrupts ? 17 8 19 ];
+        putv self :_interrupts %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_16_36_18_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 20; @symbol_functiondef = [read,20,13,17]; ]
+    function read() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_20_20_30_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 21 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_20_20_30_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_20_20_30_4_stop" ]
+        %val.1 = local;
+        symbol [ val %val.1 21 12 15 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 22 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_stmt:
+        symbol [ _selection %tmp.2 22 12 22 ];
+        %tmp.2 = getv ? :_selection;
+        %tmp.3 = 1;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_29_24_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 23 12 ]
+        symbol [ pressedKeys %tmp.6 23 21 32 ];
+        %tmp.6 = getv ? :pressedKeys;
+        %tmp.7 = 4;
+        %tmp.8 = shr %tmp.6 %tmp.7;
+        %tmp.9 = compl %tmp.8;
+        %tmp.10 = 0x0F;
+        %tmp.11 = bitand %tmp.9 %tmp.10;
+        lputv %val.1 %tmp.11;
+        symbol [ val %val.1 23 12 15 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_29_24_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 24 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_stmt:
+        symbol [ _selection %tmp.13 24 19 29 ];
+        %tmp.13 = getv ? :_selection;
+        %tmp.14 = 0;
+        %tmp.15 = eq %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_36_26_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 25 12 ]
+        symbol [ pressedKeys %tmp.17 25 20 31 ];
+        %tmp.17 = getv ? :pressedKeys;
+        %tmp.18 = compl %tmp.17;
+        %tmp.19 = 0x0F;
+        %tmp.20 = bitand %tmp.18 %tmp.19;
+        lputv %val.1 %tmp.20;
+        symbol [ val %val.1 25 12 15 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_36_26_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_26_15_28_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 27 12 ]
+        %tmp.21 = 0x0F;
+        lputv %val.1 %tmp.21;
+        symbol [ val %val.1 27 12 15 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_26_15_28_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_24_15_28_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_22_8_28_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 29 8 ]
+        %tmp.22 = lgetv %val.1;
+        symbol [ val %tmp.22 29 15 18 ];
+        %tmp.23 = 0xFF;
+        %tmp.24 = bitand %tmp.22 %tmp.23;
+        ret %tmp.24;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_20_20_30_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 32; @symbol_functiondef = [write,32,13,18]; @symbol_param<0> = [val,32,19,22]; ]
+    function write(val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_32_24_43_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 33 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_32_24_43_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_32_24_43_4_stop" ]
+        %sel.1 = local;
+        symbol [ sel %sel.1 33 12 15 ];
+        %tmp.1 = lgetv %val;
+        symbol [ val %tmp.1 33 20 23 ];
+        %tmp.2 = compl %tmp.1;
+        %tmp.3 = 0x30;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        lputv %sel.1 %tmp.4;
+        symbol [ sel %sel.1 33 12 15 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 34 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_12_34_34_begin:
+        %tmp.5 = lgetv %sel.1;
+        symbol [ sel %tmp.5 34 12 15 ];
+        %tmp.6 = 0x30;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bt %tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_27_34_34_false:
+        %tmp.8 = lgetv %sel.1;
+        symbol [ sel %tmp.8 34 27 30 ];
+        %tmp.9 = 0;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_27_34_34_end:
+        %tmp.11 = phi [%tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_12_34_34_begin] [%tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_27_34_34_false] [%tmp.11 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_27_34_34_end];
+        bf %tmp.11 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_37_36_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 35 12 ]
+        %tmp.12 = 2;
+        symbol [ _selection ? 35 12 22 ];
+        putv self :_selection %tmp.12;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_37_36_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 36 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_stmt:
+        %tmp.13 = lgetv %sel.1;
+        symbol [ sel %tmp.13 36 20 23 ];
+        %tmp.14 = 0x20;
+        %tmp.15 = bitand %tmp.13 %tmp.14;
+        %tmp.16 = 0;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_38_38_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 37 12 ]
+        %tmp.18 = 0;
+        symbol [ _selection ? 37 12 22 ];
+        putv self :_selection %tmp.18;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_38_38_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 38 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_stmt:
+        %tmp.19 = lgetv %sel.1;
+        symbol [ sel %tmp.19 38 20 23 ];
+        %tmp.20 = 0x10;
+        %tmp.21 = bitand %tmp.19 %tmp.20;
+        %tmp.22 = 0;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        bf %tmp.23 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_38_40_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 39 12 ]
+        %tmp.24 = 1;
+        symbol [ _selection ? 39 12 22 ];
+        putv self :_selection %tmp.24;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_38_40_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_40_15_42_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 41 12 ]
+        %tmp.25 = 2;
+        symbol [ _selection ? 41 12 22 ];
+        putv self :_selection %tmp.25;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_40_15_42_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_38_15_42_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_36_15_42_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_34_8_42_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_32_24_43_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 45; @symbol_functiondef = [keyDown,45,13,20]; @symbol_param<0> = [gbKey,45,21,26]; ]
+    function keyDown(gbKey) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_45_28_48_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 46 8 ]
+        symbol [ pressedKeys %tmp.1 46 8 19 ];
+        %tmp.1 = getv self :pressedKeys;
+        %tmp.2 = lgetv %gbKey;
+        symbol [ gbKey %tmp.2 46 23 28 ];
+        %tmp.3 = bitor %tmp.1 %tmp.2;
+        symbol [ pressedKeys ? 46 8 19 ];
+        putv self :pressedKeys dup %tmp.3;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 47 8 ]
+        symbol [ _interrupts %tmp.5 47 8 19 ];
+        %tmp.5 = getv ? :_interrupts;
+        symbol [ request %tmp.6 47 20 27 ];
+        %tmp.6 = getv function %tmp.5 :request;
+        symbol [ INT_JOYPAD %tmp.8 47 28 38 ];
+        %tmp.8 = getv ? :INT_JOYPAD;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_45_28_48_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 50; @symbol_functiondef = [keyUp,50,13,18]; @symbol_param<0> = [gbKey,50,19,24]; ]
+    function keyUp(gbKey) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_50_26_52_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc" 51 8 ]
+        symbol [ pressedKeys %tmp.1 51 8 19 ];
+        %tmp.1 = getv self :pressedKeys;
+        %tmp.2 = lgetv %gbKey;
+        symbol [ gbKey %tmp.2 51 24 29 ];
+        %tmp.3 = compl %tmp.2;
+        %tmp.4 = bitand %tmp.1 %tmp.3;
+        symbol [ pressedKeys ? 51 8 19 ];
+        putv self :pressedKeys dup %tmp.4;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Joypad_mc_50_26_52_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Joypad.mc"; @line = 2; ]
+<init> {
+}

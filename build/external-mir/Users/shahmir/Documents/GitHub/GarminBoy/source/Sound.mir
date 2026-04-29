@@ -1,0 +1,701 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 4; @symbol_classdef = [Sound,4,6,11]; ]
+class Sound {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 5; @position = 8; @symbol_vardef = [nr10,5,8,12]; ]
+    var nr10 = 0x80;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 6; @position = 8; @symbol_vardef = [nr11,6,8,12]; ]
+    var nr11 = 0xBF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 7; @position = 8; @symbol_vardef = [nr12,7,8,12]; ]
+    var nr12 = 0xF3;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 8; @position = 8; @symbol_vardef = [nr13,8,8,12]; ]
+    var nr13 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 9; @position = 8; @symbol_vardef = [nr14,9,8,12]; ]
+    var nr14 = 0xBF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 10; @position = 8; @symbol_vardef = [nr21,10,8,12]; ]
+    var nr21 = 0x3F;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 11; @position = 8; @symbol_vardef = [nr22,11,8,12]; ]
+    var nr22 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 12; @position = 8; @symbol_vardef = [nr23,12,8,12]; ]
+    var nr23 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 13; @position = 8; @symbol_vardef = [nr24,13,8,12]; ]
+    var nr24 = 0xBF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 14; @position = 8; @symbol_vardef = [nr30,14,8,12]; ]
+    var nr30 = 0x7F;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 15; @position = 8; @symbol_vardef = [nr31,15,8,12]; ]
+    var nr31 = 0xFF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 16; @position = 8; @symbol_vardef = [nr32,16,8,12]; ]
+    var nr32 = 0x9F;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 17; @position = 8; @symbol_vardef = [nr33,17,8,12]; ]
+    var nr33 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 18; @position = 8; @symbol_vardef = [nr34,18,8,12]; ]
+    var nr34 = 0xBF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 19; @position = 8; @symbol_vardef = [nr41,19,8,12]; ]
+    var nr41 = 0xFF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 20; @position = 8; @symbol_vardef = [nr42,20,8,12]; ]
+    var nr42 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 21; @position = 8; @symbol_vardef = [nr43,21,8,12]; ]
+    var nr43 = 0x00;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 22; @position = 8; @symbol_vardef = [nr44,22,8,12]; ]
+    var nr44 = 0xBF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 23; @position = 8; @symbol_vardef = [nr50,23,8,12]; ]
+    var nr50 = 0x77;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 24; @position = 8; @symbol_vardef = [nr51,24,8,12]; ]
+    var nr51 = 0xF3;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 25; @position = 8; @symbol_vardef = [nr52,25,8,12]; ]
+    var nr52 = 0xF1;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 26; @position = 8; @symbol_vardef = [wav,26,8,11]; ]
+    var wav;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 28; @symbol_functiondef = [initialize,28,13,23]; ]
+    function initialize() as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_28_26_30_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 29 8 ]
+        %tmp.2 = 16;
+        %tmp.1 = newba %tmp.2;
+        symbol [ wav ? 29 8 11 ];
+        putv self :wav %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_28_26_30_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 32; @symbol_functiondef = [start,32,13,18]; ]
+    function start() {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 34; @symbol_functiondef = [read,34,13,17]; @symbol_param<0> = [addr,34,18,22]; ]
+    function read(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_34_24_62_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 35 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 35 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 36 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF10;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_36_12_36_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 37 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF11;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_37_12_37_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 38 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF12;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_38_12_38_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 39 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF13;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_39_12_39_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 40 12 ]
+        %tmp.18 = dup %tmp.1;
+        %tmp.19 = 0xFF14;
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_40_12_40_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 41 12 ]
+        %tmp.22 = dup %tmp.1;
+        %tmp.23 = 0xFF16;
+        %tmp.24 = getv function %tmp.22 :equals;
+        %tmp.25 = invoke %tmp.22 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_41_12_41_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 42 12 ]
+        %tmp.26 = dup %tmp.1;
+        %tmp.27 = 0xFF17;
+        %tmp.28 = getv function %tmp.26 :equals;
+        %tmp.29 = invoke %tmp.26 %tmp.28 (%tmp.27);
+        bt %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_42_12_42_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 43 12 ]
+        %tmp.30 = dup %tmp.1;
+        %tmp.31 = 0xFF18;
+        %tmp.32 = getv function %tmp.30 :equals;
+        %tmp.33 = invoke %tmp.30 %tmp.32 (%tmp.31);
+        bt %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_43_12_43_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 44 12 ]
+        %tmp.34 = dup %tmp.1;
+        %tmp.35 = 0xFF19;
+        %tmp.36 = getv function %tmp.34 :equals;
+        %tmp.37 = invoke %tmp.34 %tmp.36 (%tmp.35);
+        bt %tmp.37 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_44_12_44_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 45 12 ]
+        %tmp.38 = dup %tmp.1;
+        %tmp.39 = 0xFF1A;
+        %tmp.40 = getv function %tmp.38 :equals;
+        %tmp.41 = invoke %tmp.38 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_45_12_45_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 46 12 ]
+        %tmp.42 = dup %tmp.1;
+        %tmp.43 = 0xFF1B;
+        %tmp.44 = getv function %tmp.42 :equals;
+        %tmp.45 = invoke %tmp.42 %tmp.44 (%tmp.43);
+        bt %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_46_12_46_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 47 12 ]
+        %tmp.46 = dup %tmp.1;
+        %tmp.47 = 0xFF1C;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_47_12_47_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 48 12 ]
+        %tmp.50 = dup %tmp.1;
+        %tmp.51 = 0xFF1D;
+        %tmp.52 = getv function %tmp.50 :equals;
+        %tmp.53 = invoke %tmp.50 %tmp.52 (%tmp.51);
+        bt %tmp.53 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_48_12_48_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 49 12 ]
+        %tmp.54 = dup %tmp.1;
+        %tmp.55 = 0xFF1E;
+        %tmp.56 = getv function %tmp.54 :equals;
+        %tmp.57 = invoke %tmp.54 %tmp.56 (%tmp.55);
+        bt %tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_49_12_49_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 50 12 ]
+        %tmp.58 = dup %tmp.1;
+        %tmp.59 = 0xFF20;
+        %tmp.60 = getv function %tmp.58 :equals;
+        %tmp.61 = invoke %tmp.58 %tmp.60 (%tmp.59);
+        bt %tmp.61 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_50_12_50_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 51 12 ]
+        %tmp.62 = dup %tmp.1;
+        %tmp.63 = 0xFF21;
+        %tmp.64 = getv function %tmp.62 :equals;
+        %tmp.65 = invoke %tmp.62 %tmp.64 (%tmp.63);
+        bt %tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_51_12_51_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 52 12 ]
+        %tmp.66 = dup %tmp.1;
+        %tmp.67 = 0xFF22;
+        %tmp.68 = getv function %tmp.66 :equals;
+        %tmp.69 = invoke %tmp.66 %tmp.68 (%tmp.67);
+        bt %tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_52_12_52_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 53 12 ]
+        %tmp.70 = dup %tmp.1;
+        %tmp.71 = 0xFF23;
+        %tmp.72 = getv function %tmp.70 :equals;
+        %tmp.73 = invoke %tmp.70 %tmp.72 (%tmp.71);
+        bt %tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_53_12_53_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 54 12 ]
+        %tmp.74 = dup %tmp.1;
+        %tmp.75 = 0xFF24;
+        %tmp.76 = getv function %tmp.74 :equals;
+        %tmp.77 = invoke %tmp.74 %tmp.76 (%tmp.75);
+        bt %tmp.77 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_54_12_54_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 55 12 ]
+        %tmp.78 = dup %tmp.1;
+        %tmp.79 = 0xFF25;
+        %tmp.80 = getv function %tmp.78 :equals;
+        %tmp.81 = invoke %tmp.78 %tmp.80 (%tmp.79);
+        bt %tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_55_12_55_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 56 12 ]
+        %tmp.82 = dup %tmp.1;
+        %tmp.83 = 0xFF26;
+        %tmp.84 = getv function %tmp.82 :equals;
+        %tmp.85 = invoke %tmp.82 %tmp.84 (%tmp.83);
+        bt %tmp.85 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_56_12_56_36_switchCase;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_36_12_36_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 36 25 ]
+        symbol [ nr10 %tmp.87 36 32 36 ];
+        %tmp.87 = getv ? :nr10;
+        ret %tmp.87;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_37_12_37_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 37 25 ]
+        symbol [ nr11 %tmp.89 37 32 36 ];
+        %tmp.89 = getv ? :nr11;
+        ret %tmp.89;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_38_12_38_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 38 25 ]
+        symbol [ nr12 %tmp.91 38 32 36 ];
+        %tmp.91 = getv ? :nr12;
+        ret %tmp.91;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_39_12_39_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 39 25 ]
+        symbol [ nr13 %tmp.93 39 32 36 ];
+        %tmp.93 = getv ? :nr13;
+        ret %tmp.93;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_40_12_40_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 40 25 ]
+        symbol [ nr14 %tmp.95 40 32 36 ];
+        %tmp.95 = getv ? :nr14;
+        ret %tmp.95;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_41_12_41_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 41 25 ]
+        symbol [ nr21 %tmp.97 41 32 36 ];
+        %tmp.97 = getv ? :nr21;
+        ret %tmp.97;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_42_12_42_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 42 25 ]
+        symbol [ nr22 %tmp.99 42 32 36 ];
+        %tmp.99 = getv ? :nr22;
+        ret %tmp.99;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_43_12_43_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 43 25 ]
+        symbol [ nr23 %tmp.101 43 32 36 ];
+        %tmp.101 = getv ? :nr23;
+        ret %tmp.101;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_44_12_44_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 44 25 ]
+        symbol [ nr24 %tmp.103 44 32 36 ];
+        %tmp.103 = getv ? :nr24;
+        ret %tmp.103;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_45_12_45_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 45 25 ]
+        symbol [ nr30 %tmp.105 45 32 36 ];
+        %tmp.105 = getv ? :nr30;
+        ret %tmp.105;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_46_12_46_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 46 25 ]
+        symbol [ nr31 %tmp.107 46 32 36 ];
+        %tmp.107 = getv ? :nr31;
+        ret %tmp.107;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_47_12_47_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 47 25 ]
+        symbol [ nr32 %tmp.109 47 32 36 ];
+        %tmp.109 = getv ? :nr32;
+        ret %tmp.109;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_48_12_48_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 48 25 ]
+        symbol [ nr33 %tmp.111 48 32 36 ];
+        %tmp.111 = getv ? :nr33;
+        ret %tmp.111;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_49_12_49_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 49 25 ]
+        symbol [ nr34 %tmp.113 49 32 36 ];
+        %tmp.113 = getv ? :nr34;
+        ret %tmp.113;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_50_12_50_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 50 25 ]
+        symbol [ nr41 %tmp.115 50 32 36 ];
+        %tmp.115 = getv ? :nr41;
+        ret %tmp.115;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_51_12_51_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 51 25 ]
+        symbol [ nr42 %tmp.117 51 32 36 ];
+        %tmp.117 = getv ? :nr42;
+        ret %tmp.117;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_52_12_52_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 52 25 ]
+        symbol [ nr43 %tmp.119 52 32 36 ];
+        %tmp.119 = getv ? :nr43;
+        ret %tmp.119;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_53_12_53_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 53 25 ]
+        symbol [ nr44 %tmp.121 53 32 36 ];
+        %tmp.121 = getv ? :nr44;
+        ret %tmp.121;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_54_12_54_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 54 25 ]
+        symbol [ nr50 %tmp.123 54 32 36 ];
+        %tmp.123 = getv ? :nr50;
+        ret %tmp.123;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_55_12_55_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 55 25 ]
+        symbol [ nr51 %tmp.125 55 32 36 ];
+        %tmp.125 = getv ? :nr51;
+        ret %tmp.125;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_56_12_56_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 56 25 ]
+        symbol [ nr52 %tmp.127 56 32 36 ];
+        %tmp.127 = getv ? :nr52;
+        ret %tmp.127;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_defaultCodeBegin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_35_8_57_8_switchStmtEnd:
+        pop;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 58 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_12_58_38_begin:
+        %tmp.128 = lgetv %addr;
+        symbol [ addr %tmp.128 58 12 16 ];
+        %tmp.129 = 0xFF30;
+        %tmp.130 = gte %tmp.128 %tmp.129;
+        bf %tmp.130 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_30_58_38_true:
+        %tmp.131 = lgetv %addr;
+        symbol [ addr %tmp.131 58 30 34 ];
+        %tmp.132 = 0xFF3F;
+        %tmp.133 = lte %tmp.131 %tmp.132;
+        push %tmp.133;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_30_58_38_end:
+        %tmp.134 = phi [%tmp.130 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_12_58_38_begin] [%tmp.133 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_30_58_38_true] [%tmp.134 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_30_58_38_end];
+        bf %tmp.134 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_46_60_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 59 12 ]
+        symbol [ wav %tmp.136 59 19 22 ];
+        %tmp.136 = getv ? :wav;
+        %tmp.137 = lgetv %addr;
+        symbol [ addr %tmp.137 59 23 27 ];
+        %tmp.138 = 0xFF30;
+        %tmp.139 = sub %tmp.137 %tmp.138;
+        %tmp.140 = agetv %tmp.136 %tmp.139;
+        %tmp.141 = 0xFF;
+        %tmp.142 = bitand %tmp.140 %tmp.141;
+        ret %tmp.142;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_46_60_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_58_8_60_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 61 8 ]
+        %tmp.143 = 0xFF;
+        ret %tmp.143;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_34_24_62_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 64; @symbol_functiondef = [write,64,13,18]; @symbol_param<0> = [addr,64,19,23]; @symbol_param<1> = [val,64,25,28]; ]
+    function write(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_64_30_93_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 65 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 65 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 66 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF10;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_66_12_66_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 67 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF11;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_67_12_67_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 68 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF12;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_68_12_68_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 69 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF13;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_69_12_69_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 70 12 ]
+        %tmp.18 = dup %tmp.1;
+        %tmp.19 = 0xFF14;
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_70_12_70_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 71 12 ]
+        %tmp.22 = dup %tmp.1;
+        %tmp.23 = 0xFF16;
+        %tmp.24 = getv function %tmp.22 :equals;
+        %tmp.25 = invoke %tmp.22 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_71_12_71_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 72 12 ]
+        %tmp.26 = dup %tmp.1;
+        %tmp.27 = 0xFF17;
+        %tmp.28 = getv function %tmp.26 :equals;
+        %tmp.29 = invoke %tmp.26 %tmp.28 (%tmp.27);
+        bt %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_72_12_72_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 73 12 ]
+        %tmp.30 = dup %tmp.1;
+        %tmp.31 = 0xFF18;
+        %tmp.32 = getv function %tmp.30 :equals;
+        %tmp.33 = invoke %tmp.30 %tmp.32 (%tmp.31);
+        bt %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_73_12_73_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 74 12 ]
+        %tmp.34 = dup %tmp.1;
+        %tmp.35 = 0xFF19;
+        %tmp.36 = getv function %tmp.34 :equals;
+        %tmp.37 = invoke %tmp.34 %tmp.36 (%tmp.35);
+        bt %tmp.37 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_74_12_74_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 75 12 ]
+        %tmp.38 = dup %tmp.1;
+        %tmp.39 = 0xFF1A;
+        %tmp.40 = getv function %tmp.38 :equals;
+        %tmp.41 = invoke %tmp.38 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_75_12_75_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 76 12 ]
+        %tmp.42 = dup %tmp.1;
+        %tmp.43 = 0xFF1B;
+        %tmp.44 = getv function %tmp.42 :equals;
+        %tmp.45 = invoke %tmp.42 %tmp.44 (%tmp.43);
+        bt %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_76_12_76_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 77 12 ]
+        %tmp.46 = dup %tmp.1;
+        %tmp.47 = 0xFF1C;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_77_12_77_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 78 12 ]
+        %tmp.50 = dup %tmp.1;
+        %tmp.51 = 0xFF1D;
+        %tmp.52 = getv function %tmp.50 :equals;
+        %tmp.53 = invoke %tmp.50 %tmp.52 (%tmp.51);
+        bt %tmp.53 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_78_12_78_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 79 12 ]
+        %tmp.54 = dup %tmp.1;
+        %tmp.55 = 0xFF1E;
+        %tmp.56 = getv function %tmp.54 :equals;
+        %tmp.57 = invoke %tmp.54 %tmp.56 (%tmp.55);
+        bt %tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_79_12_79_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 80 12 ]
+        %tmp.58 = dup %tmp.1;
+        %tmp.59 = 0xFF20;
+        %tmp.60 = getv function %tmp.58 :equals;
+        %tmp.61 = invoke %tmp.58 %tmp.60 (%tmp.59);
+        bt %tmp.61 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_80_12_80_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 81 12 ]
+        %tmp.62 = dup %tmp.1;
+        %tmp.63 = 0xFF21;
+        %tmp.64 = getv function %tmp.62 :equals;
+        %tmp.65 = invoke %tmp.62 %tmp.64 (%tmp.63);
+        bt %tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_81_12_81_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 82 12 ]
+        %tmp.66 = dup %tmp.1;
+        %tmp.67 = 0xFF22;
+        %tmp.68 = getv function %tmp.66 :equals;
+        %tmp.69 = invoke %tmp.66 %tmp.68 (%tmp.67);
+        bt %tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_82_12_82_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 83 12 ]
+        %tmp.70 = dup %tmp.1;
+        %tmp.71 = 0xFF23;
+        %tmp.72 = getv function %tmp.70 :equals;
+        %tmp.73 = invoke %tmp.70 %tmp.72 (%tmp.71);
+        bt %tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_83_12_83_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 84 12 ]
+        %tmp.74 = dup %tmp.1;
+        %tmp.75 = 0xFF24;
+        %tmp.76 = getv function %tmp.74 :equals;
+        %tmp.77 = invoke %tmp.74 %tmp.76 (%tmp.75);
+        bt %tmp.77 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_84_12_84_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 85 12 ]
+        %tmp.78 = dup %tmp.1;
+        %tmp.79 = 0xFF25;
+        %tmp.80 = getv function %tmp.78 :equals;
+        %tmp.81 = invoke %tmp.78 %tmp.80 (%tmp.79);
+        bt %tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_85_12_85_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 86 12 ]
+        %tmp.82 = dup %tmp.1;
+        %tmp.83 = 0xFF26;
+        %tmp.84 = getv function %tmp.82 :equals;
+        %tmp.85 = invoke %tmp.82 %tmp.84 (%tmp.83);
+        bt %tmp.85 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_86_12_86_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 87 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_66_12_66_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 66 25 ]
+        %tmp.86 = lgetv %val;
+        symbol [ val %tmp.86 66 32 35 ];
+        symbol [ nr10 ? 66 25 29 ];
+        putv self :nr10 %tmp.86;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 66 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_67_12_67_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 67 25 ]
+        %tmp.87 = lgetv %val;
+        symbol [ val %tmp.87 67 32 35 ];
+        symbol [ nr11 ? 67 25 29 ];
+        putv self :nr11 %tmp.87;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 67 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_68_12_68_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 68 25 ]
+        %tmp.88 = lgetv %val;
+        symbol [ val %tmp.88 68 32 35 ];
+        symbol [ nr12 ? 68 25 29 ];
+        putv self :nr12 %tmp.88;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 68 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_69_12_69_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 69 25 ]
+        %tmp.89 = lgetv %val;
+        symbol [ val %tmp.89 69 32 35 ];
+        symbol [ nr13 ? 69 25 29 ];
+        putv self :nr13 %tmp.89;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 69 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_70_12_70_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 70 25 ]
+        %tmp.90 = lgetv %val;
+        symbol [ val %tmp.90 70 32 35 ];
+        symbol [ nr14 ? 70 25 29 ];
+        putv self :nr14 %tmp.90;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 70 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_71_12_71_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 71 25 ]
+        %tmp.91 = lgetv %val;
+        symbol [ val %tmp.91 71 32 35 ];
+        symbol [ nr21 ? 71 25 29 ];
+        putv self :nr21 %tmp.91;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 71 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_72_12_72_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 72 25 ]
+        %tmp.92 = lgetv %val;
+        symbol [ val %tmp.92 72 32 35 ];
+        symbol [ nr22 ? 72 25 29 ];
+        putv self :nr22 %tmp.92;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 72 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_73_12_73_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 73 25 ]
+        %tmp.93 = lgetv %val;
+        symbol [ val %tmp.93 73 32 35 ];
+        symbol [ nr23 ? 73 25 29 ];
+        putv self :nr23 %tmp.93;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 73 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_74_12_74_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 74 25 ]
+        %tmp.94 = lgetv %val;
+        symbol [ val %tmp.94 74 32 35 ];
+        symbol [ nr24 ? 74 25 29 ];
+        putv self :nr24 %tmp.94;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 74 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_75_12_75_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 75 25 ]
+        %tmp.95 = lgetv %val;
+        symbol [ val %tmp.95 75 32 35 ];
+        symbol [ nr30 ? 75 25 29 ];
+        putv self :nr30 %tmp.95;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 75 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_76_12_76_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 76 25 ]
+        %tmp.96 = lgetv %val;
+        symbol [ val %tmp.96 76 32 35 ];
+        symbol [ nr31 ? 76 25 29 ];
+        putv self :nr31 %tmp.96;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 76 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_77_12_77_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 77 25 ]
+        %tmp.97 = lgetv %val;
+        symbol [ val %tmp.97 77 32 35 ];
+        symbol [ nr32 ? 77 25 29 ];
+        putv self :nr32 %tmp.97;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 77 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_78_12_78_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 78 25 ]
+        %tmp.98 = lgetv %val;
+        symbol [ val %tmp.98 78 32 35 ];
+        symbol [ nr33 ? 78 25 29 ];
+        putv self :nr33 %tmp.98;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 78 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_79_12_79_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 79 25 ]
+        %tmp.99 = lgetv %val;
+        symbol [ val %tmp.99 79 32 35 ];
+        symbol [ nr34 ? 79 25 29 ];
+        putv self :nr34 %tmp.99;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 79 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_80_12_80_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 80 25 ]
+        %tmp.100 = lgetv %val;
+        symbol [ val %tmp.100 80 32 35 ];
+        symbol [ nr41 ? 80 25 29 ];
+        putv self :nr41 %tmp.100;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 80 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_81_12_81_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 81 25 ]
+        %tmp.101 = lgetv %val;
+        symbol [ val %tmp.101 81 32 35 ];
+        symbol [ nr42 ? 81 25 29 ];
+        putv self :nr42 %tmp.101;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 81 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_82_12_82_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 82 25 ]
+        %tmp.102 = lgetv %val;
+        symbol [ val %tmp.102 82 32 35 ];
+        symbol [ nr43 ? 82 25 29 ];
+        putv self :nr43 %tmp.102;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 82 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_83_12_83_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 83 25 ]
+        %tmp.103 = lgetv %val;
+        symbol [ val %tmp.103 83 32 35 ];
+        symbol [ nr44 ? 83 25 29 ];
+        putv self :nr44 %tmp.103;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 83 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_84_12_84_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 84 25 ]
+        %tmp.104 = lgetv %val;
+        symbol [ val %tmp.104 84 32 35 ];
+        symbol [ nr50 ? 84 25 29 ];
+        putv self :nr50 %tmp.104;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 84 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_85_12_85_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 85 25 ]
+        %tmp.105 = lgetv %val;
+        symbol [ val %tmp.105 85 32 35 ];
+        symbol [ nr51 ? 85 25 29 ];
+        putv self :nr51 %tmp.105;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 85 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_86_12_86_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 86 25 ]
+        %tmp.106 = lgetv %val;
+        symbol [ val %tmp.106 86 32 35 ];
+        symbol [ nr52 ? 86 25 29 ];
+        putv self :nr52 %tmp.106;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 86 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_87_12_91_21_switchCase:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_defaultCodeBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 88 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_20_88_46_begin:
+        %tmp.107 = lgetv %addr;
+        symbol [ addr %tmp.107 88 20 24 ];
+        %tmp.108 = 0xFF30;
+        %tmp.109 = gte %tmp.107 %tmp.108;
+        bf %tmp.109 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_38_88_46_true:
+        %tmp.110 = lgetv %addr;
+        symbol [ addr %tmp.110 88 38 42 ];
+        %tmp.111 = 0xFF3F;
+        %tmp.112 = lte %tmp.110 %tmp.111;
+        push %tmp.112;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_38_88_46_end:
+        %tmp.113 = phi [%tmp.109 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_20_88_46_begin] [%tmp.112 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_38_88_46_true] [%tmp.113 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_38_88_46_end];
+        bf %tmp.113 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_54_90_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 89 20 ]
+        symbol [ wav %tmp.114 89 20 23 ];
+        %tmp.114 = getv self :wav;
+        %tmp.115 = lgetv %val;
+        symbol [ val %tmp.115 89 41 44 ];
+        %tmp.116 = 0xFF;
+        %tmp.117 = bitand %tmp.115 %tmp.116;
+        %tmp.118 = lgetv %addr;
+        symbol [ addr %tmp.118 89 24 28 ];
+        %tmp.119 = 0xFF30;
+        %tmp.120 = sub %tmp.118 %tmp.119;
+        aputv %tmp.114 %tmp.120 %tmp.117;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_54_90_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_88_16_90_16_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc" 91 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_65_8_92_8_switchStmtEnd:
+        pop;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Sound_mc_64_30_93_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Sound.mc"; @line = 4; ]
+<init> {
+}

@@ -1,0 +1,372 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [WatchUi,1,24,31]; ]
+using Toybox.WatchUi as :WatchUi;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 7; @symbol_classdef = [Rom,7,6,9]; ]
+class Rom {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 8; @position = 8; @symbol_vardef = [data,8,8,12]; ]
+    var data;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; ]
+    function initialize() as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 11 8 ]
+        %tmp.2 = 32768;
+        %tmp.1 = newba %tmp.2;
+        symbol [ data ? 11 8 12 ];
+        putv self :data %tmp.1;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 13 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_stop" ]
+        %chunkIds.1 = local;
+        symbol [ chunkIds %chunkIds.1 13 12 20 ];
+        %tmp.3 = newa 8;
+        symbol [ Rez %tmp.5 14 12 15 ];
+        %tmp.5 = getv ? :Rez;
+        symbol [ Strings %tmp.6 14 16 23 ];
+        %tmp.6 = getv %tmp.5 :Strings;
+        symbol [ RomChunk0 %tmp.7 14 24 33 ];
+        %tmp.7 = getv %tmp.6 :RomChunk0;
+        %tmp.8 = dup %tmp.3;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        symbol [ Rez %tmp.11 15 12 15 ];
+        %tmp.11 = getv ? :Rez;
+        symbol [ Strings %tmp.12 15 16 23 ];
+        %tmp.12 = getv %tmp.11 :Strings;
+        symbol [ RomChunk1 %tmp.13 15 24 33 ];
+        %tmp.13 = getv %tmp.12 :RomChunk1;
+        %tmp.14 = dup %tmp.9;
+        %tmp.15 = aputv %tmp.14 1 %tmp.13;
+        symbol [ Rez %tmp.17 16 12 15 ];
+        %tmp.17 = getv ? :Rez;
+        symbol [ Strings %tmp.18 16 16 23 ];
+        %tmp.18 = getv %tmp.17 :Strings;
+        symbol [ RomChunk2 %tmp.19 16 24 33 ];
+        %tmp.19 = getv %tmp.18 :RomChunk2;
+        %tmp.20 = dup %tmp.15;
+        %tmp.21 = aputv %tmp.20 2 %tmp.19;
+        symbol [ Rez %tmp.23 17 12 15 ];
+        %tmp.23 = getv ? :Rez;
+        symbol [ Strings %tmp.24 17 16 23 ];
+        %tmp.24 = getv %tmp.23 :Strings;
+        symbol [ RomChunk3 %tmp.25 17 24 33 ];
+        %tmp.25 = getv %tmp.24 :RomChunk3;
+        %tmp.26 = dup %tmp.21;
+        %tmp.27 = aputv %tmp.26 3 %tmp.25;
+        symbol [ Rez %tmp.29 18 12 15 ];
+        %tmp.29 = getv ? :Rez;
+        symbol [ Strings %tmp.30 18 16 23 ];
+        %tmp.30 = getv %tmp.29 :Strings;
+        symbol [ RomChunk4 %tmp.31 18 24 33 ];
+        %tmp.31 = getv %tmp.30 :RomChunk4;
+        %tmp.32 = dup %tmp.27;
+        %tmp.33 = aputv %tmp.32 4 %tmp.31;
+        symbol [ Rez %tmp.35 19 12 15 ];
+        %tmp.35 = getv ? :Rez;
+        symbol [ Strings %tmp.36 19 16 23 ];
+        %tmp.36 = getv %tmp.35 :Strings;
+        symbol [ RomChunk5 %tmp.37 19 24 33 ];
+        %tmp.37 = getv %tmp.36 :RomChunk5;
+        %tmp.38 = dup %tmp.33;
+        %tmp.39 = aputv %tmp.38 5 %tmp.37;
+        symbol [ Rez %tmp.41 20 12 15 ];
+        %tmp.41 = getv ? :Rez;
+        symbol [ Strings %tmp.42 20 16 23 ];
+        %tmp.42 = getv %tmp.41 :Strings;
+        symbol [ RomChunk6 %tmp.43 20 24 33 ];
+        %tmp.43 = getv %tmp.42 :RomChunk6;
+        %tmp.44 = dup %tmp.39;
+        %tmp.45 = aputv %tmp.44 6 %tmp.43;
+        symbol [ Rez %tmp.47 21 12 15 ];
+        %tmp.47 = getv ? :Rez;
+        symbol [ Strings %tmp.48 21 16 23 ];
+        %tmp.48 = getv %tmp.47 :Strings;
+        symbol [ RomChunk7 %tmp.49 21 24 33 ];
+        %tmp.49 = getv %tmp.48 :RomChunk7;
+        %tmp.50 = dup %tmp.45;
+        %tmp.51 = aputv %tmp.50 7 %tmp.49;
+        lputv %chunkIds.1 %tmp.51;
+        symbol [ chunkIds %chunkIds.1 13 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 24 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_stop" ]
+        %offset.2 = local;
+        symbol [ offset %offset.2 24 12 18 ];
+        %tmp.52 = 0;
+        lputv %offset.2 %tmp.52;
+        symbol [ offset %offset.2 24 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 25 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 25 17 18 ];
+        %tmp.53 = 0;
+        lputv %i.3 %tmp.53;
+        symbol [ i %i.3 25 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_test:
+        %tmp.54 = lgetv %i.3;
+        symbol [ i %tmp.54 25 24 25 ];
+        %tmp.55 = 8;
+        %tmp.56 = lt %tmp.54 %tmp.55;
+        bf %tmp.56 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 26 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_stop" ]
+        %hex.4 = local;
+        symbol [ hex %hex.4 26 16 19 ];
+        symbol [ WatchUi %tmp.57 26 22 29 ];
+        %tmp.57 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.58 26 30 42 ];
+        %tmp.58 = getv function %tmp.57 :loadResource;
+        %tmp.59 = lgetv %chunkIds.1;
+        symbol [ chunkIds %tmp.59 26 43 51 ];
+        %tmp.60 = lgetv %i.3;
+        symbol [ i %tmp.60 26 52 53 ];
+        %tmp.61 = agetv %tmp.59 %tmp.60;
+        %tmp.62 = invoke %tmp.57 %tmp.58(%tmp.61);
+        lputv %hex.4 %tmp.62;
+        symbol [ hex %hex.4 26 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 27 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_stop" ]
+        %len.5 = local;
+        symbol [ len %len.5 27 16 19 ];
+        %tmp.63 = lgetv %hex.4;
+        symbol [ hex %tmp.63 27 22 25 ];
+        symbol [ length %tmp.64 27 26 32 ];
+        %tmp.64 = getv function %tmp.63 :length;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        lputv %len.5 %tmp.65;
+        symbol [ len %len.5 27 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 28 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_stop" ]
+        %j.6 = local;
+        symbol [ j %j.6 28 16 17 ];
+        %tmp.66 = 0;
+        lputv %j.6 %tmp.66;
+        symbol [ j %j.6 28 16 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 29 12 ]
+        while @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_test:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_19_29_39_begin:
+        %tmp.67 = lgetv %j.6;
+        symbol [ j %tmp.67 29 19 20 ];
+        %tmp.68 = lgetv %len.5;
+        symbol [ len %tmp.68 29 23 26 ];
+        %tmp.69 = lt %tmp.67 %tmp.68;
+        %tmp.70 = dup %tmp.69;
+        bf %tmp.70 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_30_29_39_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_30_29_39_true:
+        %tmp.71 = lgetv %offset.2;
+        symbol [ offset %tmp.71 29 30 36 ];
+        %tmp.72 = 32768;
+        %tmp.73 = lt %tmp.71 %tmp.72;
+        %tmp.74 = and %tmp.69 %tmp.73;
+        push %tmp.74;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_30_29_39_end:
+        %tmp.75 = phi [%tmp.70 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_19_29_39_begin] [%tmp.74 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_30_29_39_true] [%tmp.75 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_30_29_39_end];
+        bf %tmp.75 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 30 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_stop" ]
+        %hi.7 = local;
+        symbol [ hi %hi.7 30 20 22 ];
+        %tmp.76 = self;
+        symbol [ hexNibble %tmp.77 30 25 34 ];
+        %tmp.77 = getv function %tmp.76 :hexNibble;
+        %tmp.78 = lgetv %hex.4;
+        symbol [ hex %tmp.78 30 35 38 ];
+        symbol [ substring %tmp.79 30 39 48 ];
+        %tmp.79 = getv function %tmp.78 :substring;
+        %tmp.80 = lgetv %j.6;
+        symbol [ j %tmp.80 30 49 50 ];
+        %tmp.81 = lgetv %j.6;
+        symbol [ j %tmp.81 30 56 57 ];
+        %tmp.82 = 1;
+        %tmp.83 = add %tmp.81 %tmp.82;
+        %tmp.84 = invoke %tmp.78 %tmp.79(%tmp.80, %tmp.83);
+        %tmp.85 = invoke %tmp.76 %tmp.77(%tmp.84);
+        lputv %hi.7 %tmp.85;
+        symbol [ hi %hi.7 30 20 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 31 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_stop" ]
+        %lo.8 = local;
+        symbol [ lo %lo.8 31 20 22 ];
+        %tmp.86 = self;
+        symbol [ hexNibble %tmp.87 31 25 34 ];
+        %tmp.87 = getv function %tmp.86 :hexNibble;
+        %tmp.88 = lgetv %hex.4;
+        symbol [ hex %tmp.88 31 35 38 ];
+        symbol [ substring %tmp.89 31 39 48 ];
+        %tmp.89 = getv function %tmp.88 :substring;
+        %tmp.90 = lgetv %j.6;
+        symbol [ j %tmp.90 31 49 50 ];
+        %tmp.91 = 1;
+        %tmp.92 = add %tmp.90 %tmp.91;
+        %tmp.93 = lgetv %j.6;
+        symbol [ j %tmp.93 31 56 57 ];
+        %tmp.94 = 2;
+        %tmp.95 = add %tmp.93 %tmp.94;
+        %tmp.96 = invoke %tmp.88 %tmp.89(%tmp.92, %tmp.95);
+        %tmp.97 = invoke %tmp.86 %tmp.87(%tmp.96);
+        lputv %lo.8 %tmp.97;
+        symbol [ lo %lo.8 31 20 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 32 16 ]
+        symbol [ data %tmp.98 32 16 20 ];
+        %tmp.98 = getv self :data;
+        %tmp.99 = lgetv %hi.7;
+        symbol [ hi %tmp.99 32 33 35 ];
+        %tmp.100 = 4;
+        %tmp.101 = shl %tmp.99 %tmp.100;
+        %tmp.102 = lgetv %lo.8;
+        symbol [ lo %tmp.102 32 44 46 ];
+        %tmp.103 = bitor %tmp.101 %tmp.102;
+        %tmp.104 = 0xFF;
+        %tmp.105 = bitand %tmp.103 %tmp.104;
+        %tmp.106 = lgetv %offset.2;
+        symbol [ offset %tmp.106 32 21 27 ];
+        aputv %tmp.98 %tmp.106 %tmp.105;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 33 16 ]
+        %tmp.109 = lgetv %offset.2;
+        symbol [ offset %tmp.109 33 16 22 ];
+        %tmp.110 = add %tmp.109 1;
+        lputv %offset.2 %tmp.110;
+        symbol [ offset %offset.2 33 16 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 34 16 ]
+        %tmp.111 = lgetv %j.6;
+        symbol [ j %tmp.111 34 16 17 ];
+        %tmp.112 = 2;
+        %tmp.113 = add %tmp.111 %tmp.112;
+        lputv %j.6 %tmp.113;
+        symbol [ j %j.6 34 16 17 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_46_35_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_29_12_35_12_while_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_36_36_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 25 ]
+        %tmp.116 = lgetv %i.3;
+        symbol [ i %tmp.116 25 31 32 ];
+        %tmp.117 = add %tmp.116 1;
+        lputv %i.3 %tmp.117;
+        symbol [ i %i.3 25 31 32 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_25_8_36_8_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_10_26_37_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 40; @symbol_functiondef = [hexNibble,40,13,22]; @symbol_param<0> = [c,40,23,24]; ]
+    function hexNibble(c) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_40_26_46_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 41 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_40_26_46_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_40_26_46_4_stop" ]
+        %code.1 = local;
+        symbol [ code %code.1 41 12 16 ];
+        %tmp.1 = lgetv %c;
+        symbol [ c %tmp.1 41 19 20 ];
+        symbol [ toCharArray %tmp.2 41 21 32 ];
+        %tmp.2 = getv function %tmp.1 :toCharArray;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 0;
+        %tmp.5 = agetv %tmp.3 %tmp.4;
+        symbol [ toNumber %tmp.6 41 38 46 ];
+        %tmp.6 = getv function %tmp.5 :toNumber;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %code.1 %tmp.7;
+        symbol [ code %code.1 41 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 42 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_12_42_34_begin:
+        %tmp.8 = lgetv %code.1;
+        symbol [ code %tmp.8 42 12 16 ];
+        %tmp.9 = 48;
+        %tmp.10 = gte %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_26_42_34_true:
+        %tmp.11 = lgetv %code.1;
+        symbol [ code %tmp.11 42 26 30 ];
+        %tmp.12 = 57;
+        %tmp.13 = lte %tmp.11 %tmp.12;
+        push %tmp.13;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_26_42_34_end:
+        %tmp.14 = phi [%tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_12_42_34_begin] [%tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_26_42_34_true] [%tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_26_42_34_end];
+        bf %tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_39_42_59_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 42 41 ]
+        %tmp.15 = lgetv %code.1;
+        symbol [ code %tmp.15 42 48 52 ];
+        %tmp.16 = 48;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        ret %tmp.17;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_39_42_59_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_42_8_42_59_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 43 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_12_43_34_begin:
+        %tmp.18 = lgetv %code.1;
+        symbol [ code %tmp.18 43 12 16 ];
+        %tmp.19 = 65;
+        %tmp.20 = gte %tmp.18 %tmp.19;
+        bf %tmp.20 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_26_43_34_true:
+        %tmp.21 = lgetv %code.1;
+        symbol [ code %tmp.21 43 26 30 ];
+        %tmp.22 = 70;
+        %tmp.23 = lte %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_26_43_34_end:
+        %tmp.24 = phi [%tmp.20 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_12_43_34_begin] [%tmp.23 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_26_43_34_true] [%tmp.24 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_26_43_34_end];
+        bf %tmp.24 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_39_43_59_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 43 41 ]
+        %tmp.25 = lgetv %code.1;
+        symbol [ code %tmp.25 43 48 52 ];
+        %tmp.26 = 55;
+        %tmp.27 = sub %tmp.25 %tmp.26;
+        ret %tmp.27;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_39_43_59_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_43_8_43_59_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 44 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_12_44_34_begin:
+        %tmp.28 = lgetv %code.1;
+        symbol [ code %tmp.28 44 12 16 ];
+        %tmp.29 = 97;
+        %tmp.30 = gte %tmp.28 %tmp.29;
+        bf %tmp.30 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_26_44_34_true:
+        %tmp.31 = lgetv %code.1;
+        symbol [ code %tmp.31 44 26 30 ];
+        %tmp.32 = 102;
+        %tmp.33 = lte %tmp.31 %tmp.32;
+        push %tmp.33;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_26_44_34_end:
+        %tmp.34 = phi [%tmp.30 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_12_44_34_begin] [%tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_26_44_34_true] [%tmp.34 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_26_44_34_end];
+        bf %tmp.34 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_39_44_59_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 44 41 ]
+        %tmp.35 = lgetv %code.1;
+        symbol [ code %tmp.35 44 48 52 ];
+        %tmp.36 = 87;
+        %tmp.37 = sub %tmp.35 %tmp.36;
+        ret %tmp.37;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_39_44_59_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_44_8_44_59_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc" 45 8 ]
+        %tmp.38 = 0;
+        ret %tmp.38;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Rom_mc_40_26_46_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Rom.mc"; @line = 1; ]
+<init> {
+}

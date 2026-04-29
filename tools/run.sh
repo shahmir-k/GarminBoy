@@ -11,7 +11,7 @@ MONKEYDO="$SDK/bin/monkeydo"
 CONNECTIQ="$SDK/bin/connectiq"
 
 DEVICE="fenix7xpro"
-KEY="$HOME/.garmin/developer_key"
+KEY="$HOME/.garmin/developer_key.der"
 OUT="build/GarminBoy.prg"
 
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -29,8 +29,8 @@ echo "Building..."
     -f monkey.jungle \
     -d "$DEVICE" \
     -o "$OUT" \
-    --private-key "$KEY" \
-    -y "$SDK/bin/api.db" \
+    -y "$KEY" \
+    -l 0 \
     -r
 
 echo "Build OK → $OUT"
@@ -40,7 +40,7 @@ echo ""
 if ! pgrep -f "ConnectIQ.app" > /dev/null; then
     echo "Starting simulator..."
     open "$SDK/bin/ConnectIQ.app"
-    sleep 3
+    sleep 6
 fi
 
 # ── 3. Load app into simulator ───────────────────────────────────────────────

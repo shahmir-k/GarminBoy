@@ -2,36 +2,36 @@
 // All NR1x–NR5x and wave RAM registers are stored so ROM writes don't fault.
 
 class Sound {
-    var nr10 as Number = 0x80;
-    var nr11 as Number = 0xBF;
-    var nr12 as Number = 0xF3;
-    var nr13 as Number = 0x00;
-    var nr14 as Number = 0xBF;
-    var nr21 as Number = 0x3F;
-    var nr22 as Number = 0x00;
-    var nr23 as Number = 0x00;
-    var nr24 as Number = 0xBF;
-    var nr30 as Number = 0x7F;
-    var nr31 as Number = 0xFF;
-    var nr32 as Number = 0x9F;
-    var nr33 as Number = 0x00;
-    var nr34 as Number = 0xBF;
-    var nr41 as Number = 0xFF;
-    var nr42 as Number = 0x00;
-    var nr43 as Number = 0x00;
-    var nr44 as Number = 0xBF;
-    var nr50 as Number = 0x77;
-    var nr51 as Number = 0xF3;
-    var nr52 as Number = 0xF1;
-    var wav  as ByteArray;
+    var nr10 = 0x80;
+    var nr11 = 0xBF;
+    var nr12 = 0xF3;
+    var nr13 = 0x00;
+    var nr14 = 0xBF;
+    var nr21 = 0x3F;
+    var nr22 = 0x00;
+    var nr23 = 0x00;
+    var nr24 = 0xBF;
+    var nr30 = 0x7F;
+    var nr31 = 0xFF;
+    var nr32 = 0x9F;
+    var nr33 = 0x00;
+    var nr34 = 0xBF;
+    var nr41 = 0xFF;
+    var nr42 = 0x00;
+    var nr43 = 0x00;
+    var nr44 = 0xBF;
+    var nr50 = 0x77;
+    var nr51 = 0xF3;
+    var nr52 = 0xF1;
+    var wav ;
 
     function initialize() {
         wav = new [16]b;
     }
 
-    function start() as Void {}
+    function start() {}
 
-    function read(addr as Number) as Number {
+    function read(addr) {
         switch (addr) {
             case 0xFF10: return nr10;
             case 0xFF11: return nr11;
@@ -61,7 +61,7 @@ class Sound {
         return 0xFF;
     }
 
-    function write(addr as Number, val as Number) as Void {
+    function write(addr, val) {
         switch (addr) {
             case 0xFF10: nr10 = val; break;
             case 0xFF11: nr11 = val; break;

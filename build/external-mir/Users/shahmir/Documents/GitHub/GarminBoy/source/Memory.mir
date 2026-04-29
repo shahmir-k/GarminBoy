@@ -1,0 +1,1099 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [System,1,13,19]; @symbol_usingAlias = [Sys,1,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 3; @symbol_classdef = [Memory,3,6,12]; ]
+class Memory {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 4; @position = 8; @symbol_vardef = [rom,4,8,11]; ]
+    var rom;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 5; @position = 8; @symbol_vardef = [vram,5,8,12]; ]
+    var vram;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 6; @position = 8; @symbol_vardef = [wram,6,8,12]; ]
+    var wram;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 7; @position = 8; @symbol_vardef = [hram,7,8,12]; ]
+    var hram;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 8; @position = 8; @symbol_vardef = [oam,8,8,11]; ]
+    var oam;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 10; @position = 8; @symbol_vardef = [_interrupts,10,8,19]; ]
+    var _interrupts;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 11; @position = 8; @symbol_vardef = [_ppu,11,8,12]; ]
+    var _ppu;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 12; @position = 8; @symbol_vardef = [_gbTimer,12,8,16]; ]
+    var _gbTimer;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 13; @position = 8; @symbol_vardef = [_joypad,13,8,15]; ]
+    var _joypad;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 14; @position = 8; @symbol_vardef = [_sound,14,8,14]; ]
+    var _sound;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; @symbol_param<0> = [romData,16,24,31]; @symbol_param<1> = [interrupts,16,33,43]; ]
+    function initialize(romData, interrupts) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_16_45_23_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 17 8 ]
+        %tmp.1 = lgetv %romData;
+        symbol [ romData %tmp.1 17 15 22 ];
+        symbol [ rom ? 17 8 11 ];
+        putv self :rom %tmp.1;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 18 8 ]
+        %tmp.3 = 8192;
+        %tmp.2 = newba %tmp.3;
+        symbol [ vram ? 18 8 12 ];
+        putv self :vram %tmp.2;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 19 8 ]
+        %tmp.5 = 8192;
+        %tmp.4 = newba %tmp.5;
+        symbol [ wram ? 19 8 12 ];
+        putv self :wram %tmp.4;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 20 8 ]
+        %tmp.7 = 127;
+        %tmp.6 = newba %tmp.7;
+        symbol [ hram ? 20 8 12 ];
+        putv self :hram %tmp.6;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 21 8 ]
+        %tmp.9 = 160;
+        %tmp.8 = newba %tmp.9;
+        symbol [ oam ? 21 8 11 ];
+        putv self :oam %tmp.8;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 22 8 ]
+        %tmp.10 = lgetv %interrupts;
+        symbol [ interrupts %tmp.10 22 22 32 ];
+        symbol [ _interrupts ? 22 8 19 ];
+        putv self :_interrupts %tmp.10;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_16_45_23_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 25; @symbol_functiondef = [setPpu,25,13,19]; @symbol_param<0> = [ppu,25,20,23]; ]
+    function setPpu(ppu) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_25_32_25_46_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 25 34 ]
+        %tmp.1 = lgetv %ppu;
+        symbol [ ppu %tmp.1 25 41 44 ];
+        symbol [ _ppu ? 25 34 38 ];
+        putv self :_ppu %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_25_32_25_46_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 26; @symbol_functiondef = [setTimer,26,13,21]; @symbol_param<0> = [t,26,22,23]; ]
+    function setTimer(t) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_26_28_26_44_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 26 30 ]
+        %tmp.1 = lgetv %t;
+        symbol [ t %tmp.1 26 41 42 ];
+        symbol [ _gbTimer ? 26 30 38 ];
+        putv self :_gbTimer %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_26_28_26_44_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 27; @symbol_functiondef = [setJoypad,27,13,22]; @symbol_param<0> = [j,27,23,24]; ]
+    function setJoypad(j) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_27_29_27_44_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 27 31 ]
+        %tmp.1 = lgetv %j;
+        symbol [ j %tmp.1 27 41 42 ];
+        symbol [ _joypad ? 27 31 38 ];
+        putv self :_joypad %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_27_29_27_44_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 28; @symbol_functiondef = [setSound,28,13,21]; @symbol_param<0> = [s,28,22,23]; ]
+    function setSound(s) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_28_30_28_44_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 28 32 ]
+        %tmp.1 = lgetv %s;
+        symbol [ s %tmp.1 28 41 42 ];
+        symbol [ _sound ? 28 32 38 ];
+        putv self :_sound %tmp.1;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_28_30_28_44_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 30; @symbol_functiondef = [readByte,30,13,21]; @symbol_param<0> = [addr,30,22,26]; ]
+    function readByte(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_30_28_53_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 31 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 31 15 19 ];
+        %tmp.2 = 0xFFFF;
+        %tmp.3 = bitand %tmp.1 %tmp.2;
+        lputv %addr %tmp.3;
+        symbol [ addr %addr 31 8 12 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 32 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_stmt:
+        %tmp.4 = lgetv %addr;
+        symbol [ addr %tmp.4 32 12 16 ];
+        %tmp.5 = 0x7FFF;
+        %tmp.6 = lte %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_28_34_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 33 12 ]
+        symbol [ rom %tmp.8 33 19 22 ];
+        %tmp.8 = getv ? :rom;
+        %tmp.9 = lgetv %addr;
+        symbol [ addr %tmp.9 33 23 27 ];
+        %tmp.10 = agetv %tmp.8 %tmp.9;
+        %tmp.11 = 0xFF;
+        %tmp.12 = bitand %tmp.10 %tmp.11;
+        ret %tmp.12;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_28_34_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 34 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_stmt:
+        %tmp.13 = lgetv %addr;
+        symbol [ addr %tmp.13 34 19 23 ];
+        %tmp.14 = 0x9FFF;
+        %tmp.15 = lte %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_35_36_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 35 12 ]
+        symbol [ vram %tmp.17 35 19 23 ];
+        %tmp.17 = getv ? :vram;
+        %tmp.18 = lgetv %addr;
+        symbol [ addr %tmp.18 35 24 28 ];
+        %tmp.19 = 0x8000;
+        %tmp.20 = sub %tmp.18 %tmp.19;
+        %tmp.21 = agetv %tmp.17 %tmp.20;
+        %tmp.22 = 0xFF;
+        %tmp.23 = bitand %tmp.21 %tmp.22;
+        ret %tmp.23;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_35_36_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 36 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_stmt:
+        %tmp.24 = lgetv %addr;
+        symbol [ addr %tmp.24 36 19 23 ];
+        %tmp.25 = 0xBFFF;
+        %tmp.26 = lte %tmp.24 %tmp.25;
+        bf %tmp.26 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_35_38_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 37 12 ]
+        %tmp.27 = 0xFF;
+        ret %tmp.27;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_35_38_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 38 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_stmt:
+        %tmp.28 = lgetv %addr;
+        symbol [ addr %tmp.28 38 19 23 ];
+        %tmp.29 = 0xDFFF;
+        %tmp.30 = lte %tmp.28 %tmp.29;
+        bf %tmp.30 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_35_40_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 39 12 ]
+        symbol [ wram %tmp.32 39 19 23 ];
+        %tmp.32 = getv ? :wram;
+        %tmp.33 = lgetv %addr;
+        symbol [ addr %tmp.33 39 24 28 ];
+        %tmp.34 = 0xC000;
+        %tmp.35 = sub %tmp.33 %tmp.34;
+        %tmp.36 = agetv %tmp.32 %tmp.35;
+        %tmp.37 = 0xFF;
+        %tmp.38 = bitand %tmp.36 %tmp.37;
+        ret %tmp.38;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_35_40_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 40 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_stmt:
+        %tmp.39 = lgetv %addr;
+        symbol [ addr %tmp.39 40 19 23 ];
+        %tmp.40 = 0xFDFF;
+        %tmp.41 = lte %tmp.39 %tmp.40;
+        bf %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_35_42_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 41 12 ]
+        symbol [ wram %tmp.43 41 19 23 ];
+        %tmp.43 = getv ? :wram;
+        %tmp.44 = lgetv %addr;
+        symbol [ addr %tmp.44 41 25 29 ];
+        %tmp.45 = 0xE000;
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        %tmp.47 = 0x1FFF;
+        %tmp.48 = bitand %tmp.46 %tmp.47;
+        %tmp.49 = agetv %tmp.43 %tmp.48;
+        %tmp.50 = 0xFF;
+        %tmp.51 = bitand %tmp.49 %tmp.50;
+        ret %tmp.51;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_35_42_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 42 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_stmt:
+        %tmp.52 = lgetv %addr;
+        symbol [ addr %tmp.52 42 19 23 ];
+        %tmp.53 = 0xFE9F;
+        %tmp.54 = lte %tmp.52 %tmp.53;
+        bf %tmp.54 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_35_44_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 43 12 ]
+        symbol [ oam %tmp.56 43 19 22 ];
+        %tmp.56 = getv ? :oam;
+        %tmp.57 = lgetv %addr;
+        symbol [ addr %tmp.57 43 23 27 ];
+        %tmp.58 = 0xFE00;
+        %tmp.59 = sub %tmp.57 %tmp.58;
+        %tmp.60 = agetv %tmp.56 %tmp.59;
+        %tmp.61 = 0xFF;
+        %tmp.62 = bitand %tmp.60 %tmp.61;
+        ret %tmp.62;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_35_44_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 44 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_stmt:
+        %tmp.63 = lgetv %addr;
+        symbol [ addr %tmp.63 44 19 23 ];
+        %tmp.64 = 0xFEFF;
+        %tmp.65 = lte %tmp.63 %tmp.64;
+        bf %tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_35_46_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 45 12 ]
+        %tmp.66 = 0xFF;
+        ret %tmp.66;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_35_46_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 46 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_stmt:
+        %tmp.67 = lgetv %addr;
+        symbol [ addr %tmp.67 46 19 23 ];
+        %tmp.68 = 0xFF7F;
+        %tmp.69 = lte %tmp.67 %tmp.68;
+        bf %tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_35_48_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 47 12 ]
+        %tmp.70 = self;
+        symbol [ readIo %tmp.71 47 19 25 ];
+        %tmp.71 = getv function %tmp.70 :readIo;
+        %tmp.72 = lgetv %addr;
+        symbol [ addr %tmp.72 47 26 30 ];
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        ret %tmp.73;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_35_48_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 48 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_stmt:
+        %tmp.74 = lgetv %addr;
+        symbol [ addr %tmp.74 48 19 23 ];
+        %tmp.75 = 0xFFFE;
+        %tmp.76 = lte %tmp.74 %tmp.75;
+        bf %tmp.76 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_35_50_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 49 12 ]
+        symbol [ hram %tmp.78 49 19 23 ];
+        %tmp.78 = getv ? :hram;
+        %tmp.79 = lgetv %addr;
+        symbol [ addr %tmp.79 49 24 28 ];
+        %tmp.80 = 0xFF80;
+        %tmp.81 = sub %tmp.79 %tmp.80;
+        %tmp.82 = agetv %tmp.78 %tmp.81;
+        %tmp.83 = 0xFF;
+        %tmp.84 = bitand %tmp.82 %tmp.83;
+        ret %tmp.84;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_35_50_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_50_15_52_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 51 12 ]
+        symbol [ _interrupts %tmp.86 51 19 30 ];
+        %tmp.86 = getv ? :_interrupts;
+        symbol [ ieRead %tmp.87 51 31 37 ];
+        %tmp.87 = getv function %tmp.86 :ieRead;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        %tmp.89 = 0xFF;
+        %tmp.90 = bitand %tmp.88 %tmp.89;
+        ret %tmp.90;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_50_15_52_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_48_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_46_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_44_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_42_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_40_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_38_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_36_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_34_15_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_32_8_52_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_30_28_53_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 55; @symbol_functiondef = [writeByte,55,13,22]; @symbol_param<0> = [addr,55,23,27]; @symbol_param<1> = [val,55,29,32]; ]
+    function writeByte(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_55_34_79_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 56 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 56 15 19 ];
+        %tmp.2 = 0xFFFF;
+        %tmp.3 = bitand %tmp.1 %tmp.2;
+        lputv %addr %tmp.3;
+        symbol [ addr %addr 56 8 12 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 57 8 ]
+        %tmp.4 = lgetv %val;
+        symbol [ val %tmp.4 57 15 18 ];
+        %tmp.5 = 0xFF;
+        %tmp.6 = bitand %tmp.4 %tmp.5;
+        lputv %val %tmp.6;
+        symbol [ val %val 57 8 11 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 58 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_stmt:
+        %tmp.7 = lgetv %addr;
+        symbol [ addr %tmp.7 58 12 16 ];
+        %tmp.8 = 0x7FFF;
+        %tmp.9 = lte %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_true:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 60 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_stmt:
+        %tmp.10 = lgetv %addr;
+        symbol [ addr %tmp.10 60 19 23 ];
+        %tmp.11 = 0x9FFF;
+        %tmp.12 = lte %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_35_62_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 61 12 ]
+        symbol [ vram %tmp.13 61 12 16 ];
+        %tmp.13 = getv self :vram;
+        %tmp.14 = lgetv %val;
+        symbol [ val %tmp.14 61 34 37 ];
+        %tmp.15 = lgetv %addr;
+        symbol [ addr %tmp.15 61 17 21 ];
+        %tmp.16 = 0x8000;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        aputv %tmp.13 %tmp.17 %tmp.14;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_35_62_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 62 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_stmt:
+        %tmp.18 = lgetv %addr;
+        symbol [ addr %tmp.18 62 19 23 ];
+        %tmp.19 = 0xBFFF;
+        %tmp.20 = lte %tmp.18 %tmp.19;
+        bf %tmp.20 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_true:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 64 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_stmt:
+        %tmp.21 = lgetv %addr;
+        symbol [ addr %tmp.21 64 19 23 ];
+        %tmp.22 = 0xDFFF;
+        %tmp.23 = lte %tmp.21 %tmp.22;
+        bf %tmp.23 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_35_66_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 65 12 ]
+        symbol [ wram %tmp.24 65 12 16 ];
+        %tmp.24 = getv self :wram;
+        %tmp.25 = lgetv %val;
+        symbol [ val %tmp.25 65 34 37 ];
+        %tmp.26 = lgetv %addr;
+        symbol [ addr %tmp.26 65 17 21 ];
+        %tmp.27 = 0xC000;
+        %tmp.28 = sub %tmp.26 %tmp.27;
+        aputv %tmp.24 %tmp.28 %tmp.25;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_35_66_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 66 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_stmt:
+        %tmp.29 = lgetv %addr;
+        symbol [ addr %tmp.29 66 19 23 ];
+        %tmp.30 = 0xFDFF;
+        %tmp.31 = lte %tmp.29 %tmp.30;
+        bf %tmp.31 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_35_68_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 67 12 ]
+        symbol [ wram %tmp.32 67 12 16 ];
+        %tmp.32 = getv self :wram;
+        %tmp.33 = lgetv %val;
+        symbol [ val %tmp.33 67 45 48 ];
+        %tmp.34 = lgetv %addr;
+        symbol [ addr %tmp.34 67 18 22 ];
+        %tmp.35 = 0xE000;
+        %tmp.36 = sub %tmp.34 %tmp.35;
+        %tmp.37 = 0x1FFF;
+        %tmp.38 = bitand %tmp.36 %tmp.37;
+        aputv %tmp.32 %tmp.38 %tmp.33;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_35_68_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 68 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_stmt:
+        %tmp.39 = lgetv %addr;
+        symbol [ addr %tmp.39 68 19 23 ];
+        %tmp.40 = 0xFE9F;
+        %tmp.41 = lte %tmp.39 %tmp.40;
+        bf %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_35_70_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 69 12 ]
+        symbol [ oam %tmp.42 69 12 15 ];
+        %tmp.42 = getv self :oam;
+        %tmp.43 = lgetv %val;
+        symbol [ val %tmp.43 69 33 36 ];
+        %tmp.44 = lgetv %addr;
+        symbol [ addr %tmp.44 69 16 20 ];
+        %tmp.45 = 0xFE00;
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        aputv %tmp.42 %tmp.46 %tmp.43;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_35_70_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 70 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_stmt:
+        %tmp.47 = lgetv %addr;
+        symbol [ addr %tmp.47 70 19 23 ];
+        %tmp.48 = 0xFEFF;
+        %tmp.49 = lte %tmp.47 %tmp.48;
+        bf %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_true:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 72 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_stmt:
+        %tmp.50 = lgetv %addr;
+        symbol [ addr %tmp.50 72 19 23 ];
+        %tmp.51 = 0xFF7F;
+        %tmp.52 = lte %tmp.50 %tmp.51;
+        bf %tmp.52 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_35_74_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 73 12 ]
+        %tmp.53 = self;
+        symbol [ writeIo %tmp.54 73 12 19 ];
+        %tmp.54 = getv function %tmp.53 :writeIo;
+        %tmp.55 = lgetv %addr;
+        symbol [ addr %tmp.55 73 20 24 ];
+        %tmp.56 = lgetv %val;
+        symbol [ val %tmp.56 73 26 29 ];
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.56);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_35_74_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 74 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_stmt:
+        %tmp.57 = lgetv %addr;
+        symbol [ addr %tmp.57 74 19 23 ];
+        %tmp.58 = 0xFFFE;
+        %tmp.59 = lte %tmp.57 %tmp.58;
+        bf %tmp.59 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_35_76_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 75 12 ]
+        symbol [ hram %tmp.60 75 12 16 ];
+        %tmp.60 = getv self :hram;
+        %tmp.61 = lgetv %val;
+        symbol [ val %tmp.61 75 34 37 ];
+        %tmp.62 = lgetv %addr;
+        symbol [ addr %tmp.62 75 17 21 ];
+        %tmp.63 = 0xFF80;
+        %tmp.64 = sub %tmp.62 %tmp.63;
+        aputv %tmp.60 %tmp.64 %tmp.61;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_35_76_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_76_15_78_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 77 12 ]
+        symbol [ _interrupts %tmp.66 77 12 23 ];
+        %tmp.66 = getv ? :_interrupts;
+        symbol [ ieWrite %tmp.67 77 24 31 ];
+        %tmp.67 = getv function %tmp.66 :ieWrite;
+        %tmp.68 = lgetv %val;
+        symbol [ val %tmp.68 77 32 35 ];
+        invoke %tmp.66 %tmp.67(%tmp.68);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_76_15_78_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_74_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_72_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_70_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_68_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_66_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_64_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_62_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_60_15_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_58_8_78_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_55_34_79_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 81; @symbol_functiondef = [readWord,81,13,21]; @symbol_param<0> = [addr,81,22,26]; ]
+    function readWord(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_81_28_83_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 82 8 ]
+        %tmp.1 = self;
+        symbol [ readByte %tmp.2 82 15 23 ];
+        %tmp.2 = getv function %tmp.1 :readByte;
+        %tmp.3 = lgetv %addr;
+        symbol [ addr %tmp.3 82 24 28 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        %tmp.5 = self;
+        symbol [ readByte %tmp.6 82 33 41 ];
+        %tmp.6 = getv function %tmp.5 :readByte;
+        %tmp.7 = lgetv %addr;
+        symbol [ addr %tmp.7 82 43 47 ];
+        %tmp.8 = 1;
+        %tmp.9 = add %tmp.7 %tmp.8;
+        %tmp.10 = 0xFFFF;
+        %tmp.11 = bitand %tmp.9 %tmp.10;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.11);
+        %tmp.13 = 8;
+        %tmp.14 = shl %tmp.12 %tmp.13;
+        %tmp.15 = bitor %tmp.4 %tmp.14;
+        ret %tmp.15;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_81_28_83_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 85; @symbol_functiondef = [writeWord,85,13,22]; @symbol_param<0> = [addr,85,23,27]; @symbol_param<1> = [val,85,29,32]; ]
+    function writeWord(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_85_34_88_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 86 8 ]
+        %tmp.1 = self;
+        symbol [ writeByte %tmp.2 86 8 17 ];
+        %tmp.2 = getv function %tmp.1 :writeByte;
+        %tmp.3 = lgetv %addr;
+        symbol [ addr %tmp.3 86 18 22 ];
+        %tmp.4 = lgetv %val;
+        symbol [ val %tmp.4 86 38 41 ];
+        %tmp.5 = 0xFF;
+        %tmp.6 = bitand %tmp.4 %tmp.5;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.6);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 87 8 ]
+        %tmp.7 = self;
+        symbol [ writeByte %tmp.8 87 8 17 ];
+        %tmp.8 = getv function %tmp.7 :writeByte;
+        %tmp.9 = lgetv %addr;
+        symbol [ addr %tmp.9 87 19 23 ];
+        %tmp.10 = 1;
+        %tmp.11 = add %tmp.9 %tmp.10;
+        %tmp.12 = 0xFFFF;
+        %tmp.13 = bitand %tmp.11 %tmp.12;
+        %tmp.14 = lgetv %val;
+        symbol [ val %tmp.14 87 40 43 ];
+        %tmp.15 = 8;
+        %tmp.16 = shr %tmp.14 %tmp.15;
+        %tmp.17 = 0xFF;
+        %tmp.18 = bitand %tmp.16 %tmp.17;
+        invoke %tmp.7 %tmp.8(%tmp.13, %tmp.18);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_85_34_88_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 90; @symbol_functiondef = [readIo,90,13,19]; @symbol_param<0> = [addr,90,20,24]; ]
+    function readIo(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_90_26_106_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 91 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_stmt:
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 91 12 16 ];
+        %tmp.2 = 0xFF00;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_28_93_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 92 12 ]
+        symbol [ _joypad %tmp.5 92 19 26 ];
+        %tmp.5 = getv ? :_joypad;
+        symbol [ read %tmp.6 92 27 31 ];
+        %tmp.6 = getv function %tmp.5 :read;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        ret %tmp.7;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_28_93_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 93 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_19_93_45_begin:
+        %tmp.8 = lgetv %addr;
+        symbol [ addr %tmp.8 93 19 23 ];
+        %tmp.9 = 0xFF04;
+        %tmp.10 = gte %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_37_93_45_true:
+        %tmp.11 = lgetv %addr;
+        symbol [ addr %tmp.11 93 37 41 ];
+        %tmp.12 = 0xFF07;
+        %tmp.13 = lte %tmp.11 %tmp.12;
+        push %tmp.13;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_37_93_45_end:
+        %tmp.14 = phi [%tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_19_93_45_begin] [%tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_37_93_45_true] [%tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_37_93_45_end];
+        bf %tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_53_95_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 94 12 ]
+        symbol [ _gbTimer %tmp.16 94 19 27 ];
+        %tmp.16 = getv ? :_gbTimer;
+        symbol [ read %tmp.17 94 28 32 ];
+        %tmp.17 = getv function %tmp.16 :read;
+        %tmp.18 = lgetv %addr;
+        symbol [ addr %tmp.18 94 33 37 ];
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        ret %tmp.19;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_53_95_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 95 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_stmt:
+        %tmp.20 = lgetv %addr;
+        symbol [ addr %tmp.20 95 19 23 ];
+        %tmp.21 = 0xFF0F;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_35_97_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 96 12 ]
+        symbol [ _interrupts %tmp.24 96 19 30 ];
+        %tmp.24 = getv ? :_interrupts;
+        symbol [ ifRead %tmp.25 96 31 37 ];
+        %tmp.25 = getv function %tmp.24 :ifRead;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        ret %tmp.26;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_35_97_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 97 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_19_97_45_begin:
+        %tmp.27 = lgetv %addr;
+        symbol [ addr %tmp.27 97 19 23 ];
+        %tmp.28 = 0xFF10;
+        %tmp.29 = gte %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_37_97_45_true:
+        %tmp.30 = lgetv %addr;
+        symbol [ addr %tmp.30 97 37 41 ];
+        %tmp.31 = 0xFF3F;
+        %tmp.32 = lte %tmp.30 %tmp.31;
+        push %tmp.32;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_37_97_45_end:
+        %tmp.33 = phi [%tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_19_97_45_begin] [%tmp.32 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_37_97_45_true] [%tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_37_97_45_end];
+        bf %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_53_99_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 98 12 ]
+        symbol [ _sound %tmp.35 98 19 25 ];
+        %tmp.35 = getv ? :_sound;
+        symbol [ read %tmp.36 98 26 30 ];
+        %tmp.36 = getv function %tmp.35 :read;
+        %tmp.37 = lgetv %addr;
+        symbol [ addr %tmp.37 98 31 35 ];
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        ret %tmp.38;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_53_99_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 99 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_99_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_99_45_begin:
+        %tmp.39 = lgetv %addr;
+        symbol [ addr %tmp.39 99 19 23 ];
+        %tmp.40 = 0xFF40;
+        %tmp.41 = eq %tmp.39 %tmp.40;
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_37_99_45_false:
+        %tmp.42 = lgetv %addr;
+        symbol [ addr %tmp.42 99 37 41 ];
+        %tmp.43 = 0xFF41;
+        %tmp.44 = eq %tmp.42 %tmp.43;
+        push %tmp.44;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_37_99_45_end:
+        %tmp.45 = phi [%tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_99_45_begin] [%tmp.44 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_37_99_45_false] [%tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_37_99_45_end];
+        bt %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_55_99_63_false:
+        %tmp.46 = lgetv %addr;
+        symbol [ addr %tmp.46 99 55 59 ];
+        %tmp.47 = 0xFF42;
+        %tmp.48 = eq %tmp.46 %tmp.47;
+        push %tmp.48;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_55_99_63_end:
+        %tmp.49 = phi [%tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_99_63_begin] [%tmp.48 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_55_99_63_false] [%tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_55_99_63_end];
+        bt %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_19_100_27_false:
+        %tmp.50 = lgetv %addr;
+        symbol [ addr %tmp.50 100 19 23 ];
+        %tmp.51 = 0xFF43;
+        %tmp.52 = eq %tmp.50 %tmp.51;
+        push %tmp.52;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_19_100_27_end:
+        %tmp.53 = phi [%tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_27_begin] [%tmp.52 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_19_100_27_false] [%tmp.53 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_19_100_27_end];
+        bt %tmp.53 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_37_100_45_false:
+        %tmp.54 = lgetv %addr;
+        symbol [ addr %tmp.54 100 37 41 ];
+        %tmp.55 = 0xFF44;
+        %tmp.56 = eq %tmp.54 %tmp.55;
+        push %tmp.56;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_37_100_45_end:
+        %tmp.57 = phi [%tmp.53 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_45_begin] [%tmp.56 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_37_100_45_false] [%tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_37_100_45_end];
+        bt %tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_55_100_63_false:
+        %tmp.58 = lgetv %addr;
+        symbol [ addr %tmp.58 100 55 59 ];
+        %tmp.59 = 0xFF45;
+        %tmp.60 = eq %tmp.58 %tmp.59;
+        push %tmp.60;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_55_100_63_end:
+        %tmp.61 = phi [%tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_100_63_begin] [%tmp.60 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_55_100_63_false] [%tmp.61 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_100_55_100_63_end];
+        bt %tmp.61 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_19_101_27_false:
+        %tmp.62 = lgetv %addr;
+        symbol [ addr %tmp.62 101 19 23 ];
+        %tmp.63 = 0xFF46;
+        %tmp.64 = eq %tmp.62 %tmp.63;
+        push %tmp.64;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_19_101_27_end:
+        %tmp.65 = phi [%tmp.61 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_27_begin] [%tmp.64 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_19_101_27_false] [%tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_19_101_27_end];
+        bt %tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_37_101_45_false:
+        %tmp.66 = lgetv %addr;
+        symbol [ addr %tmp.66 101 37 41 ];
+        %tmp.67 = 0xFF47;
+        %tmp.68 = eq %tmp.66 %tmp.67;
+        push %tmp.68;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_37_101_45_end:
+        %tmp.69 = phi [%tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_45_begin] [%tmp.68 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_37_101_45_false] [%tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_37_101_45_end];
+        bt %tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_55_101_63_false:
+        %tmp.70 = lgetv %addr;
+        symbol [ addr %tmp.70 101 55 59 ];
+        %tmp.71 = 0xFF48;
+        %tmp.72 = eq %tmp.70 %tmp.71;
+        push %tmp.72;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_55_101_63_end:
+        %tmp.73 = phi [%tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_101_63_begin] [%tmp.72 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_55_101_63_false] [%tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_101_55_101_63_end];
+        bt %tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_19_102_27_false:
+        %tmp.74 = lgetv %addr;
+        symbol [ addr %tmp.74 102 19 23 ];
+        %tmp.75 = 0xFF49;
+        %tmp.76 = eq %tmp.74 %tmp.75;
+        push %tmp.76;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_19_102_27_end:
+        %tmp.77 = phi [%tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_27_begin] [%tmp.76 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_19_102_27_false] [%tmp.77 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_19_102_27_end];
+        bt %tmp.77 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_37_102_45_false:
+        %tmp.78 = lgetv %addr;
+        symbol [ addr %tmp.78 102 37 41 ];
+        %tmp.79 = 0xFF4A;
+        %tmp.80 = eq %tmp.78 %tmp.79;
+        push %tmp.80;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_37_102_45_end:
+        %tmp.81 = phi [%tmp.77 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_45_begin] [%tmp.80 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_37_102_45_false] [%tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_37_102_45_end];
+        bt %tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_55_102_63_false:
+        %tmp.82 = lgetv %addr;
+        symbol [ addr %tmp.82 102 55 59 ];
+        %tmp.83 = 0xFF4B;
+        %tmp.84 = eq %tmp.82 %tmp.83;
+        push %tmp.84;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_55_102_63_end:
+        %tmp.85 = phi [%tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_19_102_63_begin] [%tmp.84 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_55_102_63_false] [%tmp.85 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_55_102_63_end];
+        bf %tmp.85 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_71_104_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 103 12 ]
+        symbol [ _ppu %tmp.87 103 19 23 ];
+        %tmp.87 = getv ? :_ppu;
+        symbol [ readReg %tmp.88 103 24 31 ];
+        %tmp.88 = getv function %tmp.87 :readReg;
+        %tmp.89 = lgetv %addr;
+        symbol [ addr %tmp.89 103 32 36 ];
+        %tmp.90 = invoke %tmp.87 %tmp.88(%tmp.89);
+        ret %tmp.90;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_102_71_104_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_99_15_104_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_97_15_104_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_95_15_104_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_93_15_104_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_91_8_104_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 105 8 ]
+        %tmp.91 = 0xFF;
+        ret %tmp.91;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_90_26_106_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 108; @symbol_functiondef = [writeIo,108,13,20]; @symbol_param<0> = [addr,108,21,25]; @symbol_param<1> = [val,108,27,30]; ]
+    function writeIo(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_108_32_126_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 109 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_stmt:
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 109 12 16 ];
+        %tmp.2 = 0xFF00;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_28_111_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 110 12 ]
+        symbol [ _joypad %tmp.5 110 12 19 ];
+        %tmp.5 = getv ? :_joypad;
+        symbol [ write %tmp.6 110 20 25 ];
+        %tmp.6 = getv function %tmp.5 :write;
+        %tmp.7 = lgetv %val;
+        symbol [ val %tmp.7 110 26 29 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_28_111_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 111 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_19_111_45_begin:
+        %tmp.8 = lgetv %addr;
+        symbol [ addr %tmp.8 111 19 23 ];
+        %tmp.9 = 0xFF01;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bt %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_37_111_45_false:
+        %tmp.11 = lgetv %addr;
+        symbol [ addr %tmp.11 111 37 41 ];
+        %tmp.12 = 0xFF02;
+        %tmp.13 = eq %tmp.11 %tmp.12;
+        push %tmp.13;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_37_111_45_end:
+        %tmp.14 = phi [%tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_19_111_45_begin] [%tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_37_111_45_false] [%tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_37_111_45_end];
+        bf %tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_true:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 113 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_19_113_45_begin:
+        %tmp.15 = lgetv %addr;
+        symbol [ addr %tmp.15 113 19 23 ];
+        %tmp.16 = 0xFF04;
+        %tmp.17 = gte %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_37_113_45_true:
+        %tmp.18 = lgetv %addr;
+        symbol [ addr %tmp.18 113 37 41 ];
+        %tmp.19 = 0xFF07;
+        %tmp.20 = lte %tmp.18 %tmp.19;
+        push %tmp.20;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_37_113_45_end:
+        %tmp.21 = phi [%tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_19_113_45_begin] [%tmp.20 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_37_113_45_true] [%tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_37_113_45_end];
+        bf %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_53_115_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 114 12 ]
+        symbol [ _gbTimer %tmp.23 114 12 20 ];
+        %tmp.23 = getv ? :_gbTimer;
+        symbol [ write %tmp.24 114 21 26 ];
+        %tmp.24 = getv function %tmp.23 :write;
+        %tmp.25 = lgetv %addr;
+        symbol [ addr %tmp.25 114 27 31 ];
+        %tmp.26 = lgetv %val;
+        symbol [ val %tmp.26 114 33 36 ];
+        invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_53_115_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 115 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_stmt:
+        %tmp.27 = lgetv %addr;
+        symbol [ addr %tmp.27 115 19 23 ];
+        %tmp.28 = 0xFF0F;
+        %tmp.29 = eq %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_35_117_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 116 12 ]
+        symbol [ _interrupts %tmp.31 116 12 23 ];
+        %tmp.31 = getv ? :_interrupts;
+        symbol [ ifWrite %tmp.32 116 24 31 ];
+        %tmp.32 = getv function %tmp.31 :ifWrite;
+        %tmp.33 = lgetv %val;
+        symbol [ val %tmp.33 116 32 35 ];
+        invoke %tmp.31 %tmp.32(%tmp.33);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_35_117_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 117 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_19_117_45_begin:
+        %tmp.34 = lgetv %addr;
+        symbol [ addr %tmp.34 117 19 23 ];
+        %tmp.35 = 0xFF10;
+        %tmp.36 = gte %tmp.34 %tmp.35;
+        bf %tmp.36 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_37_117_45_true:
+        %tmp.37 = lgetv %addr;
+        symbol [ addr %tmp.37 117 37 41 ];
+        %tmp.38 = 0xFF3F;
+        %tmp.39 = lte %tmp.37 %tmp.38;
+        push %tmp.39;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_37_117_45_end:
+        %tmp.40 = phi [%tmp.36 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_19_117_45_begin] [%tmp.39 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_37_117_45_true] [%tmp.40 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_37_117_45_end];
+        bf %tmp.40 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_53_119_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 118 12 ]
+        symbol [ _sound %tmp.42 118 12 18 ];
+        %tmp.42 = getv ? :_sound;
+        symbol [ write %tmp.43 118 19 24 ];
+        %tmp.43 = getv function %tmp.42 :write;
+        %tmp.44 = lgetv %addr;
+        symbol [ addr %tmp.44 118 25 29 ];
+        %tmp.45 = lgetv %val;
+        symbol [ val %tmp.45 118 31 34 ];
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_53_119_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 119 15 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_45_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_27_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_119_63_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_119_45_begin:
+        %tmp.46 = lgetv %addr;
+        symbol [ addr %tmp.46 119 19 23 ];
+        %tmp.47 = 0xFF40;
+        %tmp.48 = eq %tmp.46 %tmp.47;
+        bt %tmp.48 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_37_119_45_false:
+        %tmp.49 = lgetv %addr;
+        symbol [ addr %tmp.49 119 37 41 ];
+        %tmp.50 = 0xFF41;
+        %tmp.51 = eq %tmp.49 %tmp.50;
+        push %tmp.51;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_37_119_45_end:
+        %tmp.52 = phi [%tmp.48 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_119_45_begin] [%tmp.51 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_37_119_45_false] [%tmp.52 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_37_119_45_end];
+        bt %tmp.52 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_55_119_63_false:
+        %tmp.53 = lgetv %addr;
+        symbol [ addr %tmp.53 119 55 59 ];
+        %tmp.54 = 0xFF42;
+        %tmp.55 = eq %tmp.53 %tmp.54;
+        push %tmp.55;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_55_119_63_end:
+        %tmp.56 = phi [%tmp.52 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_119_63_begin] [%tmp.55 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_55_119_63_false] [%tmp.56 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_55_119_63_end];
+        bt %tmp.56 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_19_120_27_false:
+        %tmp.57 = lgetv %addr;
+        symbol [ addr %tmp.57 120 19 23 ];
+        %tmp.58 = 0xFF43;
+        %tmp.59 = eq %tmp.57 %tmp.58;
+        push %tmp.59;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_19_120_27_end:
+        %tmp.60 = phi [%tmp.56 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_27_begin] [%tmp.59 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_19_120_27_false] [%tmp.60 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_19_120_27_end];
+        bt %tmp.60 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_37_120_45_false:
+        %tmp.61 = lgetv %addr;
+        symbol [ addr %tmp.61 120 37 41 ];
+        %tmp.62 = 0xFF44;
+        %tmp.63 = eq %tmp.61 %tmp.62;
+        push %tmp.63;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_37_120_45_end:
+        %tmp.64 = phi [%tmp.60 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_45_begin] [%tmp.63 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_37_120_45_false] [%tmp.64 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_37_120_45_end];
+        bt %tmp.64 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_55_120_63_false:
+        %tmp.65 = lgetv %addr;
+        symbol [ addr %tmp.65 120 55 59 ];
+        %tmp.66 = 0xFF45;
+        %tmp.67 = eq %tmp.65 %tmp.66;
+        push %tmp.67;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_55_120_63_end:
+        %tmp.68 = phi [%tmp.64 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_120_63_begin] [%tmp.67 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_55_120_63_false] [%tmp.68 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_120_55_120_63_end];
+        bt %tmp.68 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_19_121_27_false:
+        %tmp.69 = lgetv %addr;
+        symbol [ addr %tmp.69 121 19 23 ];
+        %tmp.70 = 0xFF46;
+        %tmp.71 = eq %tmp.69 %tmp.70;
+        push %tmp.71;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_19_121_27_end:
+        %tmp.72 = phi [%tmp.68 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_27_begin] [%tmp.71 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_19_121_27_false] [%tmp.72 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_19_121_27_end];
+        bt %tmp.72 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_37_121_45_false:
+        %tmp.73 = lgetv %addr;
+        symbol [ addr %tmp.73 121 37 41 ];
+        %tmp.74 = 0xFF47;
+        %tmp.75 = eq %tmp.73 %tmp.74;
+        push %tmp.75;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_37_121_45_end:
+        %tmp.76 = phi [%tmp.72 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_45_begin] [%tmp.75 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_37_121_45_false] [%tmp.76 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_37_121_45_end];
+        bt %tmp.76 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_55_121_63_false:
+        %tmp.77 = lgetv %addr;
+        symbol [ addr %tmp.77 121 55 59 ];
+        %tmp.78 = 0xFF48;
+        %tmp.79 = eq %tmp.77 %tmp.78;
+        push %tmp.79;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_55_121_63_end:
+        %tmp.80 = phi [%tmp.76 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_121_63_begin] [%tmp.79 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_55_121_63_false] [%tmp.80 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_121_55_121_63_end];
+        bt %tmp.80 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_19_122_27_false:
+        %tmp.81 = lgetv %addr;
+        symbol [ addr %tmp.81 122 19 23 ];
+        %tmp.82 = 0xFF49;
+        %tmp.83 = eq %tmp.81 %tmp.82;
+        push %tmp.83;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_19_122_27_end:
+        %tmp.84 = phi [%tmp.80 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_27_begin] [%tmp.83 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_19_122_27_false] [%tmp.84 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_19_122_27_end];
+        bt %tmp.84 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_37_122_45_false:
+        %tmp.85 = lgetv %addr;
+        symbol [ addr %tmp.85 122 37 41 ];
+        %tmp.86 = 0xFF4A;
+        %tmp.87 = eq %tmp.85 %tmp.86;
+        push %tmp.87;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_37_122_45_end:
+        %tmp.88 = phi [%tmp.84 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_45_begin] [%tmp.87 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_37_122_45_false] [%tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_37_122_45_end];
+        bt %tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_55_122_63_false:
+        %tmp.89 = lgetv %addr;
+        symbol [ addr %tmp.89 122 55 59 ];
+        %tmp.90 = 0xFF4B;
+        %tmp.91 = eq %tmp.89 %tmp.90;
+        push %tmp.91;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_55_122_63_end:
+        %tmp.92 = phi [%tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_19_122_63_begin] [%tmp.91 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_55_122_63_false] [%tmp.92 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_55_122_63_end];
+        bf %tmp.92 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_71_124_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc" 123 12 ]
+        symbol [ _ppu %tmp.94 123 12 16 ];
+        %tmp.94 = getv ? :_ppu;
+        symbol [ writeReg %tmp.95 123 17 25 ];
+        %tmp.95 = getv function %tmp.94 :writeReg;
+        %tmp.96 = lgetv %addr;
+        symbol [ addr %tmp.96 123 26 30 ];
+        %tmp.97 = lgetv %val;
+        symbol [ val %tmp.97 123 32 35 ];
+        invoke %tmp.94 %tmp.95(%tmp.96, %tmp.97);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_122_71_124_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_119_15_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_117_15_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_115_15_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_113_15_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_111_15_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_109_8_124_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Memory_mc_108_32_126_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Memory.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,2575 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [System,1,13,19]; @symbol_usingAlias = [Sys,1,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 8; @symbol_classdef = [Ppu,8,6,9]; ]
+class Ppu {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 8; ]
+    <init> {
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 32 8 ]
+        %tmp.1 = newa 4;
+        %tmp.2 = 0xC4CFA1;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 0x8B956D;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 0x4D533C;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = 0x1F1F1F;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        putv self :palette %tmp.13;
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 10; @position = 8; @symbol_vardef = [lcdc,10,8,12]; ]
+    var lcdc = 0x91;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 11; @position = 8; @symbol_vardef = [stat,11,8,12]; ]
+    var stat = 0x80;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 12; @position = 8; @symbol_vardef = [scy,12,8,11]; ]
+    var scy = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 13; @position = 8; @symbol_vardef = [scx,13,8,11]; ]
+    var scx = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 14; @position = 8; @symbol_vardef = [ly,14,8,10]; ]
+    var ly = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 15; @position = 8; @symbol_vardef = [lyc,15,8,11]; ]
+    var lyc = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 16; @position = 8; @symbol_vardef = [bgp,16,8,11]; ]
+    var bgp = 0xFC;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 17; @position = 8; @symbol_vardef = [obp0,17,8,12]; ]
+    var obp0 = 0xFF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 18; @position = 8; @symbol_vardef = [obp1,18,8,12]; ]
+    var obp1 = 0xFF;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 19; @position = 8; @symbol_vardef = [wy,19,8,10]; ]
+    var wy = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 20; @position = 8; @symbol_vardef = [wx,20,8,10]; ]
+    var wx = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 21; @position = 8; @symbol_vardef = [dma,21,8,11]; ]
+    var dma = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 24; @position = 8; @symbol_vardef = [framebuffer,24,8,19]; ]
+    var framebuffer;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 26; @position = 8; @symbol_vardef = [_frameReady,26,8,19]; ]
+    var _frameReady = false;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 27; @position = 8; @symbol_vardef = [_cycles,27,8,15]; ]
+    var _cycles = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 28; @position = 8; @symbol_vardef = [_lineRendered,28,8,21]; ]
+    var _lineRendered = false;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 29; @position = 8; @symbol_vardef = [_winLineCounter,29,8,23]; ]
+    var _winLineCounter = 0;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 32; @position = 8; @symbol_vardef = [palette,32,8,15]; ]
+    var palette;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 34; @position = 8; @symbol_vardef = [_mem,34,8,12]; ]
+    var _mem;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 35; @position = 8; @symbol_vardef = [_interrupts,35,8,19]; ]
+    var _interrupts;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 37; @symbol_functiondef = [initialize,37,13,23]; @symbol_param<0> = [mem,37,24,27]; @symbol_param<1> = [interrupts,37,29,39]; ]
+    function initialize(mem, interrupts) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_37_41_41_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 38 8 ]
+        %tmp.1 = lgetv %mem;
+        symbol [ mem %tmp.1 38 22 25 ];
+        symbol [ _mem ? 38 8 12 ];
+        putv self :_mem %tmp.1;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 39 8 ]
+        %tmp.2 = lgetv %interrupts;
+        symbol [ interrupts %tmp.2 39 22 32 ];
+        symbol [ _interrupts ? 39 8 19 ];
+        putv self :_interrupts %tmp.2;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 40 8 ]
+        %tmp.4 = 160;
+        %tmp.5 = 144;
+        %tmp.6 = mul %tmp.4 %tmp.5;
+        %tmp.3 = newba %tmp.6;
+        symbol [ framebuffer ? 40 8 19 ];
+        putv self :framebuffer %tmp.3;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_37_41_41_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 43; @symbol_functiondef = [start,43,13,18]; ]
+    function start() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_43_21_60_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 44 8 ]
+        %tmp.1 = 0x91;
+        symbol [ lcdc ? 44 8 12 ];
+        putv self :lcdc %tmp.1;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 45 8 ]
+        %tmp.2 = 0x80;
+        symbol [ stat ? 45 8 12 ];
+        putv self :stat %tmp.2;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 46 8 ]
+        %tmp.3 = 0;
+        symbol [ ly ? 46 8 10 ];
+        putv self :ly %tmp.3;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 47 8 ]
+        %tmp.4 = 0;
+        symbol [ lyc ? 47 8 11 ];
+        putv self :lyc %tmp.4;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 48 8 ]
+        %tmp.5 = 0xFC;
+        symbol [ bgp ? 48 8 11 ];
+        putv self :bgp %tmp.5;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 49 8 ]
+        %tmp.6 = 0xFF;
+        symbol [ obp0 ? 49 8 12 ];
+        putv self :obp0 %tmp.6;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 50 8 ]
+        %tmp.7 = 0xFF;
+        symbol [ obp1 ? 50 8 12 ];
+        putv self :obp1 %tmp.7;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 51 8 ]
+        %tmp.8 = 0;
+        symbol [ scy ? 51 8 11 ];
+        putv self :scy %tmp.8;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 52 8 ]
+        %tmp.9 = 0;
+        symbol [ scx ? 52 8 11 ];
+        putv self :scx %tmp.9;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 53 8 ]
+        %tmp.10 = 0;
+        symbol [ wy ? 53 8 10 ];
+        putv self :wy %tmp.10;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 54 8 ]
+        %tmp.11 = 0;
+        symbol [ wx ? 54 8 10 ];
+        putv self :wx %tmp.11;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 55 8 ]
+        %tmp.12 = 0;
+        symbol [ dma ? 55 8 11 ];
+        putv self :dma %tmp.12;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 56 8 ]
+        %tmp.13 = 0;
+        symbol [ _cycles ? 56 8 15 ];
+        putv self :_cycles %tmp.13;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 57 8 ]
+        %tmp.14 = false;
+        symbol [ _lineRendered ? 57 8 21 ];
+        putv self :_lineRendered %tmp.14;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 58 8 ]
+        %tmp.15 = 0;
+        symbol [ _winLineCounter ? 58 8 23 ];
+        putv self :_winLineCounter %tmp.15;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 59 8 ]
+        %tmp.16 = false;
+        symbol [ _frameReady ? 59 8 19 ];
+        putv self :_frameReady %tmp.16;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_43_21_60_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 66; @symbol_functiondef = [readReg,66,13,20]; @symbol_param<0> = [addr,66,21,25]; ]
+    function readReg(addr) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_66_27_82_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 67 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 67 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 68 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF40;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_68_12_68_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 69 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF41;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_69_12_69_43_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 70 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF42;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_70_12_70_35_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 71 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF43;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_71_12_71_35_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 72 12 ]
+        %tmp.18 = dup %tmp.1;
+        %tmp.19 = 0xFF44;
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_72_12_72_34_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 73 12 ]
+        %tmp.22 = dup %tmp.1;
+        %tmp.23 = 0xFF45;
+        %tmp.24 = getv function %tmp.22 :equals;
+        %tmp.25 = invoke %tmp.22 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_73_12_73_35_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 74 12 ]
+        %tmp.26 = dup %tmp.1;
+        %tmp.27 = 0xFF46;
+        %tmp.28 = getv function %tmp.26 :equals;
+        %tmp.29 = invoke %tmp.26 %tmp.28 (%tmp.27);
+        bt %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_74_12_74_35_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 75 12 ]
+        %tmp.30 = dup %tmp.1;
+        %tmp.31 = 0xFF47;
+        %tmp.32 = getv function %tmp.30 :equals;
+        %tmp.33 = invoke %tmp.30 %tmp.32 (%tmp.31);
+        bt %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_75_12_75_35_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 76 12 ]
+        %tmp.34 = dup %tmp.1;
+        %tmp.35 = 0xFF48;
+        %tmp.36 = getv function %tmp.34 :equals;
+        %tmp.37 = invoke %tmp.34 %tmp.36 (%tmp.35);
+        bt %tmp.37 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_76_12_76_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 77 12 ]
+        %tmp.38 = dup %tmp.1;
+        %tmp.39 = 0xFF49;
+        %tmp.40 = getv function %tmp.38 :equals;
+        %tmp.41 = invoke %tmp.38 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_77_12_77_36_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 78 12 ]
+        %tmp.42 = dup %tmp.1;
+        %tmp.43 = 0xFF4A;
+        %tmp.44 = getv function %tmp.42 :equals;
+        %tmp.45 = invoke %tmp.42 %tmp.44 (%tmp.43);
+        bt %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_78_12_78_34_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 79 12 ]
+        %tmp.46 = dup %tmp.1;
+        %tmp.47 = 0xFF4B;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_79_12_79_34_switchCase;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_68_12_68_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 68 25 ]
+        symbol [ lcdc %tmp.51 68 32 36 ];
+        %tmp.51 = getv ? :lcdc;
+        ret %tmp.51;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_69_12_69_43_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 69 25 ]
+        symbol [ stat %tmp.53 69 32 36 ];
+        %tmp.53 = getv ? :stat;
+        %tmp.54 = 0x80;
+        %tmp.55 = bitor %tmp.53 %tmp.54;
+        ret %tmp.55;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_70_12_70_35_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 70 25 ]
+        symbol [ scy %tmp.57 70 32 35 ];
+        %tmp.57 = getv ? :scy;
+        ret %tmp.57;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_71_12_71_35_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 71 25 ]
+        symbol [ scx %tmp.59 71 32 35 ];
+        %tmp.59 = getv ? :scx;
+        ret %tmp.59;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_72_12_72_34_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 72 25 ]
+        symbol [ ly %tmp.61 72 32 34 ];
+        %tmp.61 = getv ? :ly;
+        ret %tmp.61;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_73_12_73_35_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 73 25 ]
+        symbol [ lyc %tmp.63 73 32 35 ];
+        %tmp.63 = getv ? :lyc;
+        ret %tmp.63;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_74_12_74_35_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 74 25 ]
+        symbol [ dma %tmp.65 74 32 35 ];
+        %tmp.65 = getv ? :dma;
+        ret %tmp.65;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_75_12_75_35_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 75 25 ]
+        symbol [ bgp %tmp.67 75 32 35 ];
+        %tmp.67 = getv ? :bgp;
+        ret %tmp.67;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_76_12_76_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 76 25 ]
+        symbol [ obp0 %tmp.69 76 32 36 ];
+        %tmp.69 = getv ? :obp0;
+        ret %tmp.69;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_77_12_77_36_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 77 25 ]
+        symbol [ obp1 %tmp.71 77 32 36 ];
+        %tmp.71 = getv ? :obp1;
+        ret %tmp.71;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_78_12_78_34_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 78 25 ]
+        symbol [ wy %tmp.73 78 32 34 ];
+        %tmp.73 = getv ? :wy;
+        ret %tmp.73;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_79_12_79_34_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 79 25 ]
+        symbol [ wx %tmp.75 79 32 34 ];
+        %tmp.75 = getv ? :wx;
+        ret %tmp.75;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_defaultCodeBegin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_67_8_80_8_switchStmtEnd:
+        pop;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 81 8 ]
+        %tmp.76 = 0xFF;
+        ret %tmp.76;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_66_27_82_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 84; @symbol_functiondef = [writeReg,84,13,21]; @symbol_param<0> = [addr,84,22,26]; @symbol_param<1> = [val,84,28,31]; ]
+    function writeReg(addr, val) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_84_33_102_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 85 8 ]
+        %tmp.1 = lgetv %addr;
+        symbol [ addr %tmp.1 85 16 20 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 86 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.3 = 0xFF40;
+        %tmp.4 = getv function %tmp.2 :equals;
+        %tmp.5 = invoke %tmp.2 %tmp.4 (%tmp.3);
+        bt %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_86_12_86_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 87 12 ]
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = 0xFF41;
+        %tmp.8 = getv function %tmp.6 :equals;
+        %tmp.9 = invoke %tmp.6 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_87_12_87_67_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 88 12 ]
+        %tmp.10 = dup %tmp.1;
+        %tmp.11 = 0xFF42;
+        %tmp.12 = getv function %tmp.10 :equals;
+        %tmp.13 = invoke %tmp.10 %tmp.12 (%tmp.11);
+        bt %tmp.13 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_88_12_88_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 89 12 ]
+        %tmp.14 = dup %tmp.1;
+        %tmp.15 = 0xFF43;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_89_12_89_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 90 12 ]
+        %tmp.18 = dup %tmp.1;
+        %tmp.19 = 0xFF44;
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_90_12_90_30_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 91 12 ]
+        %tmp.22 = dup %tmp.1;
+        %tmp.23 = 0xFF45;
+        %tmp.24 = getv function %tmp.22 :equals;
+        %tmp.25 = invoke %tmp.22 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_91_12_91_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 92 12 ]
+        %tmp.26 = dup %tmp.1;
+        %tmp.27 = 0xFF46;
+        %tmp.28 = getv function %tmp.26 :equals;
+        %tmp.29 = invoke %tmp.26 %tmp.28 (%tmp.27);
+        bt %tmp.29 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_92_12_95_21_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 96 12 ]
+        %tmp.30 = dup %tmp.1;
+        %tmp.31 = 0xFF47;
+        %tmp.32 = getv function %tmp.30 :equals;
+        %tmp.33 = invoke %tmp.30 %tmp.32 (%tmp.31);
+        bt %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_96_12_96_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 97 12 ]
+        %tmp.34 = dup %tmp.1;
+        %tmp.35 = 0xFF48;
+        %tmp.36 = getv function %tmp.34 :equals;
+        %tmp.37 = invoke %tmp.34 %tmp.36 (%tmp.35);
+        bt %tmp.37 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_97_12_97_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 98 12 ]
+        %tmp.38 = dup %tmp.1;
+        %tmp.39 = 0xFF49;
+        %tmp.40 = getv function %tmp.38 :equals;
+        %tmp.41 = invoke %tmp.38 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_98_12_98_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 99 12 ]
+        %tmp.42 = dup %tmp.1;
+        %tmp.43 = 0xFF4A;
+        %tmp.44 = getv function %tmp.42 :equals;
+        %tmp.45 = invoke %tmp.42 %tmp.44 (%tmp.43);
+        bt %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_99_12_99_42_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 100 12 ]
+        %tmp.46 = dup %tmp.1;
+        %tmp.47 = 0xFF4B;
+        %tmp.48 = getv function %tmp.46 :equals;
+        %tmp.49 = invoke %tmp.46 %tmp.48 (%tmp.47);
+        bt %tmp.49 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_100_12_100_42_switchCase;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_86_12_86_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 86 25 ]
+        %tmp.50 = lgetv %val;
+        symbol [ val %tmp.50 86 32 35 ];
+        symbol [ lcdc ? 86 25 29 ];
+        putv self :lcdc %tmp.50;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 86 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_87_12_87_67_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 87 25 ]
+        symbol [ stat %tmp.52 87 33 37 ];
+        %tmp.52 = getv ? :stat;
+        %tmp.53 = 0x07;
+        %tmp.54 = bitand %tmp.52 %tmp.53;
+        %tmp.55 = lgetv %val;
+        symbol [ val %tmp.55 87 49 52 ];
+        %tmp.56 = 0x78;
+        %tmp.57 = bitand %tmp.55 %tmp.56;
+        %tmp.58 = bitor %tmp.54 %tmp.57;
+        symbol [ stat ? 87 25 29 ];
+        putv self :stat %tmp.58;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 87 62 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_88_12_88_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 88 25 ]
+        %tmp.59 = lgetv %val;
+        symbol [ val %tmp.59 88 32 35 ];
+        symbol [ scy ? 88 25 28 ];
+        putv self :scy %tmp.59;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 88 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_89_12_89_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 89 25 ]
+        %tmp.60 = lgetv %val;
+        symbol [ val %tmp.60 89 32 35 ];
+        symbol [ scx ? 89 25 28 ];
+        putv self :scx %tmp.60;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 89 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_90_12_90_30_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 90 25 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_91_12_91_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 91 25 ]
+        %tmp.61 = lgetv %val;
+        symbol [ val %tmp.61 91 32 35 ];
+        symbol [ lyc ? 91 25 28 ];
+        putv self :lyc %tmp.61;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 91 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_92_12_95_21_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 93 16 ]
+        %tmp.62 = lgetv %val;
+        symbol [ val %tmp.62 93 22 25 ];
+        symbol [ dma ? 93 16 19 ];
+        putv self :dma %tmp.62;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 94 16 ]
+        %tmp.63 = self;
+        symbol [ executeDma %tmp.64 94 16 26 ];
+        %tmp.64 = getv function %tmp.63 :executeDma;
+        invoke %tmp.63 %tmp.64();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 95 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_96_12_96_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 96 25 ]
+        %tmp.65 = lgetv %val;
+        symbol [ val %tmp.65 96 32 35 ];
+        symbol [ bgp ? 96 25 28 ];
+        putv self :bgp %tmp.65;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 96 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_97_12_97_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 97 25 ]
+        %tmp.66 = lgetv %val;
+        symbol [ val %tmp.66 97 32 35 ];
+        symbol [ obp0 ? 97 25 29 ];
+        putv self :obp0 %tmp.66;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 97 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_98_12_98_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 98 25 ]
+        %tmp.67 = lgetv %val;
+        symbol [ val %tmp.67 98 32 35 ];
+        symbol [ obp1 ? 98 25 29 ];
+        putv self :obp1 %tmp.67;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 98 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_99_12_99_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 99 25 ]
+        %tmp.68 = lgetv %val;
+        symbol [ val %tmp.68 99 32 35 ];
+        symbol [ wy ? 99 25 27 ];
+        putv self :wy %tmp.68;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 99 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_100_12_100_42_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 100 25 ]
+        %tmp.69 = lgetv %val;
+        symbol [ val %tmp.69 100 32 35 ];
+        symbol [ wx ? 100 25 27 ];
+        putv self :wx %tmp.69;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 100 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_defaultCodeBegin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_85_8_101_8_switchStmtEnd:
+        pop;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_84_33_102_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 104; @symbol_functiondef = [executeDma,104,13,23]; ]
+    function executeDma() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_104_26_109_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 105 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_104_26_109_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_104_26_109_4_stop" ]
+        %srcBase.1 = local;
+        symbol [ srcBase %srcBase.1 105 12 19 ];
+        symbol [ dma %tmp.2 105 23 26 ];
+        %tmp.2 = getv ? :dma;
+        %tmp.3 = 8;
+        %tmp.4 = shl %tmp.2 %tmp.3;
+        %tmp.5 = 0xFFFF;
+        %tmp.6 = bitand %tmp.4 %tmp.5;
+        lputv %srcBase.1 %tmp.6;
+        symbol [ srcBase %srcBase.1 105 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 106 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 106 17 18 ];
+        %tmp.7 = 0;
+        lputv %i.2 %tmp.7;
+        symbol [ i %i.2 106 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_test:
+        %tmp.8 = lgetv %i.2;
+        symbol [ i %tmp.8 106 24 25 ];
+        %tmp.9 = 160;
+        %tmp.10 = lt %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_38_108_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 107 12 ]
+        symbol [ _mem %tmp.11 107 12 16 ];
+        %tmp.11 = getv self :_mem;
+        symbol [ oam %tmp.12 107 17 20 ];
+        %tmp.12 = getv %tmp.11 :oam;
+        symbol [ _mem %tmp.14 107 26 30 ];
+        %tmp.14 = getv ? :_mem;
+        symbol [ readByte %tmp.15 107 31 39 ];
+        %tmp.15 = getv function %tmp.14 :readByte;
+        %tmp.16 = lgetv %srcBase.1;
+        symbol [ srcBase %tmp.16 107 40 47 ];
+        %tmp.17 = lgetv %i.2;
+        symbol [ i %tmp.17 107 50 51 ];
+        %tmp.18 = add %tmp.16 %tmp.17;
+        %tmp.19 = invoke %tmp.14 %tmp.15(%tmp.18);
+        %tmp.20 = 0xFF;
+        %tmp.21 = bitand %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %i.2;
+        symbol [ i %tmp.22 107 21 22 ];
+        aputv %tmp.12 %tmp.22 %tmp.21;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_38_108_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 106 ]
+        %tmp.25 = lgetv %i.2;
+        symbol [ i %tmp.25 106 33 34 ];
+        %tmp.26 = add %tmp.25 1;
+        lputv %i.2 %tmp.26;
+        symbol [ i %i.2 106 33 34 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_106_8_108_8_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_104_26_109_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 115; @symbol_functiondef = [cycle,115,13,18]; @symbol_param<0> = [tStates,115,19,26]; ]
+    function cycle(tStates) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_115_28_187_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 116 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_8_121_8_if_stmt:
+        symbol [ lcdc %tmp.2 116 13 17 ];
+        %tmp.2 = getv ? :lcdc;
+        %tmp.3 = 0x80;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = 0;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_8_121_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_8_121_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_32_121_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 117 12 ]
+        %tmp.7 = 0;
+        symbol [ ly ? 117 12 14 ];
+        putv self :ly %tmp.7;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 118 12 ]
+        %tmp.8 = 0;
+        symbol [ _cycles ? 118 12 19 ];
+        putv self :_cycles %tmp.8;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 119 12 ]
+        symbol [ stat %tmp.10 119 19 23 ];
+        %tmp.10 = getv ? :stat;
+        %tmp.11 = 0xFC;
+        %tmp.12 = bitand %tmp.10 %tmp.11;
+        symbol [ stat ? 119 12 16 ];
+        putv self :stat %tmp.12;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 120 12 ]
+        ret ?;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_32_121_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_8_121_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_116_8_121_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 123 8 ]
+        symbol [ _cycles %tmp.13 123 8 15 ];
+        %tmp.13 = getv self :_cycles;
+        %tmp.14 = lgetv %tStates;
+        symbol [ tStates %tmp.14 123 19 26 ];
+        %tmp.15 = add %tmp.13 %tmp.14;
+        symbol [ _cycles ? 123 8 15 ];
+        putv self :_cycles dup %tmp.15;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 125 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_stmt:
+        symbol [ ly %tmp.17 125 12 14 ];
+        %tmp.17 = getv ? :ly;
+        %tmp.18 = 144;
+        %tmp.19 = gte %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_23_142_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 127 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_12_141_12_if_stmt:
+        symbol [ _cycles %tmp.21 127 16 23 ];
+        %tmp.21 = getv ? :_cycles;
+        %tmp.22 = 456;
+        %tmp.23 = gte %tmp.21 %tmp.22;
+        bf %tmp.23 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_12_141_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_12_141_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_32_141_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 128 16 ]
+        symbol [ _cycles %tmp.24 128 16 23 ];
+        %tmp.24 = getv self :_cycles;
+        %tmp.25 = 456;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        symbol [ _cycles ? 128 16 23 ];
+        putv self :_cycles dup %tmp.26;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 129 16 ]
+        symbol [ ly %tmp.29 129 16 18 ];
+        %tmp.29 = getv ? :ly;
+        %tmp.30 = add %tmp.29 1;
+        symbol [ ly ? 129 16 18 ];
+        putv self :ly dup %tmp.30;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 130 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_stmt:
+        symbol [ ly %tmp.32 130 20 22 ];
+        %tmp.32 = getv ? :ly;
+        %tmp.33 = 154;
+        %tmp.34 = gte %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_31_138_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 131 20 ]
+        %tmp.35 = 0;
+        symbol [ ly ? 131 20 22 ];
+        putv self :ly %tmp.35;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 132 20 ]
+        %tmp.36 = 0;
+        symbol [ _winLineCounter ? 132 20 35 ];
+        putv self :_winLineCounter %tmp.36;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 133 20 ]
+        %tmp.37 = self;
+        symbol [ setMode %tmp.38 133 20 27 ];
+        %tmp.38 = getv function %tmp.37 :setMode;
+        %tmp.39 = 2;
+        invoke %tmp.37 %tmp.38(%tmp.39);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 134 20 ]
+        %tmp.40 = self;
+        symbol [ checkLyc %tmp.41 134 20 28 ];
+        %tmp.41 = getv function %tmp.40 :checkLyc;
+        invoke %tmp.40 %tmp.41();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 135 20 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_20_137_20_if_stmt:
+        symbol [ stat %tmp.43 135 25 29 ];
+        %tmp.43 = getv ? :stat;
+        %tmp.44 = 0x20;
+        %tmp.45 = bitand %tmp.43 %tmp.44;
+        %tmp.46 = 0;
+        %tmp.47 = ne %tmp.45 %tmp.46;
+        bf %tmp.47 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_20_137_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_20_137_20_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_44_137_20_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 136 24 ]
+        symbol [ _interrupts %tmp.49 136 24 35 ];
+        %tmp.49 = getv ? :_interrupts;
+        symbol [ request %tmp.50 136 36 43 ];
+        %tmp.50 = getv function %tmp.49 :request;
+        symbol [ INT_STAT %tmp.52 136 44 52 ];
+        %tmp.52 = getv ? :INT_STAT;
+        invoke %tmp.49 %tmp.50(%tmp.52);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_44_137_20_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_20_137_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_135_20_137_20_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_31_138_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_138_23_140_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 139 20 ]
+        %tmp.53 = self;
+        symbol [ checkLyc %tmp.54 139 20 28 ];
+        %tmp.54 = getv function %tmp.53 :checkLyc;
+        invoke %tmp.53 %tmp.54();
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_138_23_140_16_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_130_16_140_16_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_32_141_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_12_141_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_127_12_141_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_23_142_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_142_15_186_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 143 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_142_15_186_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_142_15_186_8_stop" ]
+        %mode.1 = local;
+        symbol [ mode %mode.1 143 16 20 ];
+        symbol [ stat %tmp.56 143 23 27 ];
+        %tmp.56 = getv ? :stat;
+        %tmp.57 = 0x03;
+        %tmp.58 = bitand %tmp.56 %tmp.57;
+        lputv %mode.1 %tmp.58;
+        symbol [ mode %mode.1 143 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 145 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_stmt:
+        symbol [ _cycles %tmp.60 145 16 23 ];
+        %tmp.60 = getv ? :_cycles;
+        %tmp.61 = 80;
+        %tmp.62 = lte %tmp.60 %tmp.61;
+        bf %tmp.62 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_31_149_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 146 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_16_148_16_if_stmt:
+        %tmp.63 = lgetv %mode.1;
+        symbol [ mode %tmp.63 146 20 24 ];
+        %tmp.64 = 2;
+        %tmp.65 = ne %tmp.63 %tmp.64;
+        bf %tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_16_148_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_16_148_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_31_148_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 147 20 ]
+        %tmp.66 = self;
+        symbol [ setMode %tmp.67 147 20 27 ];
+        %tmp.67 = getv function %tmp.66 :setMode;
+        %tmp.68 = 2;
+        invoke %tmp.66 %tmp.67(%tmp.68);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_31_148_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_16_148_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_146_16_148_16_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_31_149_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 149 19 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_stmt:
+        symbol [ _cycles %tmp.70 149 23 30 ];
+        %tmp.70 = getv ? :_cycles;
+        %tmp.71 = 252;
+        %tmp.72 = lte %tmp.70 %tmp.71;
+        bf %tmp.72 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_39_157_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 150 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_16_152_16_if_stmt:
+        %tmp.73 = lgetv %mode.1;
+        symbol [ mode %tmp.73 150 20 24 ];
+        %tmp.74 = 3;
+        %tmp.75 = ne %tmp.73 %tmp.74;
+        bf %tmp.75 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_16_152_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_16_152_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_31_152_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 151 20 ]
+        %tmp.76 = self;
+        symbol [ setMode %tmp.77 151 20 27 ];
+        %tmp.77 = getv function %tmp.76 :setMode;
+        %tmp.78 = 3;
+        invoke %tmp.76 %tmp.77(%tmp.78);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_31_152_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_16_152_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_150_16_152_16_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 153 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_16_156_16_if_stmt:
+        symbol [ _lineRendered %tmp.80 153 21 34 ];
+        %tmp.80 = getv ? :_lineRendered;
+        %tmp.81 = not %tmp.80;
+        bf %tmp.81 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_16_156_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_16_156_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_36_156_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 154 20 ]
+        %tmp.82 = self;
+        symbol [ renderLine %tmp.83 154 20 30 ];
+        %tmp.83 = getv function %tmp.82 :renderLine;
+        invoke %tmp.82 %tmp.83();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 155 20 ]
+        %tmp.84 = true;
+        symbol [ _lineRendered ? 155 20 33 ];
+        putv self :_lineRendered %tmp.84;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_36_156_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_16_156_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_153_16_156_16_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_39_157_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 157 19 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_19_164_12_if_stmt:
+        symbol [ _cycles %tmp.86 157 23 30 ];
+        %tmp.86 = getv ? :_cycles;
+        %tmp.87 = 456;
+        %tmp.88 = lt %tmp.86 %tmp.87;
+        bf %tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_19_164_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_19_164_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_38_164_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 158 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_16_163_16_if_stmt:
+        %tmp.89 = lgetv %mode.1;
+        symbol [ mode %tmp.89 158 20 24 ];
+        %tmp.90 = 0;
+        %tmp.91 = ne %tmp.89 %tmp.90;
+        bf %tmp.91 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_16_163_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_16_163_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_31_163_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 159 20 ]
+        %tmp.92 = self;
+        symbol [ setMode %tmp.93 159 20 27 ];
+        %tmp.93 = getv function %tmp.92 :setMode;
+        %tmp.94 = 0;
+        invoke %tmp.92 %tmp.93(%tmp.94);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 160 20 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_20_162_20_if_stmt:
+        symbol [ stat %tmp.96 160 25 29 ];
+        %tmp.96 = getv ? :stat;
+        %tmp.97 = 0x08;
+        %tmp.98 = bitand %tmp.96 %tmp.97;
+        %tmp.99 = 0;
+        %tmp.100 = ne %tmp.98 %tmp.99;
+        bf %tmp.100 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_20_162_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_20_162_20_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_44_162_20_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 161 24 ]
+        symbol [ _interrupts %tmp.102 161 24 35 ];
+        %tmp.102 = getv ? :_interrupts;
+        symbol [ request %tmp.103 161 36 43 ];
+        %tmp.103 = getv function %tmp.102 :request;
+        symbol [ INT_STAT %tmp.105 161 44 52 ];
+        %tmp.105 = getv ? :INT_STAT;
+        invoke %tmp.102 %tmp.103(%tmp.105);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_44_162_20_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_20_162_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_160_20_162_20_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_31_163_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_16_163_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_158_16_163_16_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_38_164_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_19_164_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_157_19_164_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_149_19_164_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_145_12_164_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 166 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_12_185_12_if_stmt:
+        symbol [ _cycles %tmp.107 166 16 23 ];
+        %tmp.107 = getv ? :_cycles;
+        %tmp.108 = 456;
+        %tmp.109 = gte %tmp.107 %tmp.108;
+        bf %tmp.109 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_12_185_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_12_185_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_32_185_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 167 16 ]
+        symbol [ _cycles %tmp.110 167 16 23 ];
+        %tmp.110 = getv self :_cycles;
+        %tmp.111 = 456;
+        %tmp.112 = sub %tmp.110 %tmp.111;
+        symbol [ _cycles ? 167 16 23 ];
+        putv self :_cycles dup %tmp.112;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 168 16 ]
+        symbol [ ly %tmp.115 168 16 18 ];
+        %tmp.115 = getv ? :ly;
+        %tmp.116 = add %tmp.115 1;
+        symbol [ ly ? 168 16 18 ];
+        putv self :ly dup %tmp.116;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 169 16 ]
+        %tmp.117 = false;
+        symbol [ _lineRendered ? 169 16 29 ];
+        putv self :_lineRendered %tmp.117;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 171 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_stmt:
+        symbol [ ly %tmp.119 171 20 22 ];
+        %tmp.119 = getv ? :ly;
+        %tmp.120 = 144;
+        %tmp.121 = eq %tmp.119 %tmp.120;
+        bf %tmp.121 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_31_178_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 172 20 ]
+        %tmp.122 = self;
+        symbol [ setMode %tmp.123 172 20 27 ];
+        %tmp.123 = getv function %tmp.122 :setMode;
+        %tmp.124 = 1;
+        invoke %tmp.122 %tmp.123(%tmp.124);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 173 20 ]
+        symbol [ _interrupts %tmp.126 173 20 31 ];
+        %tmp.126 = getv ? :_interrupts;
+        symbol [ request %tmp.127 173 32 39 ];
+        %tmp.127 = getv function %tmp.126 :request;
+        symbol [ INT_VBLANK %tmp.129 173 40 50 ];
+        %tmp.129 = getv ? :INT_VBLANK;
+        invoke %tmp.126 %tmp.127(%tmp.129);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 174 20 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_20_176_20_if_stmt:
+        symbol [ stat %tmp.131 174 25 29 ];
+        %tmp.131 = getv ? :stat;
+        %tmp.132 = 0x10;
+        %tmp.133 = bitand %tmp.131 %tmp.132;
+        %tmp.134 = 0;
+        %tmp.135 = ne %tmp.133 %tmp.134;
+        bf %tmp.135 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_20_176_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_20_176_20_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_44_176_20_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 175 24 ]
+        symbol [ _interrupts %tmp.137 175 24 35 ];
+        %tmp.137 = getv ? :_interrupts;
+        symbol [ request %tmp.138 175 36 43 ];
+        %tmp.138 = getv function %tmp.137 :request;
+        symbol [ INT_STAT %tmp.140 175 44 52 ];
+        %tmp.140 = getv ? :INT_STAT;
+        invoke %tmp.137 %tmp.138(%tmp.140);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_44_176_20_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_20_176_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_174_20_176_20_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 177 20 ]
+        %tmp.141 = true;
+        symbol [ _frameReady ? 177 20 31 ];
+        putv self :_frameReady %tmp.141;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_31_178_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_false:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 178 23 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_23_183_16_if_stmt:
+        symbol [ ly %tmp.143 178 27 29 ];
+        %tmp.143 = getv ? :ly;
+        %tmp.144 = 144;
+        %tmp.145 = lt %tmp.143 %tmp.144;
+        bf %tmp.145 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_23_183_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_23_183_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_37_183_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 179 20 ]
+        %tmp.146 = self;
+        symbol [ setMode %tmp.147 179 20 27 ];
+        %tmp.147 = getv function %tmp.146 :setMode;
+        %tmp.148 = 2;
+        invoke %tmp.146 %tmp.147(%tmp.148);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 180 20 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_20_182_20_if_stmt:
+        symbol [ stat %tmp.150 180 25 29 ];
+        %tmp.150 = getv ? :stat;
+        %tmp.151 = 0x20;
+        %tmp.152 = bitand %tmp.150 %tmp.151;
+        %tmp.153 = 0;
+        %tmp.154 = ne %tmp.152 %tmp.153;
+        bf %tmp.154 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_20_182_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_20_182_20_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_44_182_20_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 181 24 ]
+        symbol [ _interrupts %tmp.156 181 24 35 ];
+        %tmp.156 = getv ? :_interrupts;
+        symbol [ request %tmp.157 181 36 43 ];
+        %tmp.157 = getv function %tmp.156 :request;
+        symbol [ INT_STAT %tmp.159 181 44 52 ];
+        %tmp.159 = getv ? :INT_STAT;
+        invoke %tmp.156 %tmp.157(%tmp.159);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_44_182_20_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_20_182_20_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_180_20_182_20_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_37_183_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_23_183_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_178_23_183_16_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_171_16_183_16_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 184 16 ]
+        %tmp.160 = self;
+        symbol [ checkLyc %tmp.161 184 16 24 ];
+        %tmp.161 = getv function %tmp.160 :checkLyc;
+        invoke %tmp.160 %tmp.161();
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_32_185_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_12_185_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_166_12_185_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_142_15_186_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_125_8_186_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_115_28_187_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 189; @symbol_functiondef = [setMode,189,13,20]; @symbol_param<0> = [mode,189,21,25]; ]
+    function setMode(mode) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_189_27_191_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 190 8 ]
+        symbol [ stat %tmp.2 190 16 20 ];
+        %tmp.2 = getv ? :stat;
+        %tmp.3 = 0xFC;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = lgetv %mode;
+        symbol [ mode %tmp.5 190 32 36 ];
+        %tmp.6 = 0x03;
+        %tmp.7 = bitand %tmp.5 %tmp.6;
+        %tmp.8 = bitor %tmp.4 %tmp.7;
+        symbol [ stat ? 190 8 12 ];
+        putv self :stat %tmp.8;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_189_27_191_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 193; @symbol_functiondef = [checkLyc,193,13,21]; ]
+    function checkLyc() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_193_24_202_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 194 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_stmt:
+        symbol [ ly %tmp.2 194 12 14 ];
+        %tmp.2 = getv ? :ly;
+        symbol [ lyc %tmp.4 194 18 21 ];
+        %tmp.4 = getv ? :lyc;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_23_199_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 195 12 ]
+        symbol [ stat %tmp.6 195 12 16 ];
+        %tmp.6 = getv self :stat;
+        %tmp.7 = 0x04;
+        %tmp.8 = bitor %tmp.6 %tmp.7;
+        symbol [ stat ? 195 12 16 ];
+        putv self :stat dup %tmp.8;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 196 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_12_198_12_if_stmt:
+        symbol [ stat %tmp.10 196 17 21 ];
+        %tmp.10 = getv ? :stat;
+        %tmp.11 = 0x40;
+        %tmp.12 = bitand %tmp.10 %tmp.11;
+        %tmp.13 = 0;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_12_198_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_12_198_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_36_198_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 197 16 ]
+        symbol [ _interrupts %tmp.16 197 16 27 ];
+        %tmp.16 = getv ? :_interrupts;
+        symbol [ request %tmp.17 197 28 35 ];
+        %tmp.17 = getv function %tmp.16 :request;
+        symbol [ INT_STAT %tmp.19 197 36 44 ];
+        %tmp.19 = getv ? :INT_STAT;
+        invoke %tmp.16 %tmp.17(%tmp.19);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_36_198_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_12_198_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_196_12_198_12_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_23_199_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_199_15_201_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 200 12 ]
+        symbol [ stat %tmp.20 200 12 16 ];
+        %tmp.20 = getv self :stat;
+        %tmp.21 = 0x04;
+        %tmp.22 = compl %tmp.21;
+        %tmp.23 = bitand %tmp.20 %tmp.22;
+        symbol [ stat ? 200 12 16 ];
+        putv self :stat dup %tmp.23;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_199_15_201_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_194_8_201_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_193_24_202_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 208; @symbol_functiondef = [renderLine,208,13,23]; ]
+    function renderLine() {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_208_26_233_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 209 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_8_209_33_if_stmt:
+        symbol [ ly %tmp.2 209 12 14 ];
+        %tmp.2 = getv ? :ly;
+        %tmp.3 = 144;
+        %tmp.4 = gte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_8_209_33_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_8_209_33_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_23_209_33_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 209 25 ]
+        ret ?;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_23_209_33_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_8_209_33_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_209_8_209_33_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 210 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_208_26_233_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_208_26_233_4_stop" ]
+        %lineBase.1 = local;
+        symbol [ lineBase %lineBase.1 210 12 20 ];
+        symbol [ ly %tmp.6 210 23 25 ];
+        %tmp.6 = getv ? :ly;
+        %tmp.7 = 160;
+        %tmp.8 = mul %tmp.6 %tmp.7;
+        lputv %lineBase.1 %tmp.8;
+        symbol [ lineBase %lineBase.1 210 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 213 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_end" ]
+        %x.2 = local;
+        symbol [ x %x.2 213 17 18 ];
+        %tmp.9 = 0;
+        lputv %x.2 %tmp.9;
+        symbol [ x %x.2 213 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_test:
+        %tmp.10 = lgetv %x.2;
+        symbol [ x %tmp.10 213 24 25 ];
+        %tmp.11 = 160;
+        %tmp.12 = lt %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_38_215_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 214 12 ]
+        symbol [ framebuffer %tmp.13 214 12 23 ];
+        %tmp.13 = getv self :framebuffer;
+        %tmp.14 = 0;
+        %tmp.15 = lgetv %lineBase.1;
+        symbol [ lineBase %tmp.15 214 24 32 ];
+        %tmp.16 = lgetv %x.2;
+        symbol [ x %tmp.16 214 35 36 ];
+        %tmp.17 = add %tmp.15 %tmp.16;
+        aputv %tmp.13 %tmp.17 %tmp.14;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_38_215_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 213 ]
+        %tmp.20 = lgetv %x.2;
+        symbol [ x %tmp.20 213 33 34 ];
+        %tmp.21 = add %tmp.20 1;
+        lputv %x.2 %tmp.21;
+        symbol [ x %x.2 213 33 34 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_213_8_215_8_for_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 217 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_8_217_42_if_stmt:
+        symbol [ lcdc %tmp.23 217 13 17 ];
+        %tmp.23 = getv ? :lcdc;
+        %tmp.24 = 0x80;
+        %tmp.25 = bitand %tmp.23 %tmp.24;
+        %tmp.26 = 0;
+        %tmp.27 = eq %tmp.25 %tmp.26;
+        bf %tmp.27 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_8_217_42_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_8_217_42_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_32_217_42_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 217 34 ]
+        ret ?;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_32_217_42_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_8_217_42_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_217_8_217_42_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 220 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_8_222_8_if_stmt:
+        symbol [ lcdc %tmp.29 220 13 17 ];
+        %tmp.29 = getv ? :lcdc;
+        %tmp.30 = 0x01;
+        %tmp.31 = bitand %tmp.29 %tmp.30;
+        %tmp.32 = 0;
+        %tmp.33 = ne %tmp.31 %tmp.32;
+        bf %tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_8_222_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_8_222_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_32_222_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 221 12 ]
+        %tmp.34 = self;
+        symbol [ renderBgLine %tmp.35 221 12 24 ];
+        %tmp.35 = getv function %tmp.34 :renderBgLine;
+        %tmp.36 = lgetv %lineBase.1;
+        symbol [ lineBase %tmp.36 221 25 33 ];
+        invoke %tmp.34 %tmp.35(%tmp.36);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_32_222_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_8_222_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_220_8_222_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 225 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_12_225_40_begin:
+        symbol [ lcdc %tmp.38 225 13 17 ];
+        %tmp.38 = getv ? :lcdc;
+        %tmp.39 = 0x20;
+        %tmp.40 = bitand %tmp.38 %tmp.39;
+        %tmp.41 = 0;
+        %tmp.42 = ne %tmp.40 %tmp.41;
+        bf %tmp.42 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_34_225_40_true:
+        symbol [ wy %tmp.44 225 34 36 ];
+        %tmp.44 = getv ? :wy;
+        symbol [ ly %tmp.46 225 40 42 ];
+        %tmp.46 = getv ? :ly;
+        %tmp.47 = lte %tmp.44 %tmp.46;
+        push %tmp.47;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_34_225_40_end:
+        %tmp.48 = phi [%tmp.42 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_12_225_40_begin] [%tmp.47 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_34_225_40_true] [%tmp.48 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_34_225_40_end];
+        bf %tmp.48 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_44_227_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 226 12 ]
+        %tmp.49 = self;
+        symbol [ renderWindowLine %tmp.50 226 12 28 ];
+        %tmp.50 = getv function %tmp.49 :renderWindowLine;
+        %tmp.51 = lgetv %lineBase.1;
+        symbol [ lineBase %tmp.51 226 29 37 ];
+        invoke %tmp.49 %tmp.50(%tmp.51);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_44_227_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_225_8_227_8_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 230 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_8_232_8_if_stmt:
+        symbol [ lcdc %tmp.53 230 13 17 ];
+        %tmp.53 = getv ? :lcdc;
+        %tmp.54 = 0x02;
+        %tmp.55 = bitand %tmp.53 %tmp.54;
+        %tmp.56 = 0;
+        %tmp.57 = ne %tmp.55 %tmp.56;
+        bf %tmp.57 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_8_232_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_8_232_8_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_32_232_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 231 12 ]
+        %tmp.58 = self;
+        symbol [ renderSpriteLine %tmp.59 231 12 28 ];
+        %tmp.59 = getv function %tmp.58 :renderSpriteLine;
+        %tmp.60 = lgetv %lineBase.1;
+        symbol [ lineBase %tmp.60 231 29 37 ];
+        invoke %tmp.58 %tmp.59(%tmp.60);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_32_232_8_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_8_232_8_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_230_8_232_8_if_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_208_26_233_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 235; @symbol_functiondef = [renderBgLine,235,13,25]; @symbol_param<0> = [lineBase,235,26,34]; ]
+    function renderBgLine(lineBase) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 236 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop" ]
+        %mapBase.1 = local;
+        symbol [ mapBase %mapBase.1 236 12 19 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_begin:
+        symbol [ lcdc %tmp.2 236 24 28 ];
+        %tmp.2 = getv ? :lcdc;
+        %tmp.3 = 0x08;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = 0;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_true:
+        %tmp.7 = 0x1C00;
+        push %tmp.7;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_else_false:
+        %tmp.8 = 0x1800;
+        push %tmp.8;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_end:
+        %tmp.9 = phi [%tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_begin] [%tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_true] [%tmp.8 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_else_false] [%tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_236_22_236_54_end];
+        lputv %mapBase.1 %tmp.9;
+        symbol [ mapBase %mapBase.1 236 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 237 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop" ]
+        %signedAddr.2 = local;
+        symbol [ signedAddr %signedAddr.2 237 12 22 ];
+        symbol [ lcdc %tmp.11 237 27 31 ];
+        %tmp.11 = getv ? :lcdc;
+        %tmp.12 = 0x10;
+        %tmp.13 = bitand %tmp.11 %tmp.12;
+        %tmp.14 = 0;
+        %tmp.15 = eq %tmp.13 %tmp.14;
+        lputv %signedAddr.2 %tmp.15;
+        symbol [ signedAddr %signedAddr.2 237 12 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 239 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop" ]
+        %bgY.3 = local;
+        symbol [ bgY %bgY.3 239 12 15 ];
+        symbol [ ly %tmp.17 239 19 21 ];
+        %tmp.17 = getv ? :ly;
+        symbol [ scy %tmp.19 239 24 27 ];
+        %tmp.19 = getv ? :scy;
+        %tmp.20 = add %tmp.17 %tmp.19;
+        %tmp.21 = 0xFF;
+        %tmp.22 = bitand %tmp.20 %tmp.21;
+        lputv %bgY.3 %tmp.22;
+        symbol [ bgY %bgY.3 239 12 15 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 240 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop" ]
+        %tileRow.4 = local;
+        symbol [ tileRow %tileRow.4 240 12 19 ];
+        %tmp.23 = lgetv %bgY.3;
+        symbol [ bgY %tmp.23 240 23 26 ];
+        %tmp.24 = 3;
+        %tmp.25 = shr %tmp.23 %tmp.24;
+        %tmp.26 = 0x1F;
+        %tmp.27 = bitand %tmp.25 %tmp.26;
+        lputv %tileRow.4 %tmp.27;
+        symbol [ tileRow %tileRow.4 240 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 241 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop" ]
+        %pixelRowInTile.5 = local;
+        symbol [ pixelRowInTile %pixelRowInTile.5 241 12 26 ];
+        %tmp.28 = lgetv %bgY.3;
+        symbol [ bgY %tmp.28 241 29 32 ];
+        %tmp.29 = 7;
+        %tmp.30 = bitand %tmp.28 %tmp.29;
+        lputv %pixelRowInTile.5 %tmp.30;
+        symbol [ pixelRowInTile %pixelRowInTile.5 241 12 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 243 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_end" ]
+        %screenX.6 = local;
+        symbol [ screenX %screenX.6 243 17 24 ];
+        %tmp.31 = 0;
+        lputv %screenX.6 %tmp.31;
+        symbol [ screenX %screenX.6 243 17 24 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_test:
+        %tmp.32 = lgetv %screenX.6;
+        symbol [ screenX %tmp.32 243 30 37 ];
+        %tmp.33 = 160;
+        %tmp.34 = lt %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 244 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %bgX.7 = local;
+        symbol [ bgX %bgX.7 244 16 19 ];
+        %tmp.35 = lgetv %screenX.6;
+        symbol [ screenX %tmp.35 244 23 30 ];
+        symbol [ scx %tmp.37 244 33 36 ];
+        %tmp.37 = getv ? :scx;
+        %tmp.38 = add %tmp.35 %tmp.37;
+        %tmp.39 = 0xFF;
+        %tmp.40 = bitand %tmp.38 %tmp.39;
+        lputv %bgX.7 %tmp.40;
+        symbol [ bgX %bgX.7 244 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 245 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %tileCol.8 = local;
+        symbol [ tileCol %tileCol.8 245 16 23 ];
+        %tmp.41 = lgetv %bgX.7;
+        symbol [ bgX %tmp.41 245 27 30 ];
+        %tmp.42 = 3;
+        %tmp.43 = shr %tmp.41 %tmp.42;
+        %tmp.44 = 0x1F;
+        %tmp.45 = bitand %tmp.43 %tmp.44;
+        lputv %tileCol.8 %tmp.45;
+        symbol [ tileCol %tileCol.8 245 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 246 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %pixelCol.9 = local;
+        symbol [ pixelCol %pixelCol.9 246 16 24 ];
+        %tmp.46 = lgetv %bgX.7;
+        symbol [ bgX %tmp.46 246 27 30 ];
+        %tmp.47 = 7;
+        %tmp.48 = bitand %tmp.46 %tmp.47;
+        lputv %pixelCol.9 %tmp.48;
+        symbol [ pixelCol %pixelCol.9 246 16 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 248 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %mapIdx.10 = local;
+        symbol [ mapIdx %mapIdx.10 248 16 22 ];
+        %tmp.49 = lgetv %mapBase.1;
+        symbol [ mapBase %tmp.49 248 25 32 ];
+        %tmp.50 = lgetv %tileRow.4;
+        symbol [ tileRow %tmp.50 248 36 43 ];
+        %tmp.51 = 32;
+        %tmp.52 = mul %tmp.50 %tmp.51;
+        %tmp.53 = add %tmp.49 %tmp.52;
+        %tmp.54 = lgetv %tileCol.8;
+        symbol [ tileCol %tmp.54 248 52 59 ];
+        %tmp.55 = add %tmp.53 %tmp.54;
+        lputv %mapIdx.10 %tmp.55;
+        symbol [ mapIdx %mapIdx.10 248 16 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 249 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %tileIndex.11 = local;
+        symbol [ tileIndex %tileIndex.11 249 16 25 ];
+        symbol [ _mem %tmp.57 249 28 32 ];
+        %tmp.57 = getv ? :_mem;
+        symbol [ vram %tmp.58 249 33 37 ];
+        %tmp.58 = getv %tmp.57 :vram;
+        %tmp.59 = lgetv %mapIdx.10;
+        symbol [ mapIdx %tmp.59 249 38 44 ];
+        %tmp.60 = agetv %tmp.58 %tmp.59;
+        %tmp.61 = 0xFF;
+        %tmp.62 = bitand %tmp.60 %tmp.61;
+        lputv %tileIndex.11 %tmp.62;
+        symbol [ tileIndex %tileIndex.11 249 16 25 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 251 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %tileDataAddr.12 = local;
+        symbol [ tileDataAddr %tileDataAddr.12 251 16 28 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 252 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_stmt:
+        %tmp.63 = lgetv %signedAddr.2;
+        symbol [ signedAddr %tmp.63 252 16 26 ];
+        bf %tmp.63 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_28_256_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 253 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_28_256_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_28_256_12_stop" ]
+        %si.13 = local;
+        symbol [ si %si.13 253 20 22 ];
+        %tmp.64 = lgetv %tileIndex.11;
+        symbol [ tileIndex %tmp.64 253 25 34 ];
+        lputv %si.13 %tmp.64;
+        symbol [ si %si.13 253 20 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 254 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_16_254_55_if_stmt:
+        %tmp.65 = lgetv %si.13;
+        symbol [ si %tmp.65 254 21 23 ];
+        %tmp.66 = 0x80;
+        %tmp.67 = bitand %tmp.65 %tmp.66;
+        %tmp.68 = 0;
+        %tmp.69 = ne %tmp.67 %tmp.68;
+        bf %tmp.69 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_16_254_55_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_16_254_55_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_38_254_55_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 254 40 ]
+        %tmp.70 = lgetv %si.13;
+        symbol [ si %tmp.70 254 45 47 ];
+        %tmp.71 = 256;
+        %tmp.72 = sub %tmp.70 %tmp.71;
+        lputv %si.13 %tmp.72;
+        symbol [ si %si.13 254 40 42 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_38_254_55_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_16_254_55_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_254_16_254_55_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 255 16 ]
+        %tmp.73 = 0x1000;
+        %tmp.74 = lgetv %si.13;
+        symbol [ si %tmp.74 255 41 43 ];
+        %tmp.75 = 16;
+        %tmp.76 = mul %tmp.74 %tmp.75;
+        %tmp.77 = add %tmp.73 %tmp.76;
+        lputv %tileDataAddr.12 %tmp.77;
+        symbol [ tileDataAddr %tileDataAddr.12 255 16 28 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_28_256_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_256_19_258_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 257 16 ]
+        %tmp.78 = lgetv %tileIndex.11;
+        symbol [ tileIndex %tmp.78 257 31 40 ];
+        %tmp.79 = 16;
+        %tmp.80 = mul %tmp.78 %tmp.79;
+        lputv %tileDataAddr.12 %tmp.80;
+        symbol [ tileDataAddr %tileDataAddr.12 257 16 28 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_256_19_258_12_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_252_12_258_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 260 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %rowAddr.14 = local;
+        symbol [ rowAddr %rowAddr.14 260 16 23 ];
+        %tmp.81 = lgetv %tileDataAddr.12;
+        symbol [ tileDataAddr %tmp.81 260 26 38 ];
+        %tmp.82 = lgetv %pixelRowInTile.5;
+        symbol [ pixelRowInTile %tmp.82 260 42 56 ];
+        %tmp.83 = 2;
+        %tmp.84 = mul %tmp.82 %tmp.83;
+        %tmp.85 = add %tmp.81 %tmp.84;
+        lputv %rowAddr.14 %tmp.85;
+        symbol [ rowAddr %rowAddr.14 260 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 261 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_16_261_46_begin:
+        %tmp.86 = lgetv %rowAddr.14;
+        symbol [ rowAddr %tmp.86 261 16 23 ];
+        %tmp.87 = 0;
+        %tmp.88 = lt %tmp.86 %tmp.87;
+        bt %tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_31_261_46_false:
+        %tmp.89 = lgetv %rowAddr.14;
+        symbol [ rowAddr %tmp.89 261 31 38 ];
+        %tmp.90 = 1;
+        %tmp.91 = add %tmp.89 %tmp.90;
+        %tmp.92 = 8192;
+        %tmp.93 = gte %tmp.91 %tmp.92;
+        push %tmp.93;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_31_261_46_end:
+        %tmp.94 = phi [%tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_16_261_46_begin] [%tmp.93 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_31_261_46_false] [%tmp.94 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_31_261_46_end];
+        bf %tmp.94 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_52_264_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 262 16 ]
+        symbol [ framebuffer %tmp.95 262 16 27 ];
+        %tmp.95 = getv self :framebuffer;
+        %tmp.96 = 0;
+        %tmp.97 = lgetv %lineBase;
+        symbol [ lineBase %tmp.97 262 28 36 ];
+        %tmp.98 = lgetv %screenX.6;
+        symbol [ screenX %tmp.98 262 39 46 ];
+        %tmp.99 = add %tmp.97 %tmp.98;
+        aputv %tmp.95 %tmp.99 %tmp.96;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 263 16 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_52_264_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_261_12_264_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 265 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %lo.15 = local;
+        symbol [ lo %lo.15 265 16 18 ];
+        symbol [ _mem %tmp.101 265 21 25 ];
+        %tmp.101 = getv ? :_mem;
+        symbol [ vram %tmp.102 265 26 30 ];
+        %tmp.102 = getv %tmp.101 :vram;
+        %tmp.103 = lgetv %rowAddr.14;
+        symbol [ rowAddr %tmp.103 265 31 38 ];
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        %tmp.105 = 0xFF;
+        %tmp.106 = bitand %tmp.104 %tmp.105;
+        lputv %lo.15 %tmp.106;
+        symbol [ lo %lo.15 265 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 266 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %hi.16 = local;
+        symbol [ hi %hi.16 266 16 18 ];
+        symbol [ _mem %tmp.108 266 21 25 ];
+        %tmp.108 = getv ? :_mem;
+        symbol [ vram %tmp.109 266 26 30 ];
+        %tmp.109 = getv %tmp.108 :vram;
+        %tmp.110 = lgetv %rowAddr.14;
+        symbol [ rowAddr %tmp.110 266 31 38 ];
+        %tmp.111 = 1;
+        %tmp.112 = add %tmp.110 %tmp.111;
+        %tmp.113 = agetv %tmp.109 %tmp.112;
+        %tmp.114 = 0xFF;
+        %tmp.115 = bitand %tmp.113 %tmp.114;
+        lputv %hi.16 %tmp.115;
+        symbol [ hi %hi.16 266 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 268 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %bit.17 = local;
+        symbol [ bit %bit.17 268 16 19 ];
+        %tmp.116 = 7;
+        %tmp.117 = lgetv %pixelCol.9;
+        symbol [ pixelCol %tmp.117 268 26 34 ];
+        %tmp.118 = sub %tmp.116 %tmp.117;
+        lputv %bit.17 %tmp.118;
+        symbol [ bit %bit.17 268 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 269 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop" ]
+        %colorIdx.18 = local;
+        symbol [ colorIdx %colorIdx.18 269 16 24 ];
+        %tmp.119 = lgetv %hi.16;
+        symbol [ hi %tmp.119 269 30 32 ];
+        %tmp.120 = lgetv %bit.17;
+        symbol [ bit %tmp.120 269 36 39 ];
+        %tmp.121 = shr %tmp.119 %tmp.120;
+        %tmp.122 = 1;
+        %tmp.123 = bitand %tmp.121 %tmp.122;
+        %tmp.124 = 1;
+        %tmp.125 = shl %tmp.123 %tmp.124;
+        %tmp.126 = lgetv %lo.15;
+        symbol [ lo %tmp.126 269 56 58 ];
+        %tmp.127 = lgetv %bit.17;
+        symbol [ bit %tmp.127 269 62 65 ];
+        %tmp.128 = shr %tmp.126 %tmp.127;
+        %tmp.129 = 1;
+        %tmp.130 = bitand %tmp.128 %tmp.129;
+        %tmp.131 = bitor %tmp.125 %tmp.130;
+        lputv %colorIdx.18 %tmp.131;
+        symbol [ colorIdx %colorIdx.18 269 16 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 270 12 ]
+        symbol [ framebuffer %tmp.132 270 12 23 ];
+        %tmp.132 = getv self :framebuffer;
+        symbol [ bgp %tmp.134 270 47 50 ];
+        %tmp.134 = getv ? :bgp;
+        %tmp.135 = lgetv %colorIdx.18;
+        symbol [ colorIdx %tmp.135 270 55 63 ];
+        %tmp.136 = 2;
+        %tmp.137 = mul %tmp.135 %tmp.136;
+        %tmp.138 = shr %tmp.134 %tmp.137;
+        %tmp.139 = 3;
+        %tmp.140 = bitand %tmp.138 %tmp.139;
+        %tmp.141 = lgetv %lineBase;
+        symbol [ lineBase %tmp.141 270 24 32 ];
+        %tmp.142 = lgetv %screenX.6;
+        symbol [ screenX %tmp.142 270 35 42 ];
+        %tmp.143 = add %tmp.141 %tmp.142;
+        aputv %tmp.132 %tmp.143 %tmp.140;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_56_271_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 243 ]
+        %tmp.146 = lgetv %screenX.6;
+        symbol [ screenX %tmp.146 243 45 52 ];
+        %tmp.147 = add %tmp.146 1;
+        lputv %screenX.6 %tmp.147;
+        symbol [ screenX %screenX.6 243 45 52 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_243_8_271_8_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_235_36_272_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 274; @symbol_functiondef = [renderWindowLine,274,13,29]; @symbol_param<0> = [lineBase,274,30,38]; ]
+    function renderWindowLine(lineBase) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 275 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %mapBase.1 = local;
+        symbol [ mapBase %mapBase.1 275 12 19 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_begin:
+        symbol [ lcdc %tmp.2 275 24 28 ];
+        %tmp.2 = getv ? :lcdc;
+        %tmp.3 = 0x40;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = 0;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_true:
+        %tmp.7 = 0x1C00;
+        push %tmp.7;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_else_false:
+        %tmp.8 = 0x1800;
+        push %tmp.8;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_end:
+        %tmp.9 = phi [%tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_begin] [%tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_true] [%tmp.8 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_else_false] [%tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_275_22_275_54_end];
+        lputv %mapBase.1 %tmp.9;
+        symbol [ mapBase %mapBase.1 275 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 276 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %signedAddr.2 = local;
+        symbol [ signedAddr %signedAddr.2 276 12 22 ];
+        symbol [ lcdc %tmp.11 276 27 31 ];
+        %tmp.11 = getv ? :lcdc;
+        %tmp.12 = 0x10;
+        %tmp.13 = bitand %tmp.11 %tmp.12;
+        %tmp.14 = 0;
+        %tmp.15 = eq %tmp.13 %tmp.14;
+        lputv %signedAddr.2 %tmp.15;
+        symbol [ signedAddr %signedAddr.2 276 12 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 277 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %wxScreen.3 = local;
+        symbol [ wxScreen %wxScreen.3 277 12 20 ];
+        symbol [ wx %tmp.17 277 23 25 ];
+        %tmp.17 = getv ? :wx;
+        %tmp.18 = 7;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        lputv %wxScreen.3 %tmp.19;
+        symbol [ wxScreen %wxScreen.3 277 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 279 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %winY.4 = local;
+        symbol [ winY %winY.4 279 12 16 ];
+        symbol [ _winLineCounter %tmp.21 279 19 34 ];
+        %tmp.21 = getv ? :_winLineCounter;
+        lputv %winY.4 %tmp.21;
+        symbol [ winY %winY.4 279 12 16 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 280 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %tileRow.5 = local;
+        symbol [ tileRow %tileRow.5 280 12 19 ];
+        %tmp.22 = lgetv %winY.4;
+        symbol [ winY %tmp.22 280 23 27 ];
+        %tmp.23 = 3;
+        %tmp.24 = shr %tmp.22 %tmp.23;
+        %tmp.25 = 0x1F;
+        %tmp.26 = bitand %tmp.24 %tmp.25;
+        lputv %tileRow.5 %tmp.26;
+        symbol [ tileRow %tileRow.5 280 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 281 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %pixelRowInTile.6 = local;
+        symbol [ pixelRowInTile %pixelRowInTile.6 281 12 26 ];
+        %tmp.27 = lgetv %winY.4;
+        symbol [ winY %tmp.27 281 29 33 ];
+        %tmp.28 = 7;
+        %tmp.29 = bitand %tmp.27 %tmp.28;
+        lputv %pixelRowInTile.6 %tmp.29;
+        symbol [ pixelRowInTile %pixelRowInTile.6 281 12 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 283 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop" ]
+        %startX.7 = local;
+        symbol [ startX %startX.7 283 12 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_begin:
+        %tmp.30 = lgetv %wxScreen.3;
+        symbol [ wxScreen %tmp.30 283 22 30 ];
+        %tmp.31 = 0;
+        %tmp.32 = lt %tmp.30 %tmp.31;
+        bf %tmp.32 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_true:
+        %tmp.33 = 0;
+        push %tmp.33;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_else_false:
+        %tmp.34 = lgetv %wxScreen.3;
+        symbol [ wxScreen %tmp.34 283 42 50 ];
+        push %tmp.34;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_end:
+        %tmp.35 = phi [%tmp.32 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_begin] [%tmp.33 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_true] [%tmp.34 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_else_false] [%tmp.35 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_283_21_283_42_end];
+        lputv %startX.7 %tmp.35;
+        symbol [ startX %startX.7 283 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 285 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_end" ]
+        %screenX.8 = local;
+        symbol [ screenX %screenX.8 285 17 24 ];
+        %tmp.36 = lgetv %startX.7;
+        symbol [ startX %tmp.36 285 27 33 ];
+        lputv %screenX.8 %tmp.36;
+        symbol [ screenX %screenX.8 285 17 24 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_test:
+        %tmp.37 = lgetv %screenX.8;
+        symbol [ screenX %tmp.37 285 35 42 ];
+        %tmp.38 = 160;
+        %tmp.39 = lt %tmp.37 %tmp.38;
+        bf %tmp.39 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 286 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %winX.9 = local;
+        symbol [ winX %winX.9 286 16 20 ];
+        %tmp.40 = lgetv %screenX.8;
+        symbol [ screenX %tmp.40 286 23 30 ];
+        %tmp.41 = lgetv %wxScreen.3;
+        symbol [ wxScreen %tmp.41 286 33 41 ];
+        %tmp.42 = sub %tmp.40 %tmp.41;
+        lputv %winX.9 %tmp.42;
+        symbol [ winX %winX.9 286 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 287 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_12_287_38_if_stmt:
+        %tmp.43 = lgetv %winX.9;
+        symbol [ winX %tmp.43 287 16 20 ];
+        %tmp.44 = 0;
+        %tmp.45 = lt %tmp.43 %tmp.44;
+        bf %tmp.45 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_12_287_38_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_12_287_38_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_26_287_38_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 287 28 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_26_287_38_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_12_287_38_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_287_12_287_38_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 288 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %tileCol.10 = local;
+        symbol [ tileCol %tileCol.10 288 16 23 ];
+        %tmp.46 = lgetv %winX.9;
+        symbol [ winX %tmp.46 288 27 31 ];
+        %tmp.47 = 3;
+        %tmp.48 = shr %tmp.46 %tmp.47;
+        %tmp.49 = 0x1F;
+        %tmp.50 = bitand %tmp.48 %tmp.49;
+        lputv %tileCol.10 %tmp.50;
+        symbol [ tileCol %tileCol.10 288 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 289 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %pixelCol.11 = local;
+        symbol [ pixelCol %pixelCol.11 289 16 24 ];
+        %tmp.51 = lgetv %winX.9;
+        symbol [ winX %tmp.51 289 27 31 ];
+        %tmp.52 = 7;
+        %tmp.53 = bitand %tmp.51 %tmp.52;
+        lputv %pixelCol.11 %tmp.53;
+        symbol [ pixelCol %pixelCol.11 289 16 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 291 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %mapIdx.12 = local;
+        symbol [ mapIdx %mapIdx.12 291 16 22 ];
+        %tmp.54 = lgetv %mapBase.1;
+        symbol [ mapBase %tmp.54 291 25 32 ];
+        %tmp.55 = lgetv %tileRow.5;
+        symbol [ tileRow %tmp.55 291 36 43 ];
+        %tmp.56 = 32;
+        %tmp.57 = mul %tmp.55 %tmp.56;
+        %tmp.58 = add %tmp.54 %tmp.57;
+        %tmp.59 = lgetv %tileCol.10;
+        symbol [ tileCol %tmp.59 291 52 59 ];
+        %tmp.60 = add %tmp.58 %tmp.59;
+        lputv %mapIdx.12 %tmp.60;
+        symbol [ mapIdx %mapIdx.12 291 16 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 292 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %tileIndex.13 = local;
+        symbol [ tileIndex %tileIndex.13 292 16 25 ];
+        symbol [ _mem %tmp.62 292 28 32 ];
+        %tmp.62 = getv ? :_mem;
+        symbol [ vram %tmp.63 292 33 37 ];
+        %tmp.63 = getv %tmp.62 :vram;
+        %tmp.64 = lgetv %mapIdx.12;
+        symbol [ mapIdx %tmp.64 292 38 44 ];
+        %tmp.65 = agetv %tmp.63 %tmp.64;
+        %tmp.66 = 0xFF;
+        %tmp.67 = bitand %tmp.65 %tmp.66;
+        lputv %tileIndex.13 %tmp.67;
+        symbol [ tileIndex %tileIndex.13 292 16 25 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 294 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %tileDataAddr.14 = local;
+        symbol [ tileDataAddr %tileDataAddr.14 294 16 28 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 295 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_stmt:
+        %tmp.68 = lgetv %signedAddr.2;
+        symbol [ signedAddr %tmp.68 295 16 26 ];
+        bf %tmp.68 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_28_299_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 296 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_28_299_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_28_299_12_stop" ]
+        %si.15 = local;
+        symbol [ si %si.15 296 20 22 ];
+        %tmp.69 = lgetv %tileIndex.13;
+        symbol [ tileIndex %tmp.69 296 25 34 ];
+        lputv %si.15 %tmp.69;
+        symbol [ si %si.15 296 20 22 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 297 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_16_297_55_if_stmt:
+        %tmp.70 = lgetv %si.15;
+        symbol [ si %tmp.70 297 21 23 ];
+        %tmp.71 = 0x80;
+        %tmp.72 = bitand %tmp.70 %tmp.71;
+        %tmp.73 = 0;
+        %tmp.74 = ne %tmp.72 %tmp.73;
+        bf %tmp.74 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_16_297_55_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_16_297_55_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_38_297_55_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 297 40 ]
+        %tmp.75 = lgetv %si.15;
+        symbol [ si %tmp.75 297 45 47 ];
+        %tmp.76 = 256;
+        %tmp.77 = sub %tmp.75 %tmp.76;
+        lputv %si.15 %tmp.77;
+        symbol [ si %si.15 297 40 42 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_38_297_55_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_16_297_55_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_297_16_297_55_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 298 16 ]
+        %tmp.78 = 0x1000;
+        %tmp.79 = lgetv %si.15;
+        symbol [ si %tmp.79 298 41 43 ];
+        %tmp.80 = 16;
+        %tmp.81 = mul %tmp.79 %tmp.80;
+        %tmp.82 = add %tmp.78 %tmp.81;
+        lputv %tileDataAddr.14 %tmp.82;
+        symbol [ tileDataAddr %tileDataAddr.14 298 16 28 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_28_299_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_299_19_301_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 300 16 ]
+        %tmp.83 = lgetv %tileIndex.13;
+        symbol [ tileIndex %tmp.83 300 31 40 ];
+        %tmp.84 = 16;
+        %tmp.85 = mul %tmp.83 %tmp.84;
+        lputv %tileDataAddr.14 %tmp.85;
+        symbol [ tileDataAddr %tileDataAddr.14 300 16 28 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_299_19_301_12_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_295_12_301_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 303 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %rowAddr.16 = local;
+        symbol [ rowAddr %rowAddr.16 303 16 23 ];
+        %tmp.86 = lgetv %tileDataAddr.14;
+        symbol [ tileDataAddr %tmp.86 303 26 38 ];
+        %tmp.87 = lgetv %pixelRowInTile.6;
+        symbol [ pixelRowInTile %tmp.87 303 42 56 ];
+        %tmp.88 = 2;
+        %tmp.89 = mul %tmp.87 %tmp.88;
+        %tmp.90 = add %tmp.86 %tmp.89;
+        lputv %rowAddr.16 %tmp.90;
+        symbol [ rowAddr %rowAddr.16 303 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 304 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_16_304_46_begin:
+        %tmp.91 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.91 304 16 23 ];
+        %tmp.92 = 0;
+        %tmp.93 = lt %tmp.91 %tmp.92;
+        bt %tmp.93 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_31_304_46_false:
+        %tmp.94 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.94 304 31 38 ];
+        %tmp.95 = 1;
+        %tmp.96 = add %tmp.94 %tmp.95;
+        %tmp.97 = 8192;
+        %tmp.98 = gte %tmp.96 %tmp.97;
+        push %tmp.98;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_31_304_46_end:
+        %tmp.99 = phi [%tmp.93 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_16_304_46_begin] [%tmp.98 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_31_304_46_false] [%tmp.99 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_31_304_46_end];
+        bf %tmp.99 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_52_304_64_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 304 54 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_52_304_64_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_304_12_304_64_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 305 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %lo.17 = local;
+        symbol [ lo %lo.17 305 16 18 ];
+        symbol [ _mem %tmp.101 305 21 25 ];
+        %tmp.101 = getv ? :_mem;
+        symbol [ vram %tmp.102 305 26 30 ];
+        %tmp.102 = getv %tmp.101 :vram;
+        %tmp.103 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.103 305 31 38 ];
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        %tmp.105 = 0xFF;
+        %tmp.106 = bitand %tmp.104 %tmp.105;
+        lputv %lo.17 %tmp.106;
+        symbol [ lo %lo.17 305 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 306 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %hi.18 = local;
+        symbol [ hi %hi.18 306 16 18 ];
+        symbol [ _mem %tmp.108 306 21 25 ];
+        %tmp.108 = getv ? :_mem;
+        symbol [ vram %tmp.109 306 26 30 ];
+        %tmp.109 = getv %tmp.108 :vram;
+        %tmp.110 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.110 306 31 38 ];
+        %tmp.111 = 1;
+        %tmp.112 = add %tmp.110 %tmp.111;
+        %tmp.113 = agetv %tmp.109 %tmp.112;
+        %tmp.114 = 0xFF;
+        %tmp.115 = bitand %tmp.113 %tmp.114;
+        lputv %hi.18 %tmp.115;
+        symbol [ hi %hi.18 306 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 308 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %bit.19 = local;
+        symbol [ bit %bit.19 308 16 19 ];
+        %tmp.116 = 7;
+        %tmp.117 = lgetv %pixelCol.11;
+        symbol [ pixelCol %tmp.117 308 26 34 ];
+        %tmp.118 = sub %tmp.116 %tmp.117;
+        lputv %bit.19 %tmp.118;
+        symbol [ bit %bit.19 308 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 309 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop" ]
+        %colorIdx.20 = local;
+        symbol [ colorIdx %colorIdx.20 309 16 24 ];
+        %tmp.119 = lgetv %hi.18;
+        symbol [ hi %tmp.119 309 30 32 ];
+        %tmp.120 = lgetv %bit.19;
+        symbol [ bit %tmp.120 309 36 39 ];
+        %tmp.121 = shr %tmp.119 %tmp.120;
+        %tmp.122 = 1;
+        %tmp.123 = bitand %tmp.121 %tmp.122;
+        %tmp.124 = 1;
+        %tmp.125 = shl %tmp.123 %tmp.124;
+        %tmp.126 = lgetv %lo.17;
+        symbol [ lo %tmp.126 309 56 58 ];
+        %tmp.127 = lgetv %bit.19;
+        symbol [ bit %tmp.127 309 62 65 ];
+        %tmp.128 = shr %tmp.126 %tmp.127;
+        %tmp.129 = 1;
+        %tmp.130 = bitand %tmp.128 %tmp.129;
+        %tmp.131 = bitor %tmp.125 %tmp.130;
+        lputv %colorIdx.20 %tmp.131;
+        symbol [ colorIdx %colorIdx.20 309 16 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 310 12 ]
+        symbol [ framebuffer %tmp.132 310 12 23 ];
+        %tmp.132 = getv self :framebuffer;
+        symbol [ bgp %tmp.134 310 47 50 ];
+        %tmp.134 = getv ? :bgp;
+        %tmp.135 = lgetv %colorIdx.20;
+        symbol [ colorIdx %tmp.135 310 55 63 ];
+        %tmp.136 = 2;
+        %tmp.137 = mul %tmp.135 %tmp.136;
+        %tmp.138 = shr %tmp.134 %tmp.137;
+        %tmp.139 = 3;
+        %tmp.140 = bitand %tmp.138 %tmp.139;
+        %tmp.141 = lgetv %lineBase;
+        symbol [ lineBase %tmp.141 310 24 32 ];
+        %tmp.142 = lgetv %screenX.8;
+        symbol [ screenX %tmp.142 310 35 42 ];
+        %tmp.143 = add %tmp.141 %tmp.142;
+        aputv %tmp.132 %tmp.143 %tmp.140;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_61_311_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 285 ]
+        %tmp.146 = lgetv %screenX.8;
+        symbol [ screenX %tmp.146 285 50 57 ];
+        %tmp.147 = add %tmp.146 1;
+        lputv %screenX.8 %tmp.147;
+        symbol [ screenX %screenX.8 285 50 57 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_285_8_311_8_for_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 313 8 ]
+        symbol [ _winLineCounter %tmp.150 313 8 23 ];
+        %tmp.150 = getv ? :_winLineCounter;
+        %tmp.151 = add %tmp.150 1;
+        symbol [ _winLineCounter ? 313 8 23 ];
+        putv self :_winLineCounter dup %tmp.151;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_274_40_314_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 316; @symbol_functiondef = [renderSpriteLine,316,13,29]; @symbol_param<0> = [lineBase,316,30,38]; ]
+    function renderSpriteLine(lineBase) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 317 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_stop" ]
+        %spriteHeight.1 = local;
+        symbol [ spriteHeight %spriteHeight.1 317 12 24 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_begin:
+        symbol [ lcdc %tmp.2 317 29 33 ];
+        %tmp.2 = getv ? :lcdc;
+        %tmp.3 = 0x04;
+        %tmp.4 = bitand %tmp.2 %tmp.3;
+        %tmp.5 = 0;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_true:
+        %tmp.7 = 16;
+        push %tmp.7;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_else_false:
+        %tmp.8 = 8;
+        push %tmp.8;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_end:
+        %tmp.9 = phi [%tmp.6 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_begin] [%tmp.7 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_true] [%tmp.8 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_else_false] [%tmp.9 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_317_27_317_55_end];
+        lputv %spriteHeight.1 %tmp.9;
+        symbol [ spriteHeight %spriteHeight.1 317 12 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 320 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_stop" ]
+        %rendered.2 = local;
+        symbol [ rendered %rendered.2 320 12 20 ];
+        %tmp.10 = 0;
+        lputv %rendered.2 %tmp.10;
+        symbol [ rendered %rendered.2 320 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 321 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 321 17 18 ];
+        %tmp.11 = 39;
+        lputv %i.3 %tmp.11;
+        symbol [ i %i.3 321 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_test:
+        %tmp.12 = lgetv %i.3;
+        symbol [ i %tmp.12 321 25 26 ];
+        %tmp.13 = 0;
+        %tmp.14 = gte %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 322 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %oamBase.4 = local;
+        symbol [ oamBase %oamBase.4 322 16 23 ];
+        %tmp.15 = lgetv %i.3;
+        symbol [ i %tmp.15 322 26 27 ];
+        %tmp.16 = 4;
+        %tmp.17 = mul %tmp.15 %tmp.16;
+        lputv %oamBase.4 %tmp.17;
+        symbol [ oamBase %oamBase.4 322 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 323 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %sprY.5 = local;
+        symbol [ sprY %sprY.5 323 16 20 ];
+        symbol [ _mem %tmp.19 323 26 30 ];
+        %tmp.19 = getv ? :_mem;
+        symbol [ oam %tmp.20 323 31 34 ];
+        %tmp.20 = getv %tmp.19 :oam;
+        %tmp.21 = lgetv %oamBase.4;
+        symbol [ oamBase %tmp.21 323 35 42 ];
+        %tmp.22 = agetv %tmp.20 %tmp.21;
+        %tmp.23 = 0xFF;
+        %tmp.24 = bitand %tmp.22 %tmp.23;
+        %tmp.25 = 16;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        lputv %sprY.5 %tmp.26;
+        symbol [ sprY %sprY.5 323 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 324 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %sprX.6 = local;
+        symbol [ sprX %sprX.6 324 16 20 ];
+        symbol [ _mem %tmp.28 324 26 30 ];
+        %tmp.28 = getv ? :_mem;
+        symbol [ oam %tmp.29 324 31 34 ];
+        %tmp.29 = getv %tmp.28 :oam;
+        %tmp.30 = lgetv %oamBase.4;
+        symbol [ oamBase %tmp.30 324 35 42 ];
+        %tmp.31 = 1;
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = agetv %tmp.29 %tmp.32;
+        %tmp.34 = 0xFF;
+        %tmp.35 = bitand %tmp.33 %tmp.34;
+        %tmp.36 = 8;
+        %tmp.37 = sub %tmp.35 %tmp.36;
+        lputv %sprX.6 %tmp.37;
+        symbol [ sprX %sprX.6 324 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 325 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %tile.7 = local;
+        symbol [ tile %tile.7 325 16 20 ];
+        symbol [ _mem %tmp.39 325 25 29 ];
+        %tmp.39 = getv ? :_mem;
+        symbol [ oam %tmp.40 325 30 33 ];
+        %tmp.40 = getv %tmp.39 :oam;
+        %tmp.41 = lgetv %oamBase.4;
+        symbol [ oamBase %tmp.41 325 34 41 ];
+        %tmp.42 = 2;
+        %tmp.43 = add %tmp.41 %tmp.42;
+        %tmp.44 = agetv %tmp.40 %tmp.43;
+        %tmp.45 = 0xFF;
+        %tmp.46 = bitand %tmp.44 %tmp.45;
+        lputv %tile.7 %tmp.46;
+        symbol [ tile %tile.7 325 16 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 326 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %attrs.8 = local;
+        symbol [ attrs %attrs.8 326 16 21 ];
+        symbol [ _mem %tmp.48 326 25 29 ];
+        %tmp.48 = getv ? :_mem;
+        symbol [ oam %tmp.49 326 30 33 ];
+        %tmp.49 = getv %tmp.48 :oam;
+        %tmp.50 = lgetv %oamBase.4;
+        symbol [ oamBase %tmp.50 326 34 41 ];
+        %tmp.51 = 3;
+        %tmp.52 = add %tmp.50 %tmp.51;
+        %tmp.53 = agetv %tmp.49 %tmp.52;
+        %tmp.54 = 0xFF;
+        %tmp.55 = bitand %tmp.53 %tmp.54;
+        lputv %attrs.8 %tmp.55;
+        symbol [ attrs %attrs.8 326 16 21 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 328 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_16_328_42_begin:
+        symbol [ ly %tmp.57 328 16 18 ];
+        %tmp.57 = getv ? :ly;
+        %tmp.58 = lgetv %sprY.5;
+        symbol [ sprY %tmp.58 328 21 25 ];
+        %tmp.59 = lt %tmp.57 %tmp.58;
+        bt %tmp.59 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_29_328_42_false:
+        symbol [ ly %tmp.61 328 29 31 ];
+        %tmp.61 = getv ? :ly;
+        %tmp.62 = lgetv %sprY.5;
+        symbol [ sprY %tmp.62 328 35 39 ];
+        %tmp.63 = lgetv %spriteHeight.1;
+        symbol [ spriteHeight %tmp.63 328 42 54 ];
+        %tmp.64 = add %tmp.62 %tmp.63;
+        %tmp.65 = gte %tmp.61 %tmp.64;
+        push %tmp.65;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_29_328_42_end:
+        %tmp.66 = phi [%tmp.59 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_16_328_42_begin] [%tmp.65 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_29_328_42_false] [%tmp.66 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_29_328_42_end];
+        bf %tmp.66 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_56_328_68_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 328 58 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_56_328_68_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_328_12_328_68_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 330 12 ]
+        %tmp.69 = lgetv %rendered.2;
+        symbol [ rendered %tmp.69 330 12 20 ];
+        %tmp.70 = add %tmp.69 1;
+        lputv %rendered.2 %tmp.70;
+        symbol [ rendered %rendered.2 330 12 20 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 331 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_12_331_40_if_stmt:
+        %tmp.71 = lgetv %rendered.2;
+        symbol [ rendered %tmp.71 331 16 24 ];
+        %tmp.72 = 10;
+        %tmp.73 = gt %tmp.71 %tmp.72;
+        bf %tmp.73 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_12_331_40_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_12_331_40_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_31_331_40_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 331 33 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_31_331_40_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_12_331_40_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_331_12_331_40_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 333 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %flipY.9 = local;
+        symbol [ flipY %flipY.9 333 16 21 ];
+        %tmp.74 = lgetv %attrs.8;
+        symbol [ attrs %tmp.74 333 25 30 ];
+        %tmp.75 = 0x40;
+        %tmp.76 = bitand %tmp.74 %tmp.75;
+        %tmp.77 = 0;
+        %tmp.78 = ne %tmp.76 %tmp.77;
+        lputv %flipY.9 %tmp.78;
+        symbol [ flipY %flipY.9 333 16 21 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 334 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %flipX.10 = local;
+        symbol [ flipX %flipX.10 334 16 21 ];
+        %tmp.79 = lgetv %attrs.8;
+        symbol [ attrs %tmp.79 334 25 30 ];
+        %tmp.80 = 0x20;
+        %tmp.81 = bitand %tmp.79 %tmp.80;
+        %tmp.82 = 0;
+        %tmp.83 = ne %tmp.81 %tmp.82;
+        lputv %flipX.10 %tmp.83;
+        symbol [ flipX %flipX.10 334 16 21 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 335 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %paletteReg.11 = local;
+        symbol [ paletteReg %paletteReg.11 335 16 26 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_begin:
+        %tmp.84 = lgetv %attrs.8;
+        symbol [ attrs %tmp.84 335 31 36 ];
+        %tmp.85 = 0x10;
+        %tmp.86 = bitand %tmp.84 %tmp.85;
+        %tmp.87 = 0;
+        %tmp.88 = ne %tmp.86 %tmp.87;
+        bf %tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_true:
+        symbol [ obp1 %tmp.90 335 53 57 ];
+        %tmp.90 = getv ? :obp1;
+        push %tmp.90;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_else_false:
+        symbol [ obp0 %tmp.92 335 60 64 ];
+        %tmp.92 = getv ? :obp0;
+        push %tmp.92;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_end:
+        %tmp.93 = phi [%tmp.88 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_begin] [%tmp.90 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_true] [%tmp.92 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_else_false] [%tmp.93 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_335_29_335_60_end];
+        lputv %paletteReg.11 %tmp.93;
+        symbol [ paletteReg %paletteReg.11 335 16 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 336 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %bgPriority.12 = local;
+        symbol [ bgPriority %bgPriority.12 336 16 26 ];
+        %tmp.94 = lgetv %attrs.8;
+        symbol [ attrs %tmp.94 336 30 35 ];
+        %tmp.95 = 0x80;
+        %tmp.96 = bitand %tmp.94 %tmp.95;
+        %tmp.97 = 0;
+        %tmp.98 = ne %tmp.96 %tmp.97;
+        lputv %bgPriority.12 %tmp.98;
+        symbol [ bgPriority %bgPriority.12 336 16 26 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 338 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %rowInSprite.13 = local;
+        symbol [ rowInSprite %rowInSprite.13 338 16 27 ];
+        symbol [ ly %tmp.100 338 30 32 ];
+        %tmp.100 = getv ? :ly;
+        %tmp.101 = lgetv %sprY.5;
+        symbol [ sprY %tmp.101 338 35 39 ];
+        %tmp.102 = sub %tmp.100 %tmp.101;
+        lputv %rowInSprite.13 %tmp.102;
+        symbol [ rowInSprite %rowInSprite.13 338 16 27 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 339 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_12_339_73_if_stmt:
+        %tmp.103 = lgetv %flipY.9;
+        symbol [ flipY %tmp.103 339 16 21 ];
+        bf %tmp.103 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_12_339_73_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_12_339_73_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_23_339_73_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 339 25 ]
+        %tmp.104 = lgetv %spriteHeight.1;
+        symbol [ spriteHeight %tmp.104 339 40 52 ];
+        %tmp.105 = 1;
+        %tmp.106 = sub %tmp.104 %tmp.105;
+        %tmp.107 = lgetv %rowInSprite.13;
+        symbol [ rowInSprite %tmp.107 339 60 71 ];
+        %tmp.108 = sub %tmp.106 %tmp.107;
+        lputv %rowInSprite.13 %tmp.108;
+        symbol [ rowInSprite %rowInSprite.13 339 25 36 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_23_339_73_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_12_339_73_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_339_12_339_73_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 341 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %tileAddr.14 = local;
+        symbol [ tileAddr %tileAddr.14 341 16 24 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 342 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_stmt:
+        %tmp.109 = lgetv %spriteHeight.1;
+        symbol [ spriteHeight %tmp.109 342 16 28 ];
+        %tmp.110 = 16;
+        %tmp.111 = eq %tmp.109 %tmp.110;
+        bf %tmp.111 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_36_349_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 343 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_36_349_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_36_349_12_stop" ]
+        %t.15 = local;
+        symbol [ t %t.15 343 20 21 ];
+        %tmp.112 = lgetv %tile.7;
+        symbol [ tile %tmp.112 343 24 28 ];
+        %tmp.113 = 0xFE;
+        %tmp.114 = bitand %tmp.112 %tmp.113;
+        lputv %t.15 %tmp.114;
+        symbol [ t %t.15 343 20 21 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 344 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_16_347_16_if_stmt:
+        %tmp.115 = lgetv %rowInSprite.13;
+        symbol [ rowInSprite %tmp.115 344 20 31 ];
+        %tmp.116 = 8;
+        %tmp.117 = gte %tmp.115 %tmp.116;
+        bf %tmp.117 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_16_347_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_16_347_16_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_38_347_16_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 345 20 ]
+        %tmp.118 = lgetv %tile.7;
+        symbol [ tile %tmp.118 345 24 28 ];
+        %tmp.119 = 0x01;
+        %tmp.120 = bitor %tmp.118 %tmp.119;
+        lputv %t.15 %tmp.120;
+        symbol [ t %t.15 345 20 21 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 346 20 ]
+        %tmp.121 = lgetv %rowInSprite.13;
+        symbol [ rowInSprite %tmp.121 346 20 31 ];
+        %tmp.122 = 8;
+        %tmp.123 = sub %tmp.121 %tmp.122;
+        lputv %rowInSprite.13 %tmp.123;
+        symbol [ rowInSprite %rowInSprite.13 346 20 31 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_38_347_16_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_16_347_16_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_344_16_347_16_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 348 16 ]
+        %tmp.124 = lgetv %t.15;
+        symbol [ t %tmp.124 348 27 28 ];
+        %tmp.125 = 16;
+        %tmp.126 = mul %tmp.124 %tmp.125;
+        lputv %tileAddr.14 %tmp.126;
+        symbol [ tileAddr %tileAddr.14 348 16 24 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_36_349_12_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_349_19_351_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 350 16 ]
+        %tmp.127 = lgetv %tile.7;
+        symbol [ tile %tmp.127 350 27 31 ];
+        %tmp.128 = 16;
+        %tmp.129 = mul %tmp.127 %tmp.128;
+        lputv %tileAddr.14 %tmp.129;
+        symbol [ tileAddr %tileAddr.14 350 16 24 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_349_19_351_12_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_342_12_351_12_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 353 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %rowAddr.16 = local;
+        symbol [ rowAddr %rowAddr.16 353 16 23 ];
+        %tmp.130 = lgetv %tileAddr.14;
+        symbol [ tileAddr %tmp.130 353 26 34 ];
+        %tmp.131 = lgetv %rowInSprite.13;
+        symbol [ rowInSprite %tmp.131 353 38 49 ];
+        %tmp.132 = 2;
+        %tmp.133 = mul %tmp.131 %tmp.132;
+        %tmp.134 = add %tmp.130 %tmp.133;
+        lputv %rowAddr.16 %tmp.134;
+        symbol [ rowAddr %rowAddr.16 353 16 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 354 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_16_354_46_begin:
+        %tmp.135 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.135 354 16 23 ];
+        %tmp.136 = 0;
+        %tmp.137 = lt %tmp.135 %tmp.136;
+        bt %tmp.137 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_31_354_46_false:
+        %tmp.138 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.138 354 31 38 ];
+        %tmp.139 = 1;
+        %tmp.140 = add %tmp.138 %tmp.139;
+        %tmp.141 = 8192;
+        %tmp.142 = gte %tmp.140 %tmp.141;
+        push %tmp.142;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_31_354_46_end:
+        %tmp.143 = phi [%tmp.137 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_16_354_46_begin] [%tmp.142 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_31_354_46_false] [%tmp.143 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_31_354_46_end];
+        bf %tmp.143 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_52_354_64_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 354 54 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_52_354_64_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_354_12_354_64_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 355 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %lo.17 = local;
+        symbol [ lo %lo.17 355 16 18 ];
+        symbol [ _mem %tmp.145 355 21 25 ];
+        %tmp.145 = getv ? :_mem;
+        symbol [ vram %tmp.146 355 26 30 ];
+        %tmp.146 = getv %tmp.145 :vram;
+        %tmp.147 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.147 355 31 38 ];
+        %tmp.148 = agetv %tmp.146 %tmp.147;
+        %tmp.149 = 0xFF;
+        %tmp.150 = bitand %tmp.148 %tmp.149;
+        lputv %lo.17 %tmp.150;
+        symbol [ lo %lo.17 355 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 356 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop" ]
+        %hi.18 = local;
+        symbol [ hi %hi.18 356 16 18 ];
+        symbol [ _mem %tmp.152 356 21 25 ];
+        %tmp.152 = getv ? :_mem;
+        symbol [ vram %tmp.153 356 26 30 ];
+        %tmp.153 = getv %tmp.152 :vram;
+        %tmp.154 = lgetv %rowAddr.16;
+        symbol [ rowAddr %tmp.154 356 31 38 ];
+        %tmp.155 = 1;
+        %tmp.156 = add %tmp.154 %tmp.155;
+        %tmp.157 = agetv %tmp.153 %tmp.156;
+        %tmp.158 = 0xFF;
+        %tmp.159 = bitand %tmp.157 %tmp.158;
+        lputv %hi.18 %tmp.159;
+        symbol [ hi %hi.18 356 16 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 358 12 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_end" ]
+        %px.19 = local;
+        symbol [ px %px.19 358 21 23 ];
+        %tmp.160 = 0;
+        lputv %px.19 %tmp.160;
+        symbol [ px %px.19 358 21 23 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_test:
+        %tmp.161 = lgetv %px.19;
+        symbol [ px %tmp.161 358 29 31 ];
+        %tmp.162 = 8;
+        %tmp.163 = lt %tmp.161 %tmp.162;
+        bf %tmp.163 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 359 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_stop" ]
+        %screenX.20 = local;
+        symbol [ screenX %screenX.20 359 20 27 ];
+        %tmp.164 = lgetv %sprX.6;
+        symbol [ sprX %tmp.164 359 30 34 ];
+        %tmp.165 = lgetv %px.19;
+        symbol [ px %tmp.165 359 37 39 ];
+        %tmp.166 = add %tmp.164 %tmp.165;
+        lputv %screenX.20 %tmp.166;
+        symbol [ screenX %screenX.20 359 20 27 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 360 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_20_360_46_begin:
+        %tmp.167 = lgetv %screenX.20;
+        symbol [ screenX %tmp.167 360 20 27 ];
+        %tmp.168 = 0;
+        %tmp.169 = lt %tmp.167 %tmp.168;
+        bt %tmp.169 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_true;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_35_360_46_false:
+        %tmp.170 = lgetv %screenX.20;
+        symbol [ screenX %tmp.170 360 35 42 ];
+        %tmp.171 = 160;
+        %tmp.172 = gte %tmp.170 %tmp.171;
+        push %tmp.172;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_35_360_46_end:
+        %tmp.173 = phi [%tmp.169 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_20_360_46_begin] [%tmp.172 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_35_360_46_false] [%tmp.173 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_35_360_46_end];
+        bf %tmp.173 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_51_360_63_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 360 53 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_51_360_63_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_360_16_360_63_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 362 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_stop" ]
+        %bit.21 = local;
+        symbol [ bit %bit.21 362 20 23 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_begin:
+        %tmp.174 = lgetv %flipX.10;
+        symbol [ flipX %tmp.174 362 26 31 ];
+        bf %tmp.174 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_true:
+        %tmp.175 = lgetv %px.19;
+        symbol [ px %tmp.175 362 34 36 ];
+        push %tmp.175;
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_else_false:
+        %tmp.176 = 7;
+        %tmp.177 = lgetv %px.19;
+        symbol [ px %tmp.177 362 44 46 ];
+        %tmp.178 = sub %tmp.176 %tmp.177;
+        push %tmp.178;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_end:
+        %tmp.179 = phi [%tmp.174 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_begin] [%tmp.175 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_true] [%tmp.178 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_else_false] [%tmp.179 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_362_26_362_46_end];
+        lputv %bit.21 %tmp.179;
+        symbol [ bit %bit.21 362 20 23 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 363 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_stop" ]
+        %colorIdx.22 = local;
+        symbol [ colorIdx %colorIdx.22 363 20 28 ];
+        %tmp.180 = lgetv %hi.18;
+        symbol [ hi %tmp.180 363 34 36 ];
+        %tmp.181 = lgetv %bit.21;
+        symbol [ bit %tmp.181 363 40 43 ];
+        %tmp.182 = shr %tmp.180 %tmp.181;
+        %tmp.183 = 1;
+        %tmp.184 = bitand %tmp.182 %tmp.183;
+        %tmp.185 = 1;
+        %tmp.186 = shl %tmp.184 %tmp.185;
+        %tmp.187 = lgetv %lo.17;
+        symbol [ lo %tmp.187 363 60 62 ];
+        %tmp.188 = lgetv %bit.21;
+        symbol [ bit %tmp.188 363 66 69 ];
+        %tmp.189 = shr %tmp.187 %tmp.188;
+        %tmp.190 = 1;
+        %tmp.191 = bitand %tmp.189 %tmp.190;
+        %tmp.192 = bitor %tmp.186 %tmp.191;
+        lputv %colorIdx.22 %tmp.192;
+        symbol [ colorIdx %colorIdx.22 363 20 28 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 364 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_16_364_47_if_stmt:
+        %tmp.193 = lgetv %colorIdx.22;
+        symbol [ colorIdx %tmp.193 364 20 28 ];
+        %tmp.194 = 0;
+        %tmp.195 = eq %tmp.193 %tmp.194;
+        bf %tmp.195 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_16_364_47_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_16_364_47_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_35_364_47_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 364 37 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_35_364_47_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_16_364_47_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_364_16_364_47_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 366 16 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_stop" ]
+        %paletteColor.23 = local;
+        symbol [ paletteColor %paletteColor.23 366 20 32 ];
+        %tmp.196 = lgetv %paletteReg.11;
+        symbol [ paletteReg %tmp.196 366 36 46 ];
+        %tmp.197 = lgetv %colorIdx.22;
+        symbol [ colorIdx %tmp.197 366 51 59 ];
+        %tmp.198 = 2;
+        %tmp.199 = mul %tmp.197 %tmp.198;
+        %tmp.200 = shr %tmp.196 %tmp.199;
+        %tmp.201 = 3;
+        %tmp.202 = bitand %tmp.200 %tmp.201;
+        lputv %paletteColor.23 %tmp.202;
+        symbol [ paletteColor %paletteColor.23 366 20 32 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 368 16 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_stmt:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_20_368_69_begin:
+        %tmp.203 = lgetv %bgPriority.12;
+        symbol [ bgPriority %tmp.203 368 20 30 ];
+        bf %tmp.203 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_34_368_69_true:
+        symbol [ framebuffer %tmp.205 368 34 45 ];
+        %tmp.205 = getv ? :framebuffer;
+        %tmp.206 = lgetv %lineBase;
+        symbol [ lineBase %tmp.206 368 46 54 ];
+        %tmp.207 = lgetv %screenX.20;
+        symbol [ screenX %tmp.207 368 57 64 ];
+        %tmp.208 = add %tmp.206 %tmp.207;
+        %tmp.209 = agetv %tmp.205 %tmp.208;
+        %tmp.210 = 0;
+        %tmp.211 = ne %tmp.209 %tmp.210;
+        push %tmp.211;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_34_368_69_end:
+        %tmp.212 = phi [%tmp.203 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_20_368_69_begin] [%tmp.211 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_34_368_69_true] [%tmp.212 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_34_368_69_end];
+        bf %tmp.212 @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_72_368_84_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 368 74 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_incr;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_72_368_84_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_368_16_368_84_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 370 16 ]
+        symbol [ framebuffer %tmp.213 370 16 27 ];
+        %tmp.213 = getv self :framebuffer;
+        %tmp.214 = lgetv %paletteColor.23;
+        symbol [ paletteColor %tmp.214 370 50 62 ];
+        %tmp.215 = lgetv %lineBase;
+        symbol [ lineBase %tmp.215 370 28 36 ];
+        %tmp.216 = lgetv %screenX.20;
+        symbol [ screenX %tmp.216 370 39 46 ];
+        %tmp.217 = add %tmp.215 %tmp.216;
+        aputv %tmp.213 %tmp.217 %tmp.214;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_43_371_12_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 358 ]
+        %tmp.220 = lgetv %px.19;
+        symbol [ px %tmp.220 358 37 39 ];
+        %tmp.221 = add %tmp.220 1;
+        lputv %px.19 %tmp.221;
+        symbol [ px %px.19 358 37 39 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_358_12_371_12_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_38_372_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc" 321 ]
+        %tmp.224 = lgetv %i.3;
+        symbol [ i %tmp.224 321 33 34 ];
+        %tmp.225 = sub %tmp.224 1;
+        lputv %i.3 %tmp.225;
+        symbol [ i %i.3 321 33 34 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_321_8_372_8_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_Ppu_mc_316_40_373_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Ppu.mc"; @line = 1; ]
+<init> {
+}

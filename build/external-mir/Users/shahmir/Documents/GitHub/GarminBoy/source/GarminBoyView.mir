@@ -1,0 +1,390 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [WatchUi,1,24,31]; ]
+using Toybox.WatchUi as :WatchUi;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; @symbol_usingAlias = [Graphics,2,25,33]; ]
+using Toybox.Graphics as :Graphics;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 4; @symbol_classdef = [GarminBoyView,4,6,19]; @symbol_extends<0> = [WatchUi,4,28,35]; @symbol_extends<1> = [View,4,36,40]; ]
+class GarminBoyView extends WatchUi.View {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 5; @position = 8; @symbol_vardef = [_emulator,5,8,17]; ]
+    var _emulator;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 8; @position = 10; @symbol_constdef = [OFFSET_X,8,10,18]; ]
+    const OFFSET_X = 60;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 9; @position = 10; @symbol_constdef = [OFFSET_Y,9,10,18]; ]
+    const OFFSET_Y = 68;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; @symbol_param<0> = [emulator,11,24,32]; ]
+    function initialize(emulator) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_11_34_14_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 12 8 ]
+        symbol [ View %tmp.2 12 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 12 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 13 8 ]
+        %tmp.4 = lgetv %emulator;
+        symbol [ emulator %tmp.4 13 20 28 ];
+        symbol [ _emulator ? 13 8 17 ];
+        putv self :_emulator %tmp.4;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_11_34_14_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 16; @symbol_functiondef = [onLayout,16,13,21]; @symbol_param<0> = [dc,16,22,24]; ]
+    function onLayout(dc) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_16_26_19_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 17 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 17 8 10 ];
+        symbol [ setColor %tmp.2 17 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 17 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 17 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 17 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 17 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 18 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 18 8 10 ];
+        symbol [ clear %tmp.8 18 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_16_26_19_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 21; @symbol_functiondef = [onUpdate,21,13,21]; @symbol_param<0> = [dc,21,22,24]; ]
+    function onUpdate(dc) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 22 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 22 8 10 ];
+        symbol [ setColor %tmp.2 22 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 22 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 22 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 22 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 22 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 23 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 23 8 10 ];
+        symbol [ clear %tmp.8 23 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 25 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_stop" ]
+        %fb.1 = local;
+        symbol [ fb %fb.1 25 12 14 ];
+        symbol [ _emulator %tmp.10 25 22 31 ];
+        %tmp.10 = getv ? :_emulator;
+        symbol [ getFramebuffer %tmp.11 25 32 46 ];
+        %tmp.11 = getv function %tmp.10 :getFramebuffer;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %fb.1 %tmp.12;
+        symbol [ fb %fb.1 25 12 14 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 26 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_stop" ]
+        %palette.2 = local;
+        symbol [ palette %palette.2 26 12 19 ];
+        symbol [ _emulator %tmp.14 26 22 31 ];
+        %tmp.14 = getv ? :_emulator;
+        symbol [ getPalette %tmp.15 26 32 42 ];
+        %tmp.15 = getv function %tmp.14 :getPalette;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %palette.2 %tmp.16;
+        symbol [ palette %palette.2 26 12 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 29 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_stop" ]
+        %groups.3 = local;
+        symbol [ groups %groups.3 29 12 18 ];
+        %tmp.17 = newa 4;
+        %tmp.19 = 160;
+        %tmp.20 = 144;
+        %tmp.21 = mul %tmp.19 %tmp.20;
+        %tmp.18 = newba %tmp.21;
+        %tmp.22 = dup %tmp.17;
+        %tmp.23 = aputv %tmp.22 0 %tmp.18;
+        %tmp.25 = 160;
+        %tmp.26 = 144;
+        %tmp.27 = mul %tmp.25 %tmp.26;
+        %tmp.24 = newba %tmp.27;
+        %tmp.28 = dup %tmp.23;
+        %tmp.29 = aputv %tmp.28 1 %tmp.24;
+        %tmp.31 = 160;
+        %tmp.32 = 144;
+        %tmp.33 = mul %tmp.31 %tmp.32;
+        %tmp.30 = newba %tmp.33;
+        %tmp.34 = dup %tmp.29;
+        %tmp.35 = aputv %tmp.34 2 %tmp.30;
+        %tmp.37 = 160;
+        %tmp.38 = 144;
+        %tmp.39 = mul %tmp.37 %tmp.38;
+        %tmp.36 = newba %tmp.39;
+        %tmp.40 = dup %tmp.35;
+        %tmp.41 = aputv %tmp.40 3 %tmp.36;
+        lputv %groups.3 %tmp.41;
+        symbol [ groups %groups.3 29 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 31 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_stop" ]
+        %counts.4 = local;
+        symbol [ counts %counts.4 31 12 18 ];
+        %tmp.42 = newa 4;
+        %tmp.43 = 0;
+        %tmp.44 = dup %tmp.42;
+        %tmp.45 = aputv %tmp.44 0 %tmp.43;
+        %tmp.46 = 0;
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 1 %tmp.46;
+        %tmp.49 = 0;
+        %tmp.50 = dup %tmp.48;
+        %tmp.51 = aputv %tmp.50 2 %tmp.49;
+        %tmp.52 = 0;
+        %tmp.53 = dup %tmp.51;
+        %tmp.54 = aputv %tmp.53 3 %tmp.52;
+        lputv %counts.4 %tmp.54;
+        symbol [ counts %counts.4 31 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 33 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 33 17 18 ];
+        %tmp.55 = 0;
+        lputv %i.5 %tmp.55;
+        symbol [ i %i.5 33 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_test:
+        %tmp.56 = lgetv %i.5;
+        symbol [ i %tmp.56 33 24 25 ];
+        %tmp.57 = 160;
+        %tmp.58 = 144;
+        %tmp.59 = mul %tmp.57 %tmp.58;
+        %tmp.60 = lt %tmp.56 %tmp.59;
+        bf %tmp.60 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 34 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_stop" ]
+        %idx.6 = local;
+        symbol [ idx %idx.6 34 16 19 ];
+        %tmp.61 = lgetv %fb.1;
+        symbol [ fb %tmp.61 34 22 24 ];
+        %tmp.62 = lgetv %i.5;
+        symbol [ i %tmp.62 34 25 26 ];
+        %tmp.63 = agetv %tmp.61 %tmp.62;
+        %tmp.64 = 0x03;
+        %tmp.65 = bitand %tmp.63 %tmp.64;
+        lputv %idx.6 %tmp.65;
+        symbol [ idx %idx.6 34 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 35 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_stop" ]
+        %g.7 = local;
+        symbol [ g %g.7 35 16 17 ];
+        %tmp.66 = lgetv %groups.3;
+        symbol [ groups %tmp.66 35 20 26 ];
+        %tmp.67 = lgetv %idx.6;
+        symbol [ idx %tmp.67 35 27 30 ];
+        %tmp.68 = agetv %tmp.66 %tmp.67;
+        lputv %g.7 %tmp.68;
+        symbol [ g %g.7 35 16 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 36 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_stop" ]
+        %cnt.8 = local;
+        symbol [ cnt %cnt.8 36 16 19 ];
+        %tmp.69 = lgetv %counts.4;
+        symbol [ counts %tmp.69 36 22 28 ];
+        %tmp.70 = lgetv %idx.6;
+        symbol [ idx %tmp.70 36 29 32 ];
+        %tmp.71 = agetv %tmp.69 %tmp.70;
+        lputv %cnt.8 %tmp.71;
+        symbol [ cnt %cnt.8 36 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 37 12 ]
+        %tmp.72 = lgetv %g.7;
+        symbol [ g %tmp.72 37 12 13 ];
+        %tmp.73 = lgetv %i.5;
+        symbol [ i %tmp.73 37 30 31 ];
+        %tmp.74 = 160;
+        %tmp.75 = mod %tmp.73 %tmp.74;
+        symbol [ OFFSET_X %tmp.77 37 40 48 ];
+        %tmp.77 = getv ? :OFFSET_X;
+        %tmp.78 = add %tmp.75 %tmp.77;
+        %tmp.79 = 0xFF;
+        %tmp.80 = bitand %tmp.78 %tmp.79;
+        %tmp.81 = lgetv %cnt.8;
+        symbol [ cnt %tmp.81 37 14 17 ];
+        %tmp.82 = 2;
+        %tmp.83 = mul %tmp.81 %tmp.82;
+        aputv %tmp.72 %tmp.83 %tmp.80;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 38 12 ]
+        %tmp.84 = lgetv %g.7;
+        symbol [ g %tmp.84 38 12 13 ];
+        %tmp.85 = lgetv %i.5;
+        symbol [ i %tmp.85 38 30 31 ];
+        %tmp.86 = 160;
+        %tmp.87 = div %tmp.85 %tmp.86;
+        symbol [ OFFSET_Y %tmp.89 38 40 48 ];
+        %tmp.89 = getv ? :OFFSET_Y;
+        %tmp.90 = add %tmp.87 %tmp.89;
+        %tmp.91 = 0xFF;
+        %tmp.92 = bitand %tmp.90 %tmp.91;
+        %tmp.93 = lgetv %cnt.8;
+        symbol [ cnt %tmp.93 38 14 17 ];
+        %tmp.94 = 2;
+        %tmp.95 = mul %tmp.93 %tmp.94;
+        %tmp.96 = 1;
+        %tmp.97 = add %tmp.95 %tmp.96;
+        aputv %tmp.84 %tmp.97 %tmp.92;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 39 12 ]
+        %tmp.98 = lgetv %counts.4;
+        symbol [ counts %tmp.98 39 12 18 ];
+        %tmp.99 = lgetv %cnt.8;
+        symbol [ cnt %tmp.99 39 26 29 ];
+        %tmp.100 = 1;
+        %tmp.101 = add %tmp.99 %tmp.100;
+        %tmp.102 = lgetv %idx.6;
+        symbol [ idx %tmp.102 39 19 22 ];
+        aputv %tmp.98 %tmp.102 %tmp.101;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_44_40_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 33 ]
+        %tmp.105 = lgetv %i.5;
+        symbol [ i %tmp.105 33 39 40 ];
+        %tmp.106 = add %tmp.105 1;
+        lputv %i.5 %tmp.106;
+        symbol [ i %i.5 33 39 40 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_33_8_40_8_for_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 42 8 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_end" ]
+        %c.9 = local;
+        symbol [ c %c.9 42 17 18 ];
+        %tmp.107 = 0;
+        lputv %c.9 %tmp.107;
+        symbol [ c %c.9 42 17 18 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_test:
+        %tmp.108 = lgetv %c.9;
+        symbol [ c %tmp.108 42 24 25 ];
+        %tmp.109 = 4;
+        %tmp.110 = lt %tmp.108 %tmp.109;
+        bf %tmp.110 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 43 12 ]
+        %tmp.111 = lgetv %dc;
+        symbol [ dc %tmp.111 43 12 14 ];
+        symbol [ setColor %tmp.112 43 15 23 ];
+        %tmp.112 = getv function %tmp.111 :setColor;
+        %tmp.113 = lgetv %palette.2;
+        symbol [ palette %tmp.113 43 24 31 ];
+        %tmp.114 = lgetv %c.9;
+        symbol [ c %tmp.114 43 32 33 ];
+        %tmp.115 = agetv %tmp.113 %tmp.114;
+        %tmp.116 = lgetv %palette.2;
+        symbol [ palette %tmp.116 43 36 43 ];
+        %tmp.117 = lgetv %c.9;
+        symbol [ c %tmp.117 43 44 45 ];
+        %tmp.118 = agetv %tmp.116 %tmp.117;
+        invoke %tmp.111 %tmp.112(%tmp.115, %tmp.118);
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 44 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_stop" ]
+        %g.10 = local;
+        symbol [ g %g.10 44 16 17 ];
+        %tmp.119 = lgetv %groups.3;
+        symbol [ groups %tmp.119 44 20 26 ];
+        %tmp.120 = lgetv %c.9;
+        symbol [ c %tmp.120 44 27 28 ];
+        %tmp.121 = agetv %tmp.119 %tmp.120;
+        lputv %g.10 %tmp.121;
+        symbol [ g %g.10 44 16 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 45 12 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_stop" ]
+        %cnt.11 = local;
+        symbol [ cnt %cnt.11 45 16 19 ];
+        %tmp.122 = lgetv %counts.4;
+        symbol [ counts %tmp.122 45 22 28 ];
+        %tmp.123 = lgetv %c.9;
+        symbol [ c %tmp.123 45 29 30 ];
+        %tmp.124 = agetv %tmp.122 %tmp.123;
+        lputv %cnt.11 %tmp.124;
+        symbol [ cnt %cnt.11 45 16 19 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 46 12 ]
+        for @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_test @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_incr @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_init:
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_begin" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_end" ]
+        %p.12 = local;
+        symbol [ p %p.12 46 21 22 ];
+        %tmp.125 = 0;
+        lputv %p.12 %tmp.125;
+        symbol [ p %p.12 46 21 22 ];
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_test:
+        %tmp.126 = lgetv %p.12;
+        symbol [ p %tmp.126 46 28 29 ];
+        %tmp.127 = lgetv %cnt.11;
+        symbol [ cnt %tmp.127 46 32 35 ];
+        %tmp.128 = lt %tmp.126 %tmp.127;
+        bf %tmp.128 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_begin:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_42_48_12_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 47 16 ]
+        %tmp.129 = lgetv %dc;
+        symbol [ dc %tmp.129 47 16 18 ];
+        symbol [ drawPoint %tmp.130 47 19 28 ];
+        %tmp.130 = getv function %tmp.129 :drawPoint;
+        %tmp.131 = lgetv %g.10;
+        symbol [ g %tmp.131 47 29 30 ];
+        %tmp.132 = lgetv %p.12;
+        symbol [ p %tmp.132 47 31 32 ];
+        %tmp.133 = 2;
+        %tmp.134 = mul %tmp.132 %tmp.133;
+        %tmp.135 = agetv %tmp.131 %tmp.134;
+        %tmp.136 = 0xFF;
+        %tmp.137 = bitand %tmp.135 %tmp.136;
+        %tmp.138 = lgetv %g.10;
+        symbol [ g %tmp.138 47 46 47 ];
+        %tmp.139 = lgetv %p.12;
+        symbol [ p %tmp.139 47 48 49 ];
+        %tmp.140 = 2;
+        %tmp.141 = mul %tmp.139 %tmp.140;
+        %tmp.142 = 1;
+        %tmp.143 = add %tmp.141 %tmp.142;
+        %tmp.144 = agetv %tmp.138 %tmp.143;
+        %tmp.145 = 0xFF;
+        %tmp.146 = bitand %tmp.144 %tmp.145;
+        invoke %tmp.129 %tmp.130(%tmp.137, %tmp.146);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_42_48_12_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 46 ]
+        %tmp.149 = lgetv %p.12;
+        symbol [ p %tmp.149 46 37 38 ];
+        %tmp.150 = add %tmp.149 1;
+        lputv %p.12 %tmp.150;
+        symbol [ p %p.12 46 37 38 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_46_12_48_12_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_36_49_8_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_incr:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc" 42 ]
+        %tmp.153 = lgetv %c.9;
+        symbol [ c %tmp.153 42 31 32 ];
+        %tmp.154 = add %tmp.153 1;
+        lputv %c.9 %tmp.154;
+        symbol [ c %c.9 42 31 32 ];
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_test;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_42_8_49_8_for_end:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyView_mc_21_26_50_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyView.mc"; @line = 1; ]
+<init> {
+}

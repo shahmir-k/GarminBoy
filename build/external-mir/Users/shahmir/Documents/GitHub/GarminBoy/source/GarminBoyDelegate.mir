@@ -1,0 +1,222 @@
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; @symbol_usingAlias = [WatchUi,1,24,31]; ]
+using Toybox.WatchUi as :WatchUi;
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 3; @symbol_classdef = [GarminBoyDelegate,3,6,23]; @symbol_extends<0> = [WatchUi,3,32,39]; @symbol_extends<1> = [InputDelegate,3,40,53]; ]
+class GarminBoyDelegate extends WatchUi.InputDelegate {
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 4; @position = 8; @symbol_vardef = [_joypad,4,8,15]; ]
+    var _joypad;
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; @symbol_param<0> = [joypad,6,24,30]; ]
+    function initialize(joypad) as Void {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_6_32_9_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 7 8 ]
+        symbol [ InputDelegate %tmp.2 7 8 21 ];
+        %tmp.2 = getv ? :InputDelegate;
+        symbol [ initialize %tmp.3 7 22 32 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 8 8 ]
+        %tmp.4 = lgetv %joypad;
+        symbol [ joypad %tmp.4 8 18 24 ];
+        symbol [ _joypad ? 8 8 15 ];
+        putv self :_joypad %tmp.4;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_6_32_9_4_stop:
+    }
+    [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 11; @symbol_functiondef = [onKey,11,13,18]; @symbol_param<0> = [keyEvent,11,19,27]; ]
+    function onKey(keyEvent) {
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 12 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_stop" ]
+        %key.1 = local;
+        symbol [ key %key.1 12 12 15 ];
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 12 21 29 ];
+        symbol [ getKey %tmp.2 12 30 36 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+        symbol [ key %key.1 12 12 15 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 13 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_stop" ]
+        %isDown.2 = local;
+        symbol [ isDown %isDown.2 13 12 18 ];
+        %tmp.4 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.4 13 22 30 ];
+        symbol [ getType %tmp.5 13 31 38 ];
+        %tmp.5 = getv function %tmp.4 :getType;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ WatchUi %tmp.7 13 44 51 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ PRESS_TYPE_DOWN %tmp.8 13 52 67 ];
+        %tmp.8 = getv %tmp.7 :PRESS_TYPE_DOWN;
+        %tmp.9 = eq %tmp.6 %tmp.8;
+        lputv %isDown.2 %tmp.9;
+        symbol [ isDown %isDown.2 13 12 18 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 15 8 ]
+        [ "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_start" "_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_stop" ]
+        %gbKey.3 = local;
+        symbol [ gbKey %gbKey.3 15 12 17 ];
+        %tmp.10 = 0;
+        lputv %gbKey.3 %tmp.10;
+        symbol [ gbKey %gbKey.3 15 12 17 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 16 8 ]
+        %tmp.11 = lgetv %key.1;
+        symbol [ key %tmp.11 16 16 19 ];
+        push %tmp.11;
+        switch %tmp.11 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 17 12 ]
+        %tmp.12 = dup %tmp.11;
+        symbol [ WatchUi %tmp.13 17 17 24 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ KEY_UP %tmp.14 17 25 31 ];
+        %tmp.14 = getv %tmp.13 :KEY_UP;
+        %tmp.15 = getv function %tmp.12 :equals;
+        %tmp.16 = invoke %tmp.12 %tmp.15 (%tmp.14);
+        bt %tmp.16 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_17_12_17_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 18 12 ]
+        %tmp.17 = dup %tmp.11;
+        symbol [ WatchUi %tmp.18 18 17 24 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ KEY_DOWN %tmp.19 18 25 33 ];
+        %tmp.19 = getv %tmp.18 :KEY_DOWN;
+        %tmp.20 = getv function %tmp.17 :equals;
+        %tmp.21 = invoke %tmp.17 %tmp.20 (%tmp.19);
+        bt %tmp.21 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_18_12_18_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 19 12 ]
+        %tmp.22 = dup %tmp.11;
+        symbol [ WatchUi %tmp.23 19 17 24 ];
+        %tmp.23 = getm $.Toybox.WatchUi;
+        symbol [ KEY_START %tmp.24 19 25 34 ];
+        %tmp.24 = getv %tmp.23 :KEY_START;
+        %tmp.25 = getv function %tmp.22 :equals;
+        %tmp.26 = invoke %tmp.22 %tmp.25 (%tmp.24);
+        bt %tmp.26 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_19_12_19_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 20 12 ]
+        %tmp.27 = dup %tmp.11;
+        symbol [ WatchUi %tmp.28 20 17 24 ];
+        %tmp.28 = getm $.Toybox.WatchUi;
+        symbol [ KEY_LAP %tmp.29 20 25 32 ];
+        %tmp.29 = getv %tmp.28 :KEY_LAP;
+        %tmp.30 = getv function %tmp.27 :equals;
+        %tmp.31 = invoke %tmp.27 %tmp.30 (%tmp.29);
+        bt %tmp.31 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_20_12_20_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 21 12 ]
+        %tmp.32 = dup %tmp.11;
+        symbol [ WatchUi %tmp.33 21 17 24 ];
+        %tmp.33 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ESC %tmp.34 21 25 32 ];
+        %tmp.34 = getv %tmp.33 :KEY_ESC;
+        %tmp.35 = getv function %tmp.32 :equals;
+        %tmp.36 = invoke %tmp.32 %tmp.35 (%tmp.34);
+        bt %tmp.36 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_21_12_21_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 22 12 ]
+        %tmp.37 = dup %tmp.11;
+        symbol [ WatchUi %tmp.38 22 17 24 ];
+        %tmp.38 = getm $.Toybox.WatchUi;
+        symbol [ KEY_LIGHT %tmp.39 22 25 34 ];
+        %tmp.39 = getv %tmp.38 :KEY_LIGHT;
+        %tmp.40 = getv function %tmp.37 :equals;
+        %tmp.41 = invoke %tmp.37 %tmp.40 (%tmp.39);
+        bt %tmp.41 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_22_12_22_64_switchCase;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 23 12 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtDefault:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_defaultCodeBegin;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_17_12_17_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 17 36 ]
+        symbol [ BUTTON_UP %tmp.43 17 44 53 ];
+        %tmp.43 = getv ? :BUTTON_UP;
+        lputv %gbKey.3 %tmp.43;
+        symbol [ gbKey %gbKey.3 17 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 17 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_18_12_18_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 18 36 ]
+        symbol [ BUTTON_DOWN %tmp.45 18 44 55 ];
+        %tmp.45 = getv ? :BUTTON_DOWN;
+        lputv %gbKey.3 %tmp.45;
+        symbol [ gbKey %gbKey.3 18 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 18 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_19_12_19_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 19 36 ]
+        symbol [ BUTTON_A %tmp.47 19 44 52 ];
+        %tmp.47 = getv ? :BUTTON_A;
+        lputv %gbKey.3 %tmp.47;
+        symbol [ gbKey %gbKey.3 19 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 19 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_20_12_20_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 20 36 ]
+        symbol [ BUTTON_B %tmp.49 20 44 52 ];
+        %tmp.49 = getv ? :BUTTON_B;
+        lputv %gbKey.3 %tmp.49;
+        symbol [ gbKey %gbKey.3 20 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 20 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_21_12_21_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 21 36 ]
+        symbol [ BUTTON_SELECT %tmp.51 21 44 57 ];
+        %tmp.51 = getv ? :BUTTON_SELECT;
+        lputv %gbKey.3 %tmp.51;
+        symbol [ gbKey %gbKey.3 21 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 21 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_22_12_22_64_switchCase:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 22 36 ]
+        symbol [ BUTTON_START %tmp.53 22 44 56 ];
+        %tmp.53 = getv ? :BUTTON_START;
+        lputv %gbKey.3 %tmp.53;
+        symbol [ gbKey %gbKey.3 22 36 41 ];
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 22 59 ]
+        goto break @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_23_12_23_33_switchCase:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_defaultCodeBegin:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 23 21 ]
+        %tmp.54 = false;
+        ret %tmp.54;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_16_8_24_8_switchStmtEnd:
+        pop;
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 26 8 ]
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_stmt:
+        %tmp.55 = lgetv %isDown.2;
+        symbol [ isDown %tmp.55 26 12 18 ];
+        bf %tmp.55 @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_else_false;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_true:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_20_26_46_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 26 22 ]
+        symbol [ _joypad %tmp.57 26 22 29 ];
+        %tmp.57 = getv ? :_joypad;
+        symbol [ keyDown %tmp.58 26 30 37 ];
+        %tmp.58 = getv function %tmp.57 :keyDown;
+        %tmp.59 = lgetv %gbKey.3;
+        symbol [ gbKey %tmp.59 26 38 43 ];
+        invoke %tmp.57 %tmp.58(%tmp.59);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_20_26_46_stop:
+        goto @_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_end;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_else_false:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_27_20_27_44_start:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 27 22 ]
+        symbol [ _joypad %tmp.61 27 22 29 ];
+        %tmp.61 = getv ? :_joypad;
+        symbol [ keyUp %tmp.62 27 30 35 ];
+        %tmp.62 = getv function %tmp.61 :keyUp;
+        %tmp.63 = lgetv %gbKey.3;
+        symbol [ gbKey %tmp.63 27 36 41 ];
+        invoke %tmp.61 %tmp.62(%tmp.63);
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_27_20_27_44_stop:
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_26_8_27_44_if_end:
+[ "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc" 28 8 ]
+        %tmp.64 = true;
+        ret %tmp.64;
+_Users_shahmir_Documents_GitHub_GarminBoy_source_GarminBoyDelegate_mc_11_29_29_4_stop:
+    }
+}
+[ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/GarminBoyDelegate.mc"; @line = 1; ]
+<init> {
+}

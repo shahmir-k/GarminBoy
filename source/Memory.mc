@@ -1,19 +1,19 @@
 using Toybox.System as Sys;
 
 class Memory {
-    var rom  as ByteArray;
-    var vram as ByteArray;
-    var wram as ByteArray;
-    var hram as ByteArray;
-    var oam  as ByteArray;
+    var rom ;
+    var vram;
+    var wram;
+    var hram;
+    var oam ;
 
-    var _interrupts as Interrupts;
-    var _ppu        as Ppu;
-    var _gbTimer    as GbTimer;
-    var _joypad     as Joypad;
-    var _sound      as Sound;
+    var _interrupts;
+    var _ppu       ;
+    var _gbTimer   ;
+    var _joypad    ;
+    var _sound     ;
 
-    function initialize(romData as ByteArray, interrupts as Interrupts) {
+    function initialize(romData, interrupts) {
         rom  = romData;
         vram = new [8192]b;
         wram = new [8192]b;
@@ -22,12 +22,12 @@ class Memory {
         _interrupts = interrupts;
     }
 
-    function setPpu(ppu as Ppu) as Void        { _ppu = ppu; }
-    function setTimer(t as GbTimer) as Void    { _gbTimer = t; }
-    function setJoypad(j as Joypad) as Void    { _joypad = j; }
-    function setSound(s as Sound) as Void      { _sound = s; }
+    function setPpu(ppu)        { _ppu = ppu; }
+    function setTimer(t)    { _gbTimer = t; }
+    function setJoypad(j)    { _joypad = j; }
+    function setSound(s)      { _sound = s; }
 
-    function readByte(addr as Number) as Number {
+    function readByte(addr) {
         addr = addr & 0xFFFF;
         if (addr <= 0x7FFF) {
             return rom[addr] & 0xFF;
@@ -52,7 +52,7 @@ class Memory {
         }
     }
 
-    function writeByte(addr as Number, val as Number) as Void {
+    function writeByte(addr, val) {
         addr = addr & 0xFFFF;
         val  = val  & 0xFF;
         if (addr <= 0x7FFF) {
@@ -78,16 +78,16 @@ class Memory {
         }
     }
 
-    function readWord(addr as Number) as Number {
+    function readWord(addr) {
         return readByte(addr) | (readByte((addr + 1) & 0xFFFF) << 8);
     }
 
-    function writeWord(addr as Number, val as Number) as Void {
+    function writeWord(addr, val) {
         writeByte(addr,               val & 0xFF);
         writeByte((addr + 1) & 0xFFFF, (val >> 8) & 0xFF);
     }
 
-    function readIo(addr as Number) as Number {
+    function readIo(addr) {
         if (addr == 0xFF00) {
             return _joypad.read();
         } else if (addr >= 0xFF04 && addr <= 0xFF07) {
@@ -105,7 +105,7 @@ class Memory {
         return 0xFF;
     }
 
-    function writeIo(addr as Number, val as Number) as Void {
+    function writeIo(addr, val) {
         if (addr == 0xFF00) {
             _joypad.write(val);
         } else if (addr == 0xFF01 || addr == 0xFF02) {

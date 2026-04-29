@@ -2,23 +2,23 @@ using Toybox.WatchUi as WatchUi;
 using Toybox.Graphics as Graphics;
 
 class GarminBoyView extends WatchUi.View {
-    var _emulator as Emulator;
+    var _emulator;
 
     // GB screen centered on 280×280 display at 1× scale
     const OFFSET_X = 60;   // (280 - 160) / 2
     const OFFSET_Y = 68;   // (280 - 144) / 2
 
-    function initialize(emulator as Emulator) {
+    function initialize(emulator) {
         View.initialize();
         _emulator = emulator;
     }
 
-    function onLayout(dc as Graphics.Dc) as Void {
+    function onLayout(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
     }
 
-    function onUpdate(dc as Graphics.Dc) as Void {
+    function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 

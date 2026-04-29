@@ -2,16 +2,16 @@
 // Named GbTimer to avoid collision with Toybox.Timer.
 
 class GbTimer {
-    var div  as Number = 0;
-    var tima as Number = 0;
-    var tma  as Number = 0;
-    var tac  as Number = 0;
+    var div  = 0;
+    var tima = 0;
+    var tma  = 0;
+    var tac  = 0;
 
-    var _divCycles  as Number = 0;
-    var _timaCycles as Number = 0;
-    var _timaThreshold as Number = 1024;
+    var _divCycles  = 0;
+    var _timaCycles = 0;
+    var _timaThreshold = 1024;
 
-    var _interrupts as Interrupts;
+    var _interrupts;
 
     // Cycles-per-TIMA-tick at each TAC frequency (T-states)
     // 4194304 Hz / freq
@@ -19,13 +19,13 @@ class GbTimer {
     // 01: 262144 Hz -> 16 T-states
     // 10: 65536  Hz -> 64 T-states
     // 11: 16384  Hz -> 256 T-states
-    var TIMA_THRESHOLDS as Array = [1024, 16, 64, 256];
+    var TIMA_THRESHOLDS = [1024, 16, 64, 256];
 
-    function initialize(interrupts as Interrupts) {
+    function initialize(interrupts) {
         _interrupts = interrupts;
     }
 
-    function start() as Void {
+    function start() {
         div  = 0;
         tima = 0;
         tma  = 0;
@@ -35,7 +35,7 @@ class GbTimer {
         _timaThreshold = 1024;
     }
 
-    function cycle(tStates as Number) as Void {
+    function cycle(tStates) {
         // DIV increments every 256 T-states
         _divCycles += tStates;
         if (_divCycles >= 256) {
@@ -51,12 +51,12 @@ class GbTimer {
             tima = (tima + 1) & 0xFF;
             if (tima == 0) {
                 tima = tma;
-                _interrupts.request(Interrupts.INT_TIMER);
+                _interrupts.request(INT_TIMER);
             }
         }
     }
 
-    function read(addr as Number) as Number {
+    function read(addr) {
         switch (addr) {
             case 0xFF04: return div  & 0xFF;
             case 0xFF05: return tima & 0xFF;
@@ -66,7 +66,7 @@ class GbTimer {
         return 0xFF;
     }
 
-    function write(addr as Number, val as Number) as Void {
+    function write(addr, val) {
         switch (addr) {
             case 0xFF04:
                 div = 0;

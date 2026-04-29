@@ -7,40 +7,40 @@ using Toybox.System as Sys;
 
 class Ppu {
     // LCD control registers
-    var lcdc as Number = 0x91;
-    var stat as Number = 0x80;
-    var scy  as Number = 0;
-    var scx  as Number = 0;
-    var ly   as Number = 0;
-    var lyc  as Number = 0;
-    var bgp  as Number = 0xFC;
-    var obp0 as Number = 0xFF;
-    var obp1 as Number = 0xFF;
-    var wy   as Number = 0;
-    var wx   as Number = 0;
-    var dma  as Number = 0;
+    var lcdc = 0x91;
+    var stat = 0x80;
+    var scy  = 0;
+    var scx  = 0;
+    var ly   = 0;
+    var lyc  = 0;
+    var bgp  = 0xFC;
+    var obp0 = 0xFF;
+    var obp1 = 0xFF;
+    var wy   = 0;
+    var wx   = 0;
+    var dma  = 0;
 
     // 160×144 framebuffer, each byte is a DMG palette index 0–3
-    var framebuffer as ByteArray;
+    var framebuffer;
 
-    var _frameReady     as Boolean = false;
-    var _cycles         as Number  = 0;
-    var _lineRendered   as Boolean = false;
-    var _winLineCounter as Number  = 0;
+    var _frameReady     = false;
+    var _cycles          = 0;
+    var _lineRendered   = false;
+    var _winLineCounter  = 0;
 
     // DMG green palette (24-bit RGB for Garmin DC)
-    var palette as Array = [0xC4CFA1, 0x8B956D, 0x4D533C, 0x1F1F1F];
+    var palette = [0xC4CFA1, 0x8B956D, 0x4D533C, 0x1F1F1F];
 
-    var _mem        as Memory;
-    var _interrupts as Interrupts;
+    var _mem       ;
+    var _interrupts;
 
-    function initialize(mem as Memory, interrupts as Interrupts) {
+    function initialize(mem, interrupts) {
         _mem        = mem;
         _interrupts = interrupts;
         framebuffer = new [160 * 144]b;
     }
 
-    function start() as Void {
+    function start() {
         lcdc = 0x91;
         stat = 0x80;
         ly   = 0;
@@ -63,7 +63,7 @@ class Ppu {
     // Register I/O
     // -------------------------------------------------------------------------
 
-    function readReg(addr as Number) as Number {
+    function readReg(addr) {
         switch (addr) {
             case 0xFF40: return lcdc;
             case 0xFF41: return stat | 0x80;
@@ -81,7 +81,7 @@ class Ppu {
         return 0xFF;
     }
 
-    function writeReg(addr as Number, val as Number) as Void {
+    function writeReg(addr, val) {
         switch (addr) {
             case 0xFF40: lcdc = val; break;
             case 0xFF41: stat = (stat & 0x07) | (val & 0x78); break;
@@ -101,7 +101,7 @@ class Ppu {
         }
     }
 
-    function executeDma() as Void {
+    function executeDma() {
         var srcBase = (dma << 8) & 0xFFFF;
         for (var i = 0; i < 160; i++) {
             _mem.oam[i] = _mem.readByte(srcBase + i) & 0xFF;
@@ -112,7 +112,7 @@ class Ppu {
     // PPU state machine — call once per CPU step with the T-state count
     // -------------------------------------------------------------------------
 
-    function cycle(tStates as Number) as Void {
+    function cycle(tStates) {
         if ((lcdc & 0x80) == 0) {
             ly = 0;
             _cycles = 0;
@@ -133,7 +133,7 @@ class Ppu {
                     setMode(2);
                     checkLyc();
                     if ((stat & 0x20) != 0) {
-                        _interrupts.request(Interrupts.INT_STAT);
+                        _interrupts.request(INT_STAT);
                     }
                 } else {
                     checkLyc();
@@ -158,7 +158,7 @@ class Ppu {
                 if (mode != 0) {
                     setMode(0);
                     if ((stat & 0x08) != 0) {
-                        _interrupts.request(Interrupts.INT_STAT);
+                        _interrupts.request(INT_STAT);
                     }
                 }
             }
@@ -170,15 +170,15 @@ class Ppu {
 
                 if (ly == 144) {
                     setMode(1);
-                    _interrupts.request(Interrupts.INT_VBLANK);
+                    _interrupts.request(INT_VBLANK);
                     if ((stat & 0x10) != 0) {
-                        _interrupts.request(Interrupts.INT_STAT);
+                        _interrupts.request(INT_STAT);
                     }
                     _frameReady = true;
                 } else if (ly < 144) {
                     setMode(2);
                     if ((stat & 0x20) != 0) {
-                        _interrupts.request(Interrupts.INT_STAT);
+                        _interrupts.request(INT_STAT);
                     }
                 }
                 checkLyc();
@@ -186,15 +186,15 @@ class Ppu {
         }
     }
 
-    function setMode(mode as Number) as Void {
+    function setMode(mode) {
         stat = (stat & 0xFC) | (mode & 0x03);
     }
 
-    function checkLyc() as Void {
+    function checkLyc() {
         if (ly == lyc) {
             stat |= 0x04;
             if ((stat & 0x40) != 0) {
-                _interrupts.request(Interrupts.INT_STAT);
+                _interrupts.request(INT_STAT);
             }
         } else {
             stat &= ~0x04;
@@ -205,7 +205,7 @@ class Ppu {
     // Scanline rendering
     // -------------------------------------------------------------------------
 
-    function renderLine() as Void {
+    function renderLine() {
         if (ly >= 144) { return; }
         var lineBase = ly * 160;
 
@@ -232,7 +232,7 @@ class Ppu {
         }
     }
 
-    function renderBgLine(lineBase as Number) as Void {
+    function renderBgLine(lineBase) {
         var mapBase = ((lcdc & 0x08) != 0) ? 0x1C00 : 0x1800;
         var signedAddr = ((lcdc & 0x10) == 0);
 
@@ -271,7 +271,7 @@ class Ppu {
         }
     }
 
-    function renderWindowLine(lineBase as Number) as Void {
+    function renderWindowLine(lineBase) {
         var mapBase = ((lcdc & 0x40) != 0) ? 0x1C00 : 0x1800;
         var signedAddr = ((lcdc & 0x10) == 0);
         var wxScreen = wx - 7;
@@ -313,7 +313,7 @@ class Ppu {
         _winLineCounter++;
     }
 
-    function renderSpriteLine(lineBase as Number) as Void {
+    function renderSpriteLine(lineBase) {
         var spriteHeight = ((lcdc & 0x04) != 0) ? 16 : 8;
 
         // Iterate OAM in reverse so lower-index sprites have priority

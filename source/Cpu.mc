@@ -1,33 +1,33 @@
 using Toybox.System as Sys;
 
 class Cpu {
-    var regA as Number = 0;
-    var regF as Number = 0;
-    var regB as Number = 0;
-    var regC as Number = 0;
-    var regD as Number = 0;
-    var regE as Number = 0;
-    var regH as Number = 0;
-    var regL as Number = 0;
-    var sp   as Number = 0;
-    var pc   as Number = 0;
-    var ime  as Number = 0;
-    var halted as Boolean = false;
+    var regA = 0;
+    var regF = 0;
+    var regB = 0;
+    var regC = 0;
+    var regD = 0;
+    var regE = 0;
+    var regH = 0;
+    var regL = 0;
+    var sp   = 0;
+    var pc   = 0;
+    var ime  = 0;
+    var halted = false;
 
     const FLAG_Z  = 0x80;
     const FLAG_N  = 0x40;
     const FLAG_H  = 0x20;
     const FLAG_CY = 0x10;
 
-    var _mem        as Memory;
-    var _interrupts as Interrupts;
+    var _mem       ;
+    var _interrupts;
 
-    function initialize(mem as Memory, interrupts as Interrupts) {
+    function initialize(mem, interrupts) {
         _mem = mem;
         _interrupts = interrupts;
     }
 
-    function start() as Void {
+    function start() {
         regA = 0x01; regF = 0xB0;
         regB = 0x00; regC = 0x13;
         regD = 0x00; regE = 0xD8;
@@ -39,17 +39,17 @@ class Cpu {
     }
 
     // ── register pair helpers ──────────────────────────────────────────────
-    function regHL() as Number { return ((regH & 0xFF) << 8) | (regL & 0xFF); }
-    function setHL(v as Number) as Void { regH = (v >> 8) & 0xFF; regL = v & 0xFF; }
-    function regBC() as Number { return ((regB & 0xFF) << 8) | (regC & 0xFF); }
-    function setBC(v as Number) as Void { regB = (v >> 8) & 0xFF; regC = v & 0xFF; }
-    function regDE() as Number { return ((regD & 0xFF) << 8) | (regE & 0xFF); }
-    function setDE(v as Number) as Void { regD = (v >> 8) & 0xFF; regE = v & 0xFF; }
-    function regAF() as Number { return ((regA & 0xFF) << 8) | (regF & 0xF0); }
-    function setAF(v as Number) as Void { regA = (v >> 8) & 0xFF; regF = v & 0xF0; }
+    function regHL() { return ((regH & 0xFF) << 8) | (regL & 0xFF); }
+    function setHL(v) { regH = (v >> 8) & 0xFF; regL = v & 0xFF; }
+    function regBC() { return ((regB & 0xFF) << 8) | (regC & 0xFF); }
+    function setBC(v) { regB = (v >> 8) & 0xFF; regC = v & 0xFF; }
+    function regDE() { return ((regD & 0xFF) << 8) | (regE & 0xFF); }
+    function setDE(v) { regD = (v >> 8) & 0xFF; regE = v & 0xFF; }
+    function regAF() { return ((regA & 0xFF) << 8) | (regF & 0xF0); }
+    function setAF(v) { regA = (v >> 8) & 0xFF; regF = v & 0xF0; }
 
     // ── 8-bit register helpers (reg 0-7: B C D E H L (HL) A) ──────────────
-    function readReg8(reg as Number) as Number {
+    function readReg8(reg) {
         switch (reg) {
             case 0: return regB & 0xFF;
             case 1: return regC & 0xFF;
@@ -62,7 +62,7 @@ class Cpu {
         }
     }
 
-    function writeReg8(reg as Number, val as Number) as Void {
+    function writeReg8(reg, val) {
         val = val & 0xFF;
         switch (reg) {
             case 0: regB = val; break;
@@ -77,7 +77,7 @@ class Cpu {
     }
 
     // ── 16-bit register helpers (0=BC 1=DE 2=HL 3=SP) ─────────────────────
-    function readReg16(reg as Number) as Number {
+    function readReg16(reg) {
         switch (reg) {
             case 0: return regBC();
             case 1: return regDE();
@@ -86,7 +86,7 @@ class Cpu {
         }
     }
 
-    function writeReg16(reg as Number, val as Number) as Void {
+    function writeReg16(reg, val) {
         val = val & 0xFFFF;
         switch (reg) {
             case 0: setBC(val); break;
@@ -97,14 +97,14 @@ class Cpu {
     }
 
     // ── stack helpers ──────────────────────────────────────────────────────
-    function push16(val as Number) as Void {
+    function push16(val) {
         sp = (sp - 1) & 0xFFFF;
         _mem.writeByte(sp, (val >> 8) & 0xFF);
         sp = (sp - 1) & 0xFFFF;
         _mem.writeByte(sp, val & 0xFF);
     }
 
-    function pop16() as Number {
+    function pop16() {
         var lo = _mem.readByte(sp) & 0xFF;
         sp = (sp + 1) & 0xFFFF;
         var hi = _mem.readByte(sp) & 0xFF;
@@ -113,7 +113,7 @@ class Cpu {
     }
 
     // ── interrupt dispatch ─────────────────────────────────────────────────
-    function handleInterrupts() as Void {
+    function handleInterrupts() {
         var pending = _interrupts.io_if & _interrupts.io_ie & 0x1F;
         if (pending != 0) {
             halted = false;
@@ -132,7 +132,7 @@ class Cpu {
     }
 
     // ── main step ─────────────────────────────────────────────────────────
-    function step() as Number {
+    function step() {
         handleInterrupts();
         if (halted) { return 4; }
 
@@ -827,7 +827,7 @@ class Cpu {
     }
 
     // ── CB-prefix opcodes ─────────────────────────────────────────────────
-    function stepCB() as Number {
+    function stepCB() {
         var cbop = _mem.readByte(pc) & 0xFF;
         pc = (pc + 1) & 0xFFFF;
 
@@ -915,7 +915,7 @@ class Cpu {
 
     // ── ALU helpers ────────────────────────────────────────────────────────
 
-    function addA(r as Number) as Void {
+    function addA(r) {
         var a = regA & 0xFF;
         var result = (a + r) & 0xFF;
         regF = (result == 0 ? FLAG_Z : 0)
@@ -924,7 +924,7 @@ class Cpu {
         regA = result;
     }
 
-    function adcA(r as Number) as Void {
+    function adcA(r) {
         var a = regA & 0xFF;
         var cy = (regF & FLAG_CY) != 0 ? 1 : 0;
         var result = (a + r + cy) & 0xFF;
@@ -934,7 +934,7 @@ class Cpu {
         regA = result;
     }
 
-    function subA(r as Number) as Void {
+    function subA(r) {
         var a = regA & 0xFF;
         var result = (a - r) & 0xFF;
         regF = FLAG_N
@@ -944,7 +944,7 @@ class Cpu {
         regA = result;
     }
 
-    function sbcA(r as Number) as Void {
+    function sbcA(r) {
         var a = regA & 0xFF;
         var cy = (regF & FLAG_CY) != 0 ? 1 : 0;
         var result = (a - r - cy) & 0xFF;
@@ -955,22 +955,22 @@ class Cpu {
         regA = result;
     }
 
-    function andA(r as Number) as Void {
+    function andA(r) {
         regA = (regA & r) & 0xFF;
         regF = (regA == 0 ? FLAG_Z : 0) | FLAG_H;
     }
 
-    function xorA(r as Number) as Void {
+    function xorA(r) {
         regA = (regA ^ r) & 0xFF;
         regF = regA == 0 ? FLAG_Z : 0;
     }
 
-    function orA(r as Number) as Void {
+    function orA(r) {
         regA = (regA | r) & 0xFF;
         regF = regA == 0 ? FLAG_Z : 0;
     }
 
-    function cpA(r as Number) as Void {
+    function cpA(r) {
         var a = regA & 0xFF;
         var result = (a - r) & 0xFF;
         regF = FLAG_N
@@ -979,7 +979,7 @@ class Cpu {
              | ((result & 0x0F) > (a & 0x0F) ? FLAG_H : 0);
     }
 
-    function addHL(rr as Number) as Void {
+    function addHL(rr) {
         var hl = regHL();
         var result = (hl + rr) & 0xFFFF;
         var hiHL = (hl >> 8) & 0xFF;
@@ -991,19 +991,19 @@ class Cpu {
     }
 
     // ── INC/DEC flag helpers ───────────────────────────────────────────────
-    function incFlags(old as Number, newVal as Number) as Number {
+    function incFlags(old, newVal) {
         return ((newVal == 0 ? FLAG_Z : 0))
              | ((newVal & 0x0F) < (old & 0x0F) ? FLAG_H : 0);
     }
 
-    function decFlags(old as Number, newVal as Number) as Number {
+    function decFlags(old, newVal) {
         return FLAG_N
              | (newVal == 0 ? FLAG_Z : 0)
              | ((newVal & 0x0F) > (old & 0x0F) ? FLAG_H : 0);
     }
 
     // ── 16-bit read helper ─────────────────────────────────────────────────
-    function readWord(addr as Number) as Number {
+    function readWord(addr) {
         var lo = _mem.readByte(addr) & 0xFF;
         var hi = _mem.readByte((addr + 1) & 0xFFFF) & 0xFF;
         return (hi << 8) | lo;
