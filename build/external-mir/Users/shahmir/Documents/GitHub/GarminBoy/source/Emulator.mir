@@ -38,7 +38,7 @@ class Emulator {
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 21; @position = 8; @symbol_vardef = [_state,21,8,14]; ]
     var _state = 0;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 25; @position = 10; @symbol_constdef = [CYCLES_PER_TICK,25,10,25]; ]
-    const CYCLES_PER_TICK = 8000;
+    const CYCLES_PER_TICK = 100;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 29; @position = 10; @symbol_constdef = [UPDATE_EVERY_N_TICKS,29,10,30]; ]
     const UPDATE_EVERY_N_TICKS = 5;
     [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 30; @position = 8; @symbol_vardef = [_tickCount,30,8,18]; ]
