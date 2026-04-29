@@ -9,10 +9,9 @@ class GarminBoyView extends WatchUi.View {
     const OFFSET_X = 60;
     const OFFSET_Y = 68;
 
-    // Pixel block size: 8 means sample every 8th pixel and draw as 8×8 block.
-    // 160/8 × 144/8 = 20×18 = 360 blocks × 4 colors = 1440 iterations — well within watchdog.
-    // Set to 1 on a device fast enough for full rendering.
-    const PIXEL_STEP = 8;
+    // Pixel block size: 1 = full 160×144 resolution.
+    // If the watch is too slow, increase to 2 or 4 (each reduces draw calls by 4x).
+    const PIXEL_STEP = 1;
 
     function initialize(emulator) {
         View.initialize();

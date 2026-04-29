@@ -21,9 +21,9 @@ class Emulator {
     var _state = 0;  // STATE_LOADING
 
     // T-states per tick. Full GB frame = 70,224.
-    // Simulator: 500 keeps tick() well under watchdog when combined with rendering.
-    // On the real Fenix 7x raise this to 70224.
-    const CYCLES_PER_TICK = 500;
+    // Real device: 70224 = one full frame per 16ms timer tick (target 60fps).
+    // Simulator: drop to 500 to stay under the tighter simulator watchdog.
+    const CYCLES_PER_TICK = 70224;
 
     // Force a view update every N ticks even if no VBlank fired,
     // so the framebuffer is visible in the simulator.
