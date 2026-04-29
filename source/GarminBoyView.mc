@@ -9,9 +9,9 @@ class GarminBoyView extends WatchUi.View {
     const OFFSET_X = 60;
     const OFFSET_Y = 68;
 
-    // Pixel block size: 2 = 80×72 sampled pixels drawn as 2×2 blocks.
-    // 23040 iterations × 4 colors — increase to 4 if still crashing.
-    const PIXEL_STEP = 2;
+    // Pixel block size: 4 = 40×36 sampled pixels drawn as 4×4 blocks.
+    // 5760 iterations × 4 colors = 1440 fillRectangle calls per frame.
+    const PIXEL_STEP = 4;
 
     function initialize(emulator) {
         View.initialize();
