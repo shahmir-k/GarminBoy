@@ -3,16 +3,16 @@ using Toybox.Graphics as Graphics;
 using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 
+// Module-level — class-level const is unreliable in Monkey C SDK 9.x
+const GB_OFFSET_X = 60;
+const GB_OFFSET_Y = 68;
+// BLOCK=8: 1440 fillRectangle calls → ~36K bytecodes, safe on all compatible devices
+// BLOCK=4: 5760 calls → ~144K bytecodes, fine on Fenix 7x Pro (240K budget)
+const GB_BLOCK = 8;
+
 class GarminBoyView extends WatchUi.View {
     var _emulator;
-    var _bitmap = null;
-
-    const OFFSET_X = 60;
-    const OFFSET_Y = 68;
-
-    // BLOCK=8: 1440 fillRectangle calls to RAM buffer (~36K bytecodes) — safe on all devices
-    // BLOCK=4: 5760 calls (~144K bytecodes) — only for devices with 240K+ bytecode budget
-    const BLOCK = 8;
+    var _bitmap  = null;
 
     function initialize(emulator) {
         View.initialize();
@@ -39,7 +39,7 @@ class GarminBoyView extends WatchUi.View {
 
         var fb      = _emulator.getFramebuffer();
         var palette = _emulator.getPalette();
-        var step    = BLOCK;
+        var step    = GB_BLOCK;
 
         if (_bitmap != null) {
             var bdc = _bitmap.getDc();
@@ -54,16 +54,15 @@ class GarminBoyView extends WatchUi.View {
                     }
                 }
             }
-            dc.drawBitmap(OFFSET_X, OFFSET_Y, _bitmap);
+            dc.drawBitmap(GB_OFFSET_X, GB_OFFSET_Y, _bitmap);
         } else {
-            // Fallback: direct rendering at lower resolution
             for (var c = 0; c < 4; c++) {
                 dc.setColor(palette[c], palette[c]);
-                for (var y = 0; y < 144; y += 8) {
+                for (var y = 0; y < 144; y += step) {
                     var lineBase = y * 160;
-                    for (var x = 0; x < 160; x += 8) {
+                    for (var x = 0; x < 160; x += step) {
                         if ((fb[lineBase + x] & 0x03) == c) {
-                            dc.fillRectangle(OFFSET_X + x, OFFSET_Y + y, 8, 8);
+                            dc.fillRectangle(GB_OFFSET_X + x, GB_OFFSET_Y + y, step, step);
                         }
                     }
                 }

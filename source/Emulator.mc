@@ -1,11 +1,17 @@
 using Toybox.Timer as Timer;
 using Toybox.WatchUi as WatchUi;
 
-// Module-level state constants — class-level const can't be used in
-// instance variable initializers reliably in Monkey C
+// All constants at module level — class-level const is unreliable in Monkey C SDK 9.x
 const STATE_LOADING = 0;
 const STATE_SETUP   = 1;
 const STATE_RUNNING = 2;
+
+// T-states per tick — tuned for Fenix 7x Pro (~240K bytecode watchdog budget)
+// Each cpu.step() ≈ 135 bytecodes. 4000 T-states / 8 avg ≈ 500 steps ≈ 67K bytecodes.
+const CYCLES_PER_TICK = 4000;
+
+// Trigger a view update every N ticks even without a VBlank
+const UPDATE_EVERY_N_TICKS = 5;
 
 class Emulator {
     var _mem;
@@ -18,15 +24,7 @@ class Emulator {
     var _rom;
     var _loop;
 
-    var _state = 0;  // STATE_LOADING
-
-    // T-states per tick. Full GB frame = 70,224.
-    // Conservative start — raise toward 70224 once confirmed stable on device.
-    const CYCLES_PER_TICK = 4000;
-
-    // Force a view update every N ticks even if no VBlank fired,
-    // so the framebuffer is visible in the simulator.
-    const UPDATE_EVERY_N_TICKS = 5;
+    var _state    = 0;  // STATE_LOADING
     var _tickCount = 0;
 
     function initialize() {}
@@ -46,10 +44,8 @@ class Emulator {
     function tick() {
         if (_state == STATE_LOADING) {
             var done = _rom.loadStep();
-            if (done) {
-                _state = STATE_SETUP;
-                WatchUi.requestUpdate();
-            }
+            if (done) { _state = STATE_SETUP; }
+            WatchUi.requestUpdate();
             return;
         }
 
@@ -68,32 +64,19 @@ class Emulator {
             _ppu.start();
             _cpu.start();
 
-            _state = STATE_RUNNING;
+            _state    = STATE_RUNNING;
             _tickCount = 0;
-            WatchUi.requestUpdate();
             return;
         }
 
-        // STATE_RUNNING — batch PPU/timer calls every scanline to save bytecodes
+        // STATE_RUNNING — call ppu/timer per instruction so mode transitions fire correctly
         var cyclesLeft = CYCLES_PER_TICK;
-        var ppuAcc    = 0;
-        var timerAcc  = 0;
         while (cyclesLeft > 0) {
             var c = _cpu.step();
+            _ppu.cycle(c);
+            _gbTimer.cycle(c);
             cyclesLeft -= c;
-            ppuAcc    += c;
-            timerAcc  += c;
-            if (ppuAcc >= 456) {
-                _ppu.cycle(ppuAcc);
-                ppuAcc = 0;
-            }
-            if (timerAcc >= 256) {
-                _gbTimer.cycle(timerAcc);
-                timerAcc = 0;
-            }
         }
-        if (ppuAcc   > 0) { _ppu.cycle(ppuAcc); }
-        if (timerAcc > 0) { _gbTimer.cycle(timerAcc); }
 
         _tickCount++;
         if (_ppu._frameReady || _tickCount >= UPDATE_EVERY_N_TICKS) {
