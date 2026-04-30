@@ -10,9 +10,9 @@ class GarminBoyView extends WatchUi.View {
     const OFFSET_X = 60;
     const OFFSET_Y = 68;
 
-    // BLOCK=4: 5760 fillRectangle calls to RAM buffer (~144K bytecodes)
-    // BLOCK=8: 1440 calls (~36K bytecodes) — use if 4 crashes
-    const BLOCK = 4;
+    // BLOCK=8: 1440 fillRectangle calls to RAM buffer (~36K bytecodes) — safe on all devices
+    // BLOCK=4: 5760 calls (~144K bytecodes) — only for devices with 240K+ bytecode budget
+    const BLOCK = 8;
 
     function initialize(emulator) {
         View.initialize();

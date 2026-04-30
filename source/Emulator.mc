@@ -22,7 +22,7 @@ class Emulator {
 
     // T-states per tick. Full GB frame = 70,224.
     // Conservative start — raise toward 70224 once confirmed stable on device.
-    const CYCLES_PER_TICK = 2000;
+    const CYCLES_PER_TICK = 4000;
 
     // Force a view update every N ticks even if no VBlank fired,
     // so the framebuffer is visible in the simulator.
@@ -74,14 +74,26 @@ class Emulator {
             return;
         }
 
-        // STATE_RUNNING
+        // STATE_RUNNING — batch PPU/timer calls every scanline to save bytecodes
         var cyclesLeft = CYCLES_PER_TICK;
+        var ppuAcc    = 0;
+        var timerAcc  = 0;
         while (cyclesLeft > 0) {
             var c = _cpu.step();
-            _ppu.cycle(c);
-            _gbTimer.cycle(c);
             cyclesLeft -= c;
+            ppuAcc    += c;
+            timerAcc  += c;
+            if (ppuAcc >= 456) {
+                _ppu.cycle(ppuAcc);
+                ppuAcc = 0;
+            }
+            if (timerAcc >= 256) {
+                _gbTimer.cycle(timerAcc);
+                timerAcc = 0;
+            }
         }
+        if (ppuAcc   > 0) { _ppu.cycle(ppuAcc); }
+        if (timerAcc > 0) { _gbTimer.cycle(timerAcc); }
 
         _tickCount++;
         if (_ppu._frameReady || _tickCount >= UPDATE_EVERY_N_TICKS) {
