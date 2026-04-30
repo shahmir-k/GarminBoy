@@ -9,7 +9,7 @@ const STATE_SETUP = 1;
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 7; @position = 6; @symbol_constdef = [STATE_RUNNING,7,6,19]; ]
 const STATE_RUNNING = 2;
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 11; @position = 6; @symbol_constdef = [CYCLES_PER_TICK,11,6,21]; ]
-const CYCLES_PER_TICK = 4000;
+const CYCLES_PER_TICK = 500;
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 14; @position = 6; @symbol_constdef = [UPDATE_EVERY_N_TICKS,14,6,26]; ]
 const UPDATE_EVERY_N_TICKS = 5;
 [ @file = "/Users/shahmir/Documents/GitHub/GarminBoy/source/Emulator.mc"; @line = 16; @symbol_classdef = [Emulator,16,6,14]; ]

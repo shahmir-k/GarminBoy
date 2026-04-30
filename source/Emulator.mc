@@ -8,7 +8,7 @@ const STATE_RUNNING = 2;
 
 // T-states per tick — tuned for Fenix 7x Pro (~240K bytecode watchdog budget)
 // Each cpu.step() ≈ 135 bytecodes. 4000 T-states / 8 avg ≈ 500 steps ≈ 67K bytecodes.
-const CYCLES_PER_TICK = 4000;
+const CYCLES_PER_TICK = 500;
 
 // Trigger a view update every N ticks even without a VBlank
 const UPDATE_EVERY_N_TICKS = 5;
